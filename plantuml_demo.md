@@ -52,6 +52,7 @@ uml_diagrams:
     - class diagram
 common_features:
     - colours
+    - openiconic
 @endyaml
 ```
 
@@ -219,6 +220,7 @@ hide Queen members
 This section includes demo of the common features that apply to all or multiple diagram types:
 
 * Colours
+* OpenIconic
 
 ### Colours
 
@@ -355,5 +357,24 @@ Bishop <|-- Queen
 Rook <|-- Queen
 
 hide Queen members
+@enduml
+```
+
+### OpenIconic
+
+The open source icon set OpenIconic can be used in diagrams using the syntax `<&icon_name>`. The `listopeniconic` command lists the available icons.
+
+```plantuml
+@startuml
+listopeniconic
+@enduml
+```
+
+#### Demo
+
+```plantuml
+@startuml
+
+:<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size> ;
 @enduml
 ```
