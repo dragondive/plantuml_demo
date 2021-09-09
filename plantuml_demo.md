@@ -37,6 +37,7 @@ uml_diagrams:
 common_features:
   - colours
   - openiconic
+  - fonts
 @endyaml
 ```
 
@@ -333,5 +334,25 @@ listopeniconic
 ```plantuml
 @startuml
 :<size:20>**<&thumb-up> When nothing <&ban> goes right <&arrow-right>, go left <&arrow-left>.**</size> <
+@enduml
+```
+
+### Fonts
+
+The `listfonts` command lists all the fonts available on the system. These can be used in the diagrams by setting the respective `skinparam`.
+
+```plantuml
+@startuml
+listfonts
+@enduml
+```
+
+#### Example
+
+```plantuml
+@startuml
+skinparam DefaultFontName Courier New
+"Brian Kernighan" -> Developers : main( ) {\n        printf(“hello, world”);\n}
+note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
