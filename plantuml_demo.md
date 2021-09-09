@@ -34,6 +34,8 @@ data_visualization:
 uml_diagrams:
   - sequence diagram
   - class diagram
+common_features:
+  - colours
 @endyaml
 ```
 
@@ -172,6 +174,142 @@ Piece <|-- Knight
 Piece <|-- Bishop
 Piece <|-- Rook
 Piece <|-- King
+Bishop <|-- Queen
+Rook <|-- Queen
+
+hide Queen members
+@enduml
+```
+
+## Common Features
+
+This section includes demo of the common features that apply to all or multiple diagram types.
+
+### Colours
+
+The colour can be configured for almost all the entities that appear in PlantUML diagrams. The colour can be specified by its hexadecimal RGB value.
+
+#### Named Colours
+
+PlantUML also defines names for some common colours. These names can be also be used to specify the colour. The `colors` command prints the palette of all the named colours.
+
+```plantuml
+@startuml
+colors
+@enduml
+```
+
+#### Similar Colours
+
+The `colors` command can also be called with an argument, which is either a named colour or a hexadecimal RGB colour value. It prints the palette of named colours similar to the specified colour.
+
+```plantuml
+@startuml
+colors Yellow
+@enduml
+```
+
+```plantuml
+@startuml
+colors #ffb36a
+@enduml
+```
+
+#### Use of Colours in Diagrams
+
+The colour can be chosen for many entities in the various types of diagrams. This demo shows the use of various colours in a sequence diagram and a class diagram.
+
+```plantuml
+@startuml
+title **Sequence Diagram Example**\n\n
+
+actor Developer as Dev  #Tomato
+actor Reviewers
+
+box Development Infrastructure #LightGreen
+  participant "Build\nServer" as Build #Azure
+  collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker #PowderBlue
+  database "[[https://github.com/dragondive/hebi Repository]]" as Repository #Plum
+end box
+
+...
+autonumber
+== Development ==
+Dev -[#404032]> Tracker : assign issue to self
+Dev -> Dev : work towards solution
+
+... some days later ...
+Dev -> Build : submit build job
+note right #PeachPuff : when solution is ready
+Build --> Dev : build successful
+note right: dotted arrows indicate\ncomputer-triggered steps
+
+== Review ==
+Dev ->  Reviewers : [[https://github.com/dragondive/hebi/compare submit pull request]]
+alt #MediumSpringGreen approved
+  Reviewers -> Dev : approve changes
+else #LightSalmon rejected
+  loop #AntiqueWhite
+    Dev <- Reviewers : review comments
+    Dev -> Reviewers : submit changes
+  end loop
+end alt
+...
+
+@enduml
+```
+
+<br><br>
+
+```plantuml
+@startuml
+title **Class Diagram Example**\n\n
+!include sprites/chess_king.puml /' load sprite from file '/
+!include sprites/chess_pawn.puml
+!include sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
+
+sprite $color {  /' define sprite directly in the plantuml description '/
+  FFFFFFFFFFFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  FFFFFFFFFFFFFFFFFF
+}
+
+abstract class Piece #WhiteSmoke {
+  - rank: enum
+  - file: enum
+  - colour <$color> : enum
+  + move()
+  + capture()
+  # is_valid_move(): bool
+}
+
+class "<$pawn,scale=.4,color=Black> Pawn" as Pawn #D0D0FF { /' include the sprite in class name '/
+  - en_passant: bool
+  + promote()
+}
+
+class "<$king,scale=.4,color=green> King" as King { /' change the sprite color '/
+  - in_check: bool
+  + castle()
+}
+
+class "<size:40><color:red>♕</color></size> Queen" as Queen #Gold /' use unicode character in class name '/
+class "<size:40>&#9816;</size> Knight" as Knight /' use unicode value in class name'/
+class "<$bishop,scale=.5,color=Black> Bishop" as Bishop
+class "<$rook,scale=.5,color=Black> Rook" as Rook
+
+Piece <|-- Pawn
+Piece <|-[#Green]- Knight
+Piece <|-- Bishop
+Piece <|-- Rook
+Piece <|-[#Indigo]- King
 Bishop <|-- Queen
 Rook <|-- Queen
 
