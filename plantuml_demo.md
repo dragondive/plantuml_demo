@@ -51,6 +51,7 @@ uml_diagrams:
 common_features:
     - colours
     - openiconic
+    - fonts
 @endyaml
 ```
 
@@ -213,6 +214,7 @@ hide Queen members
 This section includes demo of the common features that apply to all or multiple diagram types:
 * Colours
 * OpenIconic
+* Fonts
 
 ### Colours
 
@@ -368,5 +370,31 @@ listopeniconic
 @startuml
 
 :<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size> ;
+@enduml
+```
+
+### Fonts
+
+The font can be configured for almost all the text that appears in PlantUML diagrams. The `listfonts` command lists all the fonts available on the system.
+
+```plantuml
+@startuml
+listfonts
+@enduml
+```
+
+#### Demo
+
+This demo shows the customization of font used in a sequence diagram.
+
+The demo also introduces the following common features:
+* Customizing the diagram using the `skinparam` command
+
+```plantuml
+@startuml
+skinparam DefaultFontName Courier New
+skinparam DefaultFontSize 16
+"Brian Kernighan" -> Developers : main( ) {\n        printf(“hello, world”);\n}
+note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
