@@ -33,6 +33,7 @@ data_visualization:
   yaml_data : table_of_contents (this!)
 uml_diagrams:
   - sequence diagram
+  - class diagram
 @endyaml
 ```
 
@@ -40,6 +41,7 @@ uml_diagrams:
 
 PlantUML draws beautiful UML diagrams from simple textual descriptions. This document gives a demo of the following types of UML diagrams:
 * Sequence Diagram
+* Class Diagram
 
 ### Sequence Diagram
 
@@ -102,5 +104,77 @@ Build --> Repository : merge changes
 note left: build failure scenario\nomitted to reduce clutter.
 Repository --> Tracker : close issue
 note right: for simplicity, assume\nno merge conflicts.
+@enduml
+```
+
+### Class Diagram
+
+The below class diagram describes the relationships between the chess piece types. This illustrates a few features:
+* Defining an abstract class
+* Adding methods and attributes to a class
+* Describing access specifiers of the class members
+* Describing the inheritance relationship between classes
+* Hiding sections from the class
+
+Refer the [documentation](https://plantuml.com/class-diagram) for the full set of features and configuration options.
+
+The example also introduces the following features:
+* The preprocessor directive `!include` to include contents of another file
+* Defining a sprite and using it in the diagram
+* Using unicode characters in the diagram
+
+```plantuml
+@startuml
+title **Class Diagram Example**\n\n
+!include sprites/chess_king.puml /' load sprite from file '/
+!include sprites/chess_pawn.puml
+!include sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
+
+sprite $color {  /' define sprite directly in the plantuml description '/
+  FFFFFFFFFFFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  F00000000FFFFFFFFF
+  FFFFFFFFFFFFFFFFFF
+}
+
+abstract class Piece {
+  - rank: enum
+  - file: enum
+  - colour <$color> : enum
+  + move()
+  + capture()
+  # is_valid_move(): bool
+}
+
+class "<$pawn,scale=.4,color=Black> Pawn" as Pawn { /' include the sprite in class name '/
+  - en_passant: bool
+  + promote()
+}
+
+class "<$king,scale=.4,color=green> King" as King { /' change the sprite color '/
+  - in_check: bool
+  + castle()
+}
+
+class "<size:40><color:red>♕</color></size> Queen" as Queen /' use unicode character in class name '/
+class "<size:40>&#9816;</size> Knight" as Knight /' use unicode value in class name'/
+class "<$bishop,scale=.5,color=Black> Bishop" as Bishop
+class "<$rook,scale=.5,color=Black> Rook" as Rook
+
+Piece <|-- Pawn
+Piece <|-- Knight
+Piece <|-- Bishop
+Piece <|-- Rook
+Piece <|-- King
+Bishop <|-- Queen
+Rook <|-- Queen
+
+hide Queen members
 @enduml
 ```
