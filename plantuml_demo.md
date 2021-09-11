@@ -46,7 +46,7 @@ of the outer markdown document.
 data_visualization:
     yaml_data : table_of_contents //(this!)//
 uml_diagrams:
-  - sequence diagram
+    - sequence diagram
   - class diagram
 common_features:
   - colours
@@ -70,14 +70,15 @@ The below sequence diagram describes a workflow of a software developer working 
 * Using divider to split a diagram into logical sections
 * Grouping steps
 * Delay between steps
-* Label on steps
 * Different arrow types
 
 Refer the [documentation](https://plantuml.com/sequence-diagram) for the full set of features and configuration options.
 
-The example also introduces the following features:
-* The `as` keyword to define an object alias
+The example also introduces the following common features:
+* Specifying a title for the diagram
+* Defining an object instance using the `as` keyword
 * Adding hyperlinks into the diagram
+* Placing notes on entities
 
 ```plantuml
 @startuml
@@ -87,9 +88,9 @@ actor Developer as Dev
 actor Reviewers
 
 box Development Infrastructure
-  participant "Build\nServer" as Build
-  collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker
-  database "[[https://github.com/dragondive/hebi Repository]]" as Repository
+    participant "Build\nServer" as Build
+    collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker
+    database "[[https://github.com/dragondive/hebi Repository]]" as Repository
 end box
 
 autonumber
@@ -101,25 +102,29 @@ Dev -> Tracker : assign issue to self
 Dev -> Dev : work towards solution
 
 ... some days later ...
+
 Dev -> Build : submit build job
 note left: when solution is ready
+
 Build --> Dev : build successful
-note left: dotted arrows indicate\ncomputer-triggered steps
+note right: dotted arrows indicate\ncomputer-triggered steps
 
 == Review ==
 Dev ->  Reviewers : [[https://github.com/dragondive/hebi/compare submit pull request]]
 alt approved
-  Reviewers -> Dev : approve changes
+    Reviewers -> Dev : approve changes
 else rejected
-  loop
-    Dev <- Reviewers : review comments
-    Dev -> Reviewers : submit changes
-  end loop
+    loop
+        Dev <- Reviewers : review comments
+        Dev -> Reviewers : submit changes
+    end loop
 end alt
+
 == Release ==
 Dev -> Build : submit for pre-release check
 Build --> Repository : merge changes
 note left: build failure scenario\nomitted to reduce clutter.
+
 Repository --> Tracker : close issue
 note right: for simplicity, assume\nno merge conflicts.
 @enduml
