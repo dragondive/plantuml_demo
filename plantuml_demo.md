@@ -50,7 +50,7 @@ uml_diagrams:
     - class diagram
 common_features:
     - colours
-  - openiconic
+    - openiconic
   - fonts
 @endyaml
 ```
@@ -213,6 +213,7 @@ hide Queen members
 
 This section includes demo of the common features that apply to all or multiple diagram types:
 * Colours
+* OpenIconic
 
 ### Colours
 
@@ -366,7 +367,8 @@ listopeniconic
 
 ```plantuml
 @startuml
-:<size:20>**<&thumb-up> When nothing <&ban> goes right <&arrow-right>, go left <&arrow-left>.**</size> <
+
+:<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size> >
 @enduml
 ```
 
