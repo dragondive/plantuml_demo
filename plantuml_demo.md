@@ -49,7 +49,7 @@ uml_diagrams:
     - sequence diagram
     - class diagram
 common_features:
-  - colours
+    - colours
   - openiconic
   - fonts
 @endyaml
@@ -211,7 +211,8 @@ hide Queen members
 
 ## Common Features
 
-This section includes demo of the common features that apply to all or multiple diagram types.
+This section includes demo of the common features that apply to all or multiple diagram types:
+* Colours
 
 ### Colours
 
@@ -255,32 +256,32 @@ actor Developer as Dev  #Tomato
 actor Reviewers
 
 box Development Infrastructure #LightGreen
-  participant "Build\nServer" as Build #Azure
-  collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker #PowderBlue
-  database "[[https://github.com/dragondive/hebi Repository]]" as Repository #Plum
+    participant "Build\nServer" as Build #Azure
+    collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker #PowderBlue
+    database "[[https://github.com/dragondive/hebi Repository]]" as Repository #Plum
 end box
 
+autonumber 2
 ...
-autonumber
 == Development ==
 Dev -[#404032]> Tracker : assign issue to self
 Dev -> Dev : work towards solution
 
 ... some days later ...
 Dev -> Build : submit build job
-note right #PeachPuff : when solution is ready
+note left #PeachPuff : when solution is ready
 Build --> Dev : build successful
 note right: dotted arrows indicate\ncomputer-triggered steps
 
 == Review ==
 Dev ->  Reviewers : [[https://github.com/dragondive/hebi/compare submit pull request]]
 alt #MediumSpringGreen approved
-  Reviewers -> Dev : approve changes
+    Reviewers -> Dev : approve changes
 else #LightSalmon rejected
-  loop #AntiqueWhite
-    Dev <- Reviewers : review comments
-    Dev -> Reviewers : submit changes
-  end loop
+    loop #AntiqueWhite
+        Dev <- Reviewers : review comments
+        Dev -> Reviewers : submit changes
+    end loop
 end alt
 ...
 
@@ -296,36 +297,42 @@ title **Class Diagram Example**\n\n
 !include sprites/chess_pawn.puml
 !include sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
 
-sprite $color {  /' define sprite directly in the plantuml description '/
-  FFFFFFFFFFFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  FFFFFFFFFFFFFFFFFF
+sprite $chess_piece_colour {  /' define sprite directly in the description '/
+    FFFFFFFFFFFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    FFFFFFFFFFFFFFFFFF
 }
 
 abstract class Piece #WhiteSmoke {
-  - rank: enum
-  - file: enum
-  - colour <$color> : enum
-  + move()
-  + capture()
-  # is_valid_move(): bool
+    - rank: enum
+    - file: enum
+    - colour <$chess_piece_colour> : enum
+    + move()
+    + capture()
+    # is_valid_move(starting_square, destination_square): bool
 }
 
-class "<$pawn,scale=.4,color=Black> Pawn" as Pawn #D0D0FF { /' include the sprite in class name '/
-  - en_passant: bool
-  + promote()
+class "<$pawn,scale=0.4,color=Black> Pawn" as Pawn #D0D0FF { /' include the sprite in class name '/
+    - en_passant: bool
+    + promote()
 }
+
+note left of Pawn::en_passant
+    can this pawn
+    be captured
+    en passant
+end note
 
 class "<$king,scale=.4,color=green> King" as King { /' change the sprite color '/
-  - in_check: bool
-  + castle()
+    - in_check: bool
+    + castle()
 }
 
 class "<size:40><color:red>♕</color></size> Queen" as Queen #Gold /' use unicode character in class name '/
