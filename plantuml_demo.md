@@ -13,24 +13,38 @@ _Note_: PlantUML's YAML support is limited. It doesn't recognize several valid Y
 
 Refer the [documentation](https://plantuml.com/yaml) for the full set of features and configuration options.
 
-The example also introduces the following features:
-* Writing comments in the plantuml description using `/' '/`
+The example also introduces the following common features:
+* Customizing the diagram using `<style>`
+* Single line comment using `'`
+  - Should be placed on its own separate line, otherwise it is parsed as continuation of the preceding text (unlike `//` comments of C, C++, and Java)
+* Multiline comment using `/' ... '/`
+  - Can be used anywhere, including on a line having the diagram description
+* Use of the lightweight markup language creole
 
 ```plantuml
 @startyaml
-
 <style>
 yamlDiagram {
-  node {
-	FontName Consolas
-	FontSize 20
-  }
+    node {
+        ' use a constant width font because that's what developers do.
+        FontName Consolas
+        FontSize 20
+    }
 }
 </style>
 
-**table_of_contents**:  " " /' workaround: space here to avoid dummy link '/
+/'TODO:
+It would be cool to hyperlink the entries in the table_of_contents to the
+respective section in the document. Not only would it further accentuate the
+[Medium Awareness](https://tvtropes.org/pmwiki/pmwiki.php/Main/MediumAwareness)
+of this yaml document, but also augment the
+[Anachronic Order](https://tvtropes.org/pmwiki/pmwiki.php/Main/AnachronicOrder)
+of the outer markdown document.
+'/
+
+**table_of_contents**: ""  /' workaround: empty string here to avoid dummy link '/
 data_visualization:
-  yaml_data : table_of_contents (this!)
+    yaml_data : table_of_contents //(this!)//
 uml_diagrams:
   - sequence diagram
   - class diagram
