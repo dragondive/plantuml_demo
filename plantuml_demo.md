@@ -51,7 +51,7 @@ uml_diagrams:
 common_features:
     - colours
     - openiconic
-  - fonts
+    - fonts
 @endyaml
 ```
 
@@ -214,6 +214,7 @@ hide Queen members
 This section includes demo of the common features that apply to all or multiple diagram types:
 * Colours
 * OpenIconic
+* Fonts
 
 ### Colours
 
@@ -387,6 +388,7 @@ listfonts
 ```plantuml
 @startuml
 skinparam DefaultFontName Courier New
+skinparam DefaultFontSize 16
 "Brian Kernighan" -> Developers : main( ) {\n        printf(“hello, world”);\n}
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
