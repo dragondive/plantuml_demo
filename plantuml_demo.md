@@ -47,7 +47,7 @@ data_visualization:
     yaml_data : table_of_contents //(this!)//
 uml_diagrams:
     - sequence diagram
-  - class diagram
+    - class diagram
 common_features:
   - colours
   - openiconic
@@ -136,12 +136,12 @@ The below class diagram describes the relationships between the chess piece type
 * Defining an abstract class
 * Adding methods and attributes to a class
 * Describing access specifiers of the class members
-* Describing the inheritance relationship between classes
+* Describing inheritance relationship between classes
 * Hiding sections from the class
 
 Refer the [documentation](https://plantuml.com/class-diagram) for the full set of features and configuration options.
 
-The example also introduces the following features:
+The example also introduces the following common features:
 * The preprocessor directive `!include` to include contents of another file
 * Defining a sprite and using it in the diagram
 * Using unicode characters in the diagram
@@ -149,40 +149,47 @@ The example also introduces the following features:
 ```plantuml
 @startuml
 title **Class Diagram Example**\n\n
+
 !include sprites/chess_king.puml /' load sprite from file '/
 !include sprites/chess_pawn.puml
 !include sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
 
-sprite $color {  /' define sprite directly in the plantuml description '/
-  FFFFFFFFFFFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  F00000000FFFFFFFFF
-  FFFFFFFFFFFFFFFFFF
+sprite $chess_piece_colour {  /' define sprite directly in the description '/
+    FFFFFFFFFFFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    FFFFFFFFFFFFFFFFFF
 }
 
 abstract class Piece {
-  - rank: enum
-  - file: enum
-  - colour <$color> : enum
-  + move()
-  + capture()
-  # is_valid_move(): bool
+    - rank: enum
+    - file: enum
+    - colour <$chess_piece_colour> : enum
+    + move()
+    + capture()
+    # is_valid_move(starting_square, destination_square): bool
 }
 
-class "<$pawn,scale=.4,color=Black> Pawn" as Pawn { /' include the sprite in class name '/
-  - en_passant: bool
-  + promote()
+class "<$pawn,scale=0.4,color=Black> Pawn" as Pawn { /' include the sprite in class name '/
+    - en_passant: bool
+    + promote()
 }
+
+note left of Pawn::en_passant
+    can this pawn
+    be captured
+    en passant
+end note
 
 class "<$king,scale=.4,color=green> King" as King { /' change the sprite color '/
-  - in_check: bool
-  + castle()
+    - in_check: bool
+    + castle()
 }
 
 class "<size:40><color:red>♕</color></size> Queen" as Queen /' use unicode character in class name '/
