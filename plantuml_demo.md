@@ -246,13 +246,13 @@ colors #ffb36a
 @enduml
 ```
 
-#### Use of Colours in Diagrams
+#### Demo
 
-The colour can be chosen for many entities in the various types of diagrams. This demo shows the use of various colours in a sequence diagram and a class diagram.
+This demo shows the use of various colours in a sequence diagram and a class diagram.
 
 ```plantuml
 @startuml
-title **Sequence Diagram Example**\n\n
+title **Sequence Diagram Demo**\n\n
 
 actor Developer as Dev  #Tomato
 actor Reviewers
@@ -294,7 +294,7 @@ end alt
 
 ```plantuml
 @startuml
-title **Class Diagram Example**\n\n
+title **Class Diagram Demo**\n\n
 !include sprites/chess_king.puml /' load sprite from file '/
 !include sprites/chess_pawn.puml
 !include sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
