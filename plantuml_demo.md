@@ -63,7 +63,7 @@ PlantUML draws beautiful UML diagrams from simple textual descriptions. This doc
 
 ### Sequence Diagram
 
-The below sequence diagram describes a workflow of a software developer working on an issue. This illustrates a few features:
+The below sequence diagram describes a workflow of a software developer working on an issue. This demo illustrates a few features:
 * A few different participant types
 * Encompassing participants in a box
 * Autonumbering of steps
@@ -74,7 +74,7 @@ The below sequence diagram describes a workflow of a software developer working 
 
 Refer the [documentation](https://plantuml.com/sequence-diagram) for the full set of features and configuration options.
 
-The example also introduces the following common features:
+The demo also introduces the following common features:
 * Specifying a title for the diagram
 * Defining an object instance using the `as` keyword
 * Adding hyperlinks into the diagram
@@ -82,7 +82,7 @@ The example also introduces the following common features:
 
 ```plantuml
 @startuml
-title **Sequence Diagram Example**\n\n
+title **Sequence Diagram Demo**\n\n
 
 actor Developer as Dev
 actor Reviewers
