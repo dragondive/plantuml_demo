@@ -132,7 +132,7 @@ note right: for simplicity, assume\nno merge conflicts.
 
 ### Class Diagram
 
-The below class diagram describes the relationships between the chess piece types. This illustrates a few features:
+The below class diagram describes the relationships between the chess piece types. This demo illustrates a few features:
 * Defining an abstract class
 * Adding methods and attributes to a class
 * Describing access specifiers of the class members
@@ -141,14 +141,14 @@ The below class diagram describes the relationships between the chess piece type
 
 Refer the [documentation](https://plantuml.com/class-diagram) for the full set of features and configuration options.
 
-The example also introduces the following common features:
+The demo also introduces the following common features:
 * The preprocessor directive `!include` to include contents of another file
 * Defining a sprite and using it in the diagram
 * Using unicode characters in the diagram
 
 ```plantuml
 @startuml
-title **Class Diagram Example**\n\n
+title **Class Diagram Demo**\n\n
 
 !include sprites/chess_king.puml /' load sprite from file '/
 !include sprites/chess_pawn.puml
