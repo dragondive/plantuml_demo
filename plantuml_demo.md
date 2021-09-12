@@ -54,6 +54,7 @@ common_features:
     - colours
     - openiconic
     - fonts
+    - zoom
 @endyaml
 ```
 
@@ -223,6 +224,7 @@ This section includes demo of the common features that apply to all or multiple 
 * Colours
 * OpenIconic
 * Fonts
+* Zoom
 
 ### Colours
 
@@ -405,5 +407,56 @@ skinparam DefaultFontName Courier New
 skinparam DefaultFontSize 16
 "Brian Kernighan" -> Developers : main( ) {\n        printf(“hello, world”);\n}
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
+@enduml
+```
+
+### Zoom
+
+The generated image can be zoomed in or out by specifying a scaling factor.
+
+This demo shows the use of `scale` command to enlarge the image.
+
+The demo also introduces the following common features:
+
+* PlantUML's preprocessor functionalities
+
+```plantuml
+@startuml
+/' computes the factorial of the given integer. '/
+!function $factorial($n)
+    /' Return value of this function is memoized because it uses recursion. PlantUML preprocessor doesn't provide dictionary or array data structure, hence a "hack" simulates a dictionary. For every input integer, a variable is created with the stringized integer as its name, and the return value is assigned to it. Thus, the variable's name serves as the "key". '/
+    !if %variable_exists(%string($n))
+        !return %get_variable_value(%string($n))
+    !endif
+
+    !if $n == 0
+        !$value = 1
+    !else
+        !$value = $n * $factorial($n - 1)
+    !endif
+
+    %set_variable_value(%string($n), $value)
+    !return $value
+!endfunction
+
+!procedure $factorial_question_answer_sequence(\
+        $starting_number = 0,\
+        $ending_number = 12,\
+        $color_number_in_question = blue,\
+        $color_number_in_answer = green)
+    skinparam SequenceMessageAlignment direction
+    !$number = $starting_number
+    !while $number <= $ending_number
+        Question -> Answer : What is factorial of <color:$color_number_in_question>**$number**</color>?
+        Question <- Answer : Factorial of <color:$color_number_in_question>**$number**</color> is <color:$color_number_in_answer>**$factorial($number)**</color>.
+        |||
+        !$number = $number + 1
+    !endwhile
+!endprocedure
+
+scale 1.5 /' zooms the generated diagram per specified scaling factor '/
+$factorial_question_answer_sequence(\
+    $color_number_in_answer = darkviolet, $color_number_in_question = red\
+)
 @enduml
 ```
