@@ -364,7 +364,7 @@ listopeniconic
 @enduml
 ```
 
-#### Example
+#### Demo
 
 ```plantuml
 @startuml
@@ -375,7 +375,7 @@ listopeniconic
 
 ### Fonts
 
-The `listfonts` command lists all the fonts available on the system. These can be used in the diagrams by setting the respective `skinparam`.
+The font can be configured for almost all the text that appears in PlantUML diagrams. The `listfonts` command lists all the fonts available on the system.
 
 ```plantuml
 @startuml
@@ -383,7 +383,12 @@ listfonts
 @enduml
 ```
 
-#### Example
+#### Demo
+
+This demo shows the customization of font used in a sequence diagram.
+
+The demo also introduces the following common features:
+* Customizing the diagram using the `skinparam` command
 
 ```plantuml
 @startuml
