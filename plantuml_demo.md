@@ -13,7 +13,7 @@ _Note_: PlantUML's YAML support is limited. It doesn't recognize several valid Y
 
 Refer the [documentation](https://plantuml.com/yaml) for the full set of features and configuration options.
 
-The example also introduces the following common features:
+The demo also introduces the following common features:
 * Customizing the diagram using `<style>`
 * Single line comment using `'`
   - Should be placed on its own separate line, otherwise it is parsed as continuation of the preceding text (unlike `//` comments of C, C++, and Java)
