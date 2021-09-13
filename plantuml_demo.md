@@ -58,6 +58,7 @@ general_information:
     - license information
     - language description
     - syntax checker
+    - metadata
 fun_stuff:
     - xearth
     - sudoku
@@ -513,6 +514,14 @@ The command line option `-language` prints to standard output a description of t
 ### Syntax Checker
 
 The command line option `-syntax` checks the syntax of the diagram description from the standard input, and reports any syntax errors without generating the diagram.
+
+### Metadata
+
+PlantUML stores the diagram description into the generated image as metadata, in the form of encoded text. The command line option `-metadata` recovers it from the generated image.
+
+```
+java -jar plantuml.jar -metadata image_filename
+```
 
 ## Fun Stuff
 
