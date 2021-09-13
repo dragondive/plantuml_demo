@@ -55,6 +55,8 @@ common_features:
     - openiconic
     - fonts
     - zoom
+fun_stuff:
+    - xearth
 @endyaml
 ```
 
@@ -458,5 +460,30 @@ scale 1.5 /' zooms the generated diagram per specified scaling factor '/
 $factorial_question_answer_sequence(\
     $color_number_in_answer = darkviolet, $color_number_in_question = red\
 )
+@enduml
+```
+
+## Fun Stuff
+
+PlantUML comes with some fun stuff. This document gives a demo of the following fun stuff:
+
+* xearth
+
+### xearth
+
+This demo shows the use of `xearth` command to draw a map of the Earth focussed on a specified coordinate.
+
+Refer the [documentation](https://plantuml.com/xearth) for the full set of features and configuration options.
+
+```plantuml
+@startuml
+xearth(800,800)     /' define the image dimensions for the earth image. '/
+viewPositionType = Fixed
+viewPosLat = 12.971563711294497    /' ಬ್ರಿಗೇಡ್ ರಸ್ತೆ, '/
+viewPosLong = 77.60679643358596    /' ಬೆಂಗಳೂರು, ಭಾರತ '/
+12.971563711294497 77.60679643358596   "Brigade Road, Bengaluru, India"
+shadeP = false  /' if true, the Earth's surface is shaded based on its current position relative to the Sun. '/
+gridP = true
+gridDivision = 30
 @enduml
 ```
