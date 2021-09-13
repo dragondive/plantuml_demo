@@ -57,6 +57,7 @@ common_features:
     - zoom
 general_information:
     - how to run plantuml
+    - license information
 fun_stuff:
     - xearth
     - sudoku
@@ -500,6 +501,18 @@ There are several ways to run PlantUML. The most commonly used ways are:
     ```
 
     It hosts the plantuml server locally on `http://localhost:8080`.
+
+### License Information
+
+PlantUML is licensed under the GPL license. It is also available under other licenses (LGPL, Apache, Eclipse Public, MIT) with some missing features. The generated images are owned by the author of the diagram description.
+
+The special command `license` prints the license text.
+
+```plantuml
+@startuml
+license
+@enduml
+```
 
 ## Fun Stuff
 
