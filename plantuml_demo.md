@@ -55,6 +55,8 @@ common_features:
     - openiconic
     - fonts
     - zoom
+general_information:
+    - how to run plantuml
 fun_stuff:
     - xearth
     - sudoku
@@ -464,6 +466,40 @@ $factorial_question_answer_sequence(\
 )
 @enduml
 ```
+
+## General Information
+
+### How to run PlantUML
+
+There are several ways to run PlantUML. The most commonly used ways are:
+
+* **From the command line**: Download the latest precompiled binary `plantuml.jar` from the [download page](https://plantuml.com/download). Execute it from the command line. Provide the text files or directory containing the diagram descriptions as arguments. (requires [Java](https://www.java.com/en/download/) and [Graphviz](https://graphviz.org/download/))
+
+    ```
+    java -jar plantuml.jar file1 file2 file3
+    ```
+
+    Refer the [documentation](https://plantuml.com/command-line) for the full set of features and configuration options.
+
+* **Using the PlantUML server**: The PlantUML server hosted as a web service at http://www.plantuml.com/plantuml/ can be used to generate the diagram. A PlantUML server instance can also be hosted locally on a private server.
+
+    Refer the [documentation](https://plantuml.com/server) for the full set of features and configuration options.
+
+* **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either by double clicking the `plantuml.jar` or using the following command:
+
+    ```
+    java -jar plantuml.jar -gui
+    ```
+
+    Then the file or directory containing the diagram descriptions can be selected from the GUI to generate the diagrams.
+
+* **As a docker container**: PlantUML's official docker image can be downloaded with the following command:
+
+    ```
+    docker pull plantuml/plantuml-server
+    ```
+
+    It hosts the plantuml server locally on `http://localhost:8080`.
 
 ## Fun Stuff
 
