@@ -58,6 +58,7 @@ common_features:
 fun_stuff:
     - xearth
     - sudoku
+    - oregon trail
 @endyaml
 ```
 
@@ -470,6 +471,7 @@ PlantUML comes with some fun stuff. This document gives a demo of the following 
 
 * xearth
 * sudoku
+* oregon trail
 
 ### xearth
 
@@ -508,4 +510,12 @@ sudoku 4nk3o5djfhu
 @enduml
 ```
 
+### oregon trail
 
+This demo shows the text-based adventure game "Oregon Trail".
+
+```plantuml
+@startuml
+run oregon trail
+@enduml
+```
