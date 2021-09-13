@@ -62,6 +62,7 @@ general_information:
     - syntax checker
     - metadata
     - cypher
+    - generating huge diagrams
 fun_stuff:
     - xearth
     - sudoku
@@ -533,6 +534,10 @@ PlantUML stores the diagram description into the generated image as metadata, in
 ### Cypher
 
 The command line option `-cypher` replaces all words, except PlantUML keywords, with random letters. This is useful while reporting issues when the diagram description contains confidential data.
+
+### Generating Huge Diagrams
+
+PlantUML restricts image width and height to 4096 pixels by default. This can be overridden by setting the environment variable `PLANTUML_LIMIT_SIZE`.
 
 ## Fun Stuff
 
