@@ -57,6 +57,7 @@ common_features:
     - zoom
 fun_stuff:
     - xearth
+    - sudoku
 @endyaml
 ```
 
@@ -468,6 +469,7 @@ $factorial_question_answer_sequence(\
 PlantUML comes with some fun stuff. This document gives a demo of the following fun stuff:
 
 * xearth
+* sudoku
 
 ### xearth
 
@@ -487,3 +489,23 @@ gridP = true
 gridDivision = 30
 @enduml
 ```
+
+### sudoku
+
+This demo shows the use of `sudoku` command to generate a randomized sudoku puzzle.
+
+```plantuml
+@startuml
+sudoku
+@enduml
+```
+
+The `sudoku` command can also be called with an argument, which is the seed to generate a specific sudoku puzzle.
+
+```plantuml
+@startuml
+sudoku 4nk3o5djfhu
+@enduml
+```
+
+
