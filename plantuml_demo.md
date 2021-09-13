@@ -59,6 +59,7 @@ general_information:
     - how to run plantuml
     - license information
     - language description
+    - syntax checker
 fun_stuff:
     - xearth
     - sudoku
@@ -518,6 +519,10 @@ license
 ### Language Description
 
 The command line option `-language` prints to standard output a description of the PlantUML language.
+
+### Syntax Checker
+
+The command line option `-syntax` checks the syntax of the diagram description from the standard input, and reports any syntax errors without generating the diagram.
 
 ## Fun Stuff
 
