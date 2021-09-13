@@ -63,6 +63,7 @@ general_information:
     - metadata
     - cypher
     - generating huge diagrams
+    - getting help
 fun_stuff:
     - xearth
     - sudoku
@@ -538,6 +539,10 @@ The command line option `-cypher` replaces all words, except PlantUML keywords, 
 ### Generating Huge Diagrams
 
 PlantUML restricts image width and height to 4096 pixels by default. This can be overridden by setting the environment variable `PLANTUML_LIMIT_SIZE`.
+
+### Getting Help
+
+Questions not answered from the documentation can be asked either on the [PlantUML forum](https://forum.plantuml.net/) or on [PlantUML's github page](https://github.com/plantuml/plantuml/issues). PlantUML's source code is available on [github](https://github.com/plantuml).
 
 ## Fun Stuff
 
