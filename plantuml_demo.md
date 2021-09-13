@@ -61,6 +61,7 @@ general_information:
     - language description
     - syntax checker
     - metadata
+    - cypher
 fun_stuff:
     - xearth
     - sudoku
@@ -529,9 +530,9 @@ The command line option `-syntax` checks the syntax of the diagram description f
 
 PlantUML stores the diagram description into the generated image as metadata, in the form of encoded text. The command line option `-metadata` recovers it from the generated image.
 
-```
-java -jar plantuml.jar -metadata image_filename
-```
+### Cypher
+
+The command line option `-cypher` replaces all words, except PlantUML keywords, with random letters. This is useful while reporting issues when the diagram description contains confidential data.
 
 ## Fun Stuff
 
