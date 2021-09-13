@@ -56,6 +56,7 @@ common_features:
 general_information:
     - how to run plantuml
     - license information
+    - language description
 fun_stuff:
     - xearth
     - sudoku
@@ -503,6 +504,10 @@ The special command `license` prints the license text.
 license
 @enduml
 ```
+
+### Language Description
+
+The command line option `-language` prints to standard output a description of the PlantUML language.
 
 ## Fun Stuff
 
