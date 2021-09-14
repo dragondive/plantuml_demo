@@ -68,6 +68,7 @@ miscellaneous:
     supporting_plantuml:
         - dedication
         - donation
+    plantuml_themes: ""
 fun_stuff:
     - xearth
     - sudoku
@@ -574,6 +575,10 @@ The currently added public dedications can be seen directly from the source code
 #### Donation
 
 To support PlantUML via crowdfunding, donate using [Paypal](http://plantuml.com/paypal), [Patreon](http://plantuml.com/patreon) or [Liberapay](http://plantuml.com/lp). The special `donors` command prints the list of donors and sponsors.
+
+### PlantUML Themes
+
+Some user-contributed PlantUML themes are available at [Puml Themes](https://bschwarz.github.io/puml-themes/) and [RedDress-PlantUML](https://github.com/Drakemor/RedDress-PlantUML)
 
 ## Fun Stuff
 
