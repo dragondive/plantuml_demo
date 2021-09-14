@@ -64,6 +64,10 @@ general_information:
     - cypher
     - generating huge diagrams
     - getting help
+miscellaneous:
+    supporting_plantuml:
+        - dedication
+        - donation
 fun_stuff:
     - xearth
     - sudoku
@@ -543,6 +547,33 @@ PlantUML restricts image width and height to 4096 pixels by default. This can be
 ### Getting Help
 
 Questions not answered from the documentation can be asked either on the [PlantUML forum](https://forum.plantuml.net/) or on [PlantUML's github page](https://github.com/plantuml/plantuml/issues). PlantUML's source code is available on [github](https://github.com/plantuml).
+
+## Miscellaneous
+
+### Supporting PlantUML
+
+There are a number of options available to support the PlantUML tool:
+
+* Dedication
+* Donation
+
+#### Dedication
+
+Dedicate a picture or a photo with a message, which will be integrated into the PlantUML code. To support this service, a contribution of $5 per month is recommended.
+
+The dedication can be public or private. It will be available in each and every deployed instance of PlantUML across the world!
+
+```plantuml
+@startuml
+Write your own dedication!
+@enduml
+```
+
+The currently added public dedications can be seen directly from the source code: https://github.com/plantuml/plantuml/blob/master/src/net/sourceforge/plantuml/dedication/Dedications.java
+
+#### Donation
+
+To support PlantUML via crowdfunding, donate using [Paypal](http://plantuml.com/paypal), [Patreon](http://plantuml.com/patreon) or [Liberapay](http://plantuml.com/lp). The special `donors` command prints the list of donors and sponsors.
 
 ## Fun Stuff
 
