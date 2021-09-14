@@ -69,6 +69,7 @@ miscellaneous:
         - dedication
         - donation
     plantuml_themes: ""
+    uml_for_blind_people: ""
 fun_stuff:
     - xearth
     - sudoku
@@ -579,6 +580,11 @@ To support PlantUML via crowdfunding, donate using [Paypal](http://plantuml.com/
 ### PlantUML Themes
 
 Some user-contributed PlantUML themes are available at [Puml Themes](https://bschwarz.github.io/puml-themes/) and [RedDress-PlantUML](https://github.com/Drakemor/RedDress-PlantUML)
+
+### UML for Blind People
+
+[This web page](http://www.bfg-it.de/wiki/Blind_mit_UML_arbeiten) describes PlantUML as part of a solution to describe UML to blind people. (The page is written in German, and can be translated to English or other languages using a language translation engine.)
+
 
 ## Fun Stuff
 
