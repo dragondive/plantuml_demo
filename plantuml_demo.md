@@ -443,7 +443,11 @@ The demo also introduces the following common features:
 @startuml
 /' computes the factorial of the given integer. '/
 !function $factorial($n)
-    /' Return value of this function is memoized because it uses recursion. PlantUML preprocessor doesn't provide dictionary or array data structure, hence a "hack" simulates a dictionary. For every input integer, a variable is created with the stringized integer as its name, and the return value is assigned to it. Thus, the variable's name serves as the "key". '/
+    /' Return value of this function is memoized because it uses recursion.
+    PlantUML preprocessor doesn't provide dictionary or array data structure,
+    hence a "hack" simulates a dictionary. For every input integer, a variable
+    is created with the stringized integer as its name, and the return value is
+    assigned to it. Thus, the variable's name serves as the "key". '/
     !if %variable_exists(%string($n))
         !return %get_variable_value(%string($n))
     !endif
