@@ -1,0 +1,12 @@
+@startuml
+xearth(800,800)     /' define the image dimensions for the earth image. '/
+viewPositionType = Fixed
+'viewPosLat = 12.971563711294497    /' ಬ್ರಿಗೇಡ್ ರಸ್ತೆ, '/
+viewPosLat = 12.971563711294497    
+'viewPosLong = 77.60679643358596    /' ಬೆಂಗಳೂರು, ಭಾರತ '/
+viewPosLong = 77.60679643358596    
+12.971563711294497 77.60679643358596   "Brigade Road, Bengaluru, India"
+shadeP = false  /' if true, the Earth's surface is shaded based on its current position relative to the Sun. '/
+gridP = true
+gridDivision = 30
+@enduml

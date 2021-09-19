@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="73px" preserveAspectRatio="none" style="width:958px;height:73px;background:#FFFFFF;" version="1.1" viewBox="0 0 958 73" width="958px" zoomAndPan="magnify"><defs><filter height="300%" id="f3p52ad65lsbq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g id="0"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="894.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="894.5" x2="944.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="915.5" y="26.5332">0</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="899.5" y="52.0664">1</text></g><g id="1"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="809.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="809.5" x2="859.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="830.5" y="26.5332">1</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="814.5" y="52.0664">1</text></g><g id="2"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="724.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="724.5" x2="774.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="745.5" y="26.5332">2</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="729.5" y="52.0664">2</text></g><g id="3"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="639.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="639.5" x2="689.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="660.5" y="26.5332">3</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="644.5" y="52.0664">6</text></g><g id="4"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="554.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="554.5" x2="604.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="575.5" y="26.5332">4</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="14" x="559.5" y="52.0664">24</text></g><g id="5"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="469.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="469.5" x2="519.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="490.5" y="26.5332">5</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="474.5" y="52.0664">120</text></g><g id="6"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="384.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="384.5" x2="434.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="405.5" y="26.5332">6</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="21" x="389.5" y="52.0664">720</text></g><g id="7"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="50" x="299.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="299.5" x2="349.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="320.5" y="26.5332">7</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="28" x="304.5" y="52.0664">5040</text></g><g id="8"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="55" x="209" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="209" x2="264" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="232.5" y="26.5332">8</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="35" x="214" y="52.0664">40320</text></g><g id="9"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="62" x="111.5" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="111.5" x2="173.5" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="138.5" y="26.5332">9</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="42" x="116.5" y="52.0664">362880</text></g><g id="10"><rect fill="#FEFECE" filter="url(#f3p52ad65lsbq)" height="52.7031" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="69" x="7" y="7"/><line style="stroke:#A80036;stroke-width:1.5;" x1="7" x2="76" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="33.5" y="26.5332">10</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="49" x="12" y="52.0664">3628800</text></g><!--MD5=[91485c9e6fa1c7b93b85bb49950ee7c2]
+link 1 to 0--><path d="M859.73,33.5 C869.54,33.5 879.35,33.5 889.16,33.5 " fill="none" id="1-to-0" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="894.29,33.5,885.29,29.5,889.29,33.5,885.29,37.5,894.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f66784b854ad69a06c9b9f3eda09ba3a]
+link 2 to 1--><path d="M774.73,33.5 C784.54,33.5 794.35,33.5 804.16,33.5 " fill="none" id="2-to-1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="809.29,33.5,800.29,29.5,804.29,33.5,800.29,37.5,809.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[28551aba8907995ce56fa3e4ac644625]
+link 3 to 2--><path d="M689.73,33.5 C699.54,33.5 709.35,33.5 719.16,33.5 " fill="none" id="3-to-2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="724.29,33.5,715.29,29.5,719.29,33.5,715.29,37.5,724.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e71408b9390228c84d74723432d512d8]
+link 4 to 3--><path d="M604.73,33.5 C614.54,33.5 624.35,33.5 634.16,33.5 " fill="none" id="4-to-3" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="639.29,33.5,630.29,29.5,634.29,33.5,630.29,37.5,639.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d751ff46321a373f9d0b84ddfc0dabf0]
+link 5 to 4--><path d="M519.73,33.5 C529.54,33.5 539.35,33.5 549.16,33.5 " fill="none" id="5-to-4" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="554.29,33.5,545.29,29.5,549.29,33.5,545.29,37.5,554.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a33020d25e71e759d4561ece919ccd5b]
+link 6 to 5--><path d="M434.73,33.5 C444.54,33.5 454.35,33.5 464.16,33.5 " fill="none" id="6-to-5" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="469.29,33.5,460.29,29.5,464.29,33.5,460.29,37.5,469.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cf4d18d3ee10cadff7ad1a363e958d45]
+link 7 to 6--><path d="M349.73,33.5 C359.54,33.5 369.35,33.5 379.16,33.5 " fill="none" id="7-to-6" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="384.29,33.5,375.29,29.5,379.29,33.5,375.29,37.5,384.29,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b9f8d611cd4668e7d634696759b63eec]
+link 8 to 7--><path d="M264.34,33.5 C274.22,33.5 284.09,33.5 293.96,33.5 " fill="none" id="8-to-7" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="299.12,33.5,290.12,29.5,294.12,33.5,290.12,37.5,299.12,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0fe97029be06c2e3e04ec02214a184c8]
+link 9 to 8--><path d="M173.71,33.5 C183.6,33.5 193.48,33.5 203.37,33.5 " fill="none" id="9-to-8" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="208.54,33.5,199.54,29.5,203.54,33.5,199.54,37.5,208.54,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[72a253026fdb9c2e11eef548f1a282b9]
+link 10 to 9--><path d="M76.22,33.5 C86.21,33.5 96.21,33.5 106.2,33.5 " fill="none" id="10-to-9" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="111.43,33.5,102.43,29.5,106.43,33.5,102.43,37.5,111.43,33.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[89c9c834b6f4cf8e79012c075ab35c4a]
+@startuml
+!procedure $create_state($name, $attribute)
+    state $name : $attribute
+!endprocedure
+
+!procedure $connect_states($name1, $name2)
+    $name1 -right-> $name2
+!endprocedure
+
+/' computes the factorial for all numbers from 0 to the specified number,
+   creates a state for each number, with its factorial as the attribute,
+   and connects every state to its preceding state, denoting the recursive
+   nature of the factorial function computation. '/
+!function $factorial($n)
+    !if $n == 0
+        !$value = 1
+        $create_state($n, $value)
+    !else
+        !$value = $n * $factorial($n - 1)
+        $create_state($n, $value)
+        $connect_states($n, $n - 1)
+    !endif
+
+    !return $value
+!endfunction
+
+' assign the return value to avoid syntax error
+!$ignore = $factorial(10)
+@enduml
+
+@startuml
+
+
+
+            state 0 : 1
+            state 1 : 1
+            1 -right-> 0
+            state 2 : 2
+            2 -right-> 1
+            state 3 : 6
+            3 -right-> 2
+            state 4 : 24
+            4 -right-> 3
+            state 5 : 120
+            5 -right-> 4
+            state 6 : 720
+            6 -right-> 5
+            state 7 : 5040
+            7 -right-> 6
+            state 8 : 40320
+            8 -right-> 7
+            state 9 : 362880
+            9 -right-> 8
+            state 10 : 3628800
+            10 -right-> 9
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 15:43:56 IST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: IN
+--></g></svg>

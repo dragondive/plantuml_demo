@@ -1,0 +1,37 @@
+@startuml
+title **Sequence Diagram Demo**\n\n
+
+actor Developer as Dev  #Tomato
+actor Reviewers
+
+box Development Infrastructure #LightGreen
+    participant "Build\nServer" as Build #Azure
+    collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker #PowderBlue
+    database "[[https://github.com/dragondive/hebi Repository]]" as Repository #Plum
+end box
+
+autonumber 2
+...
+== Development ==
+Dev -[#404032]> Tracker : assign issue to self
+Dev -> Dev : work towards solution
+
+... some days later ...
+Dev -> Build : submit build job
+note left #PeachPuff : when solution is ready
+Build --> Dev : build successful
+note right: dotted arrows indicate\ncomputer-triggered steps
+
+== Review ==
+Dev ->  Reviewers : [[https://github.com/dragondive/hebi/compare submit pull request]]
+alt #MediumSpringGreen approved
+    Reviewers -> Dev : approve changes
+else #LightSalmon rejected
+    loop #AntiqueWhite
+        Dev <- Reviewers : review comments
+        Dev -> Reviewers : submit changes
+    end loop
+end alt
+...
+
+@enduml

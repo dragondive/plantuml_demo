@@ -1,0 +1,53 @@
+@startuml
+
+!function $fibonacci($n)
+    !if $n == 0
+        !return 0
+    !elseif $n == 1
+        !return 1
+    !else
+        /' create named variables because it seems the preprocessor cannot
+           handle two unnamed temporary variables. Following code crashes at 
+           "compile time": 
+           
+           !return $fibonacci($n - 1) + $fibonacci($n - 2) '/
+        !$fibonacci_n_minus_1 = $fibonacci($n - 1)
+        !$fibonacci_n_minus_2 = $fibonacci($n - 2)
+        !return $fibonacci_n_minus_1 + $fibonacci_n_minus_2
+    !endif
+!endfunction
+
+!procedure $create_state($name, $instance_name, $value)
+    State "$name" as $instance_name 
+    $instance_name : $value
+!endprocedure
+
+!procedure $connect_states($instance1_name, $instance2_name)
+    $instance1_name -down-> $instance2_name
+!endprocedure
+
+/' draws the fibonacci recursion tree for the specified integer n. '/
+!procedure $make_fibonacci_tree($n, $index = 0)
+    !if $n >= 0
+        !$fibonacci_n = $fibonacci($n)
+        $create_state($n, $index, $fibonacci_n)
+        /' as the same number can appear multiple times in the fibonacci tree,
+           $index is used to create distinct node instances. the procedure is
+           called recursively choosing a different $index value for each call.
+           heap numbering approach is used to compute the $index value. '/
+    !endif
+
+    !if $n >= 2
+        !$left_child_instance_name = $index * 2 + 1
+        $make_fibonacci_tree($n - 1, $left_child_instance_name)
+        $connect_states($index, $left_child_instance_name)
+
+        !$right_child_instance_name = $index * 2 + 2
+        $make_fibonacci_tree($n - 2, $right_child_instance_name)
+        $connect_states($index, $right_child_instance_name)
+    !endif
+!endprocedure
+
+$make_fibonacci_tree(10)
+
+@enduml

@@ -1,0 +1,42 @@
+@startyaml
+<style>
+yamlDiagram {
+    node {
+        ' use a constant width font because that's what developers do.
+        FontName Consolas
+        FontSize 20
+    }
+}
+</style>
+
+**table_of_contents**: ""  /' workaround: empty string here to avoid dummy link '/
+data_visualization:
+    yaml_data : table_of_contents //(this!)//
+uml_diagrams:
+    - sequence diagram
+    - class diagram
+common_features:
+    - colours
+    - openiconic
+    - fonts
+    - zoom
+general_information:
+    - how to run plantuml
+    - license information
+    - language description
+    - syntax checker
+    - metadata
+    - cypher
+    - generating huge diagrams
+    - getting help
+miscellaneous:
+    supporting_plantuml:
+        - dedication
+        - donation
+    plantuml_themes: ""
+    uml_for_blind_people: ""
+fun_stuff:
+    - xearth
+    - sudoku
+    - oregon trail
+@endyaml

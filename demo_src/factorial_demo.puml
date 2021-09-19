@@ -1,0 +1,29 @@
+@startuml
+!procedure $create_state($name, $attribute)
+    state $name : $attribute
+!endprocedure
+
+!procedure $connect_states($name1, $name2)
+    $name1 -right-> $name2
+!endprocedure
+
+/' computes the factorial for all numbers from 0 to the specified number,
+   creates a state for each number, with its factorial as the attribute,
+   and connects every state to its preceding state, denoting the recursive
+   nature of the factorial function computation. '/
+!function $factorial($n)
+    !if $n == 0
+        !$value = 1
+        $create_state($n, $value)
+    !else
+        !$value = $n * $factorial($n - 1)
+        $create_state($n, $value)
+        $connect_states($n, $n - 1)
+    !endif
+
+    !return $value
+!endfunction
+
+' assign the return value to avoid syntax error
+!$ignore = $factorial(10)
+@enduml

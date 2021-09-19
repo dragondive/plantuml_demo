@@ -1,0 +1,41 @@
+@startuml
+
+!procedure $create_state($name, $instance_name, $value)
+    !if $name >= 4
+        !$color = "#LightSalmon"
+    !else
+        !$color = ""
+    !endif
+
+    state "$name" as $instance_name $color
+    $instance_name : $value
+!endprocedure
+
+!procedure $connect_states($instance1_name, $instance2_name)
+    $instance1_name -down-> $instance2_name
+!endprocedure
+
+!function $fibonacci($n, $index = 0)
+    !if $n == 0
+        !$fibonacci_n = 0
+    !elseif $n == 1
+        !$fibonacci_n = 1
+    !else
+        !$fibonacci_n_minus_1 = $fibonacci($n - 1, $index * 2 + 1)
+        !$fibonacci_n_minus_2 = $fibonacci($n - 2, $index * 2 + 2)
+        !$fibonacci_n = $fibonacci_n_minus_1 + $fibonacci_n_minus_2
+    !endif
+
+    $create_state($n, $index, $fibonacci_n)
+
+    !if $n >= 2
+        $connect_states($index, $index * 2 + 1)
+        $connect_states($index, $index * 2 + 2)
+    !endif
+
+    !return $fibonacci_n
+!endfunction
+
+!$ignore = $fibonacci(10)
+
+@enduml

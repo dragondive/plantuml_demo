@@ -1,0 +1,51 @@
+@startuml
+
+!function $is_leaf_node($state_name)
+    !return $state_name == 0 || $state_name == 1
+!endfunction
+
+!procedure $create_state($name, $instance_name, $value, $name_based_highlight_function, $value_based_highlight_expression)
+    !if %call_user_func($name_based_highlight_function, $name)
+        !$background_color = "#technology"
+    !else
+        !$background_color = ""
+    !endif
+
+    !if %eval($value_based_highlight_expression)
+        !$border_style = "##[bold]blue"
+    !else
+        !$border_style = ""
+    !endif
+
+    state "$name" as $instance_name $background_color $border_style
+    $instance_name : $value
+!endprocedure
+
+!procedure $connect_states($instance1_name, $instance2_name)
+    $instance1_name -down-> $instance2_name
+!endprocedure
+
+!function $fibonacci($n, $index = 0)
+    !if $n == 0
+        !$fibonacci_n = 0
+    !elseif $n == 1
+        !$fibonacci_n = 1
+    !else
+        !$fibonacci_n_minus_1 = $fibonacci($n - 1, $index * 2 + 1)
+        !$fibonacci_n_minus_2 = $fibonacci($n - 2, $index * 2 + 2)
+        !$fibonacci_n = $fibonacci_n_minus_1 + $fibonacci_n_minus_2
+    !endif
+
+    $create_state($n, $index, $fibonacci_n, "$is_leaf_node", "$value <= 10")
+
+    !if $n >= 2
+        $connect_states($index, $index * 2 + 1)
+        $connect_states($index, $index * 2 + 2)
+    !endif
+
+    !return $fibonacci_n
+!endfunction
+
+!$ignore = $fibonacci(10)
+
+@enduml

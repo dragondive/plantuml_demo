@@ -1,0 +1,24 @@
+@startuml
+!procedure $connect_entities($name1, $name2)
+    $name1 -down-> $name2
+!endprocedure
+
+/' draws the full binary tree of the specified height. '/
+!procedure $make_full_binary_tree($height, $index = 0)
+    !if $height >= 0
+        object $index
+    !endif
+
+    !if $height > 0
+        !$left_child_instance_name = $index * 2 + 1
+        $make_full_binary_tree($height - 1, $left_child_instance_name)
+        $connect_entities($index, $left_child_instance_name)
+
+        !$right_child_instance_name = $index * 2 + 2
+        $make_full_binary_tree($height - 1, $right_child_instance_name)
+        $connect_entities($index, $right_child_instance_name)
+    !endif
+!endprocedure
+
+$make_full_binary_tree(5)
+@enduml

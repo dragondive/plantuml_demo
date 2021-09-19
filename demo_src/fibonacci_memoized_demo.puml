@@ -1,0 +1,59 @@
+@startuml
+
+!procedure $create_state($name, $value)
+    $create_state($name, $value, $name)
+!endprocedure
+
+!procedure $create_state($name, $value, $instance_name)
+    state "$name" as $instance_name
+    $instance_name : $value
+!endprocedure
+
+!procedure $connect_states($instance1_name, $instance2_name)
+    $instance1_name -right-> $instance2_name
+!endprocedure
+
+!function $to_variable($n)
+    !return %string($n)
+!endfunction
+
+!function $is_memoized($n)
+    !return %variable_exists($to_variable($n))
+!endfunction
+
+!function $get_from_memo($n)
+    !return %get_variable_value($to_variable($n))
+!endfunction
+
+!procedure $update_memo($n, $value)
+    %set_variable_value($to_variable($n), $value)
+!endprocedure
+
+!function $fibonacci($n)
+    !if $is_memoized($n)
+        !return $get_from_memo($n)
+    !endif
+
+    !if $n == 0
+        !$fibonacci_n = 0
+    !elseif $n == 1
+        !$fibonacci_n = 1
+    !else
+        !$fibonacci_n_minus_2 = $fibonacci($n - 2)
+        !$fibonacci_n_minus_1 = $fibonacci($n - 1)
+        !$fibonacci_n = $fibonacci_n_minus_1 + $fibonacci_n_minus_2
+      !endif
+
+    $create_state($n, $fibonacci_n)
+    !if $n >= 2
+        $connect_states($n, $n - 2)
+        $connect_states($n, $n - 1)
+    !endif
+
+    $update_memo($n, $fibonacci_n)
+    !return $fibonacci_n
+!endfunction
+
+!$ignore = $fibonacci(10)
+
+@enduml
