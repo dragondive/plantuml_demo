@@ -562,6 +562,7 @@ Questions not answered from the documentation can be asked either on the [PlantU
 PlantUML provides a number of features for customizing the look and feel of the diagrams. This section provides a demo of the following customization features:
 
 * Skinparams
+* Themes
 
 ### Skinparams
 
@@ -615,6 +616,57 @@ The command `skinparameters` can be used to generate a diagram with a list of al
 
 ```plantuml
 skinparameters
+```
+
+### Themes
+
+Themes can be applied to the PlantUML diagrams. The command `help themes` lists the themes available in the core library. Some themes include procedures to colour messages.
+
+```plantuml
+help themes
+```
+
+#### Demo
+
+```plantuml
+@startuml
+!theme metal
+title **Sequence Diagram Demo**
+
+actor Developer as Dev
+actor Reviewers
+
+box Development Infrastructure
+    participant "Build\nServer" as Build
+    collections "[[https://github.com/dragondive/hebi/issues Tracker]]" as Tracker
+    database "[[https://github.com/dragondive/hebi Repository]]" as Repository
+end box
+
+autonumber 2
+...
+== Development ==
+Dev -> Tracker : assign issue to self
+Dev -> Dev : work towards solution
+
+... some days later ...
+Dev -> Build : submit build job
+note left : when solution is ready
+Build --> Dev : $success("build successful")
+note right: dotted arrows indicate\ncomputer-triggered steps
+
+== Review ==
+Dev ->  Reviewers : [[https://github.com/dragondive/hebi/compare submit pull request]]
+alt approved
+    Reviewers -> Dev : $success("approve changes")
+else rejected
+    loop
+        Dev <- Reviewers : $warning("review comments")
+        Dev -> Reviewers : submit changes
+    end loop
+end alt
+...
+
+@enduml
 ```
 
 ## Miscellaneous
