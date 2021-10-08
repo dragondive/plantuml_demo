@@ -68,6 +68,7 @@ general_information:
 customization:
     - skinparams
     - themes
+    - styles
 miscellaneous:
     supporting_plantuml:
         - dedication
@@ -635,6 +636,7 @@ PlantUML provides a number of features for customizing the look and feel of the 
 
 * Skinparams
 * Themes
+* Styles
 
 ### Skinparams
 
@@ -738,6 +740,92 @@ else rejected
 end alt
 ...
 
+@enduml
+```
+
+### Styles
+
+CSS-like styles can be applied to the diagrams. The stylesheet can be either included inline in the diagram description between `<style>` and `</style>` tags, or included from a separate file.
+
+#### Demo
+
+```plantuml
+@startuml
+<style>
+    classDiagram {
+        class {
+            BackGroundColor PowderBlue
+            LineColor CornflowerBlue
+        }
+
+        arrow {
+            LineColor Tomato
+        }
+
+        .major_piece {
+            FontStyle bold
+            BackGroundColor Yellow
+        }
+    }
+</style>
+title **Class Diagram Demo**\n\n
+
+!include demo_src/sprites/chess_king.puml /' load sprite from file '/
+!include demo_src/sprites/chess_pawn.puml
+!include demo_src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
+
+sprite $chess_piece_colour {  /' define sprite directly in the description '/
+    FFFFFFFFFFFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    F00000000FFFFFFFFF
+    FFFFFFFFFFFFFFFFFF
+}
+
+abstract class Piece {
+    - rank: enum
+    - file: enum
+    - colour <$chess_piece_colour> : enum
+    + move()
+    + capture()
+    # is_valid_move(starting_square, destination_square): bool
+}
+
+class "<$pawn,scale=0.4,color=Black> Pawn" as Pawn { /' include the sprite in class name '/
+    - en_passant: bool
+    + promote()
+}
+
+note left of Pawn::en_passant
+    can this pawn
+    be captured
+    en passant
+end note
+
+class "<$king,scale=.4,color=green> King" as King { /' change the sprite color '/
+    - in_check: bool
+    + castle()
+}
+
+class "<size:40><color:red>♕</color></size> Queen" as Queen <<major_piece>> /' use unicode character in class name '/
+class "<size:40>&#9816;</size> Knight" as Knight /' use unicode value in class name'/
+class "<$bishop,scale=.5,color=Black> Bishop" as Bishop
+class "<$rook,scale=.5,color=Black> Rook" as Rook <<major_piece>>
+
+Piece <|-- Pawn
+Piece <|-- Knight
+Piece <|-- Bishop
+Piece <|-- Rook
+Piece <|-- King
+Bishop <|-- Queen
+Rook <|-- Queen
+
+hide Queen members
 @enduml
 ```
 
