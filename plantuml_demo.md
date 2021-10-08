@@ -51,6 +51,7 @@ uml_diagrams:
     - sequence diagram
     - class diagram
     - state diagram
+    - timing diagram
 common_features:
     - colours
     - openiconic
@@ -89,6 +90,7 @@ PlantUML draws beautiful UML diagrams from simple textual descriptions. This doc
 * Sequence Diagram
 * Class Diagram
 * State Diagram
+* Timing Diagram
 
 ### Sequence Diagram
 
@@ -308,6 +310,63 @@ Blocked ---> Working: dependency resolved
 Analyzing --> Rejected
 Resolved --> Reopen: solution\nnot working
 Reopen --> Analyzing
+
+@enduml
+```
+### Timing Diagram
+
+The below timing diagram shows a hypothetical data transfer protocol. This demo illustrates a few features:
+
+* Declaring various types of elements in a timing diagram
+* Specifying transitions as either time-oriented or participant-oriented
+* Displaying time constraints
+* Highlighting a region of the diagram
+
+Refer the [documentation](https://plantuml.com/timing-diagram) for the full set of features and configuration options.
+
+```plantuml
+@startuml
+title **Timing Diagram Demo**\n\n
+
+clock clk with period 1
+binary "Address Enable" as ADDR_EN
+concise "Address" as ADDR
+binary "Data Enable" as DATA_EN
+concise "Data" as DATA
+binary "Read/Write" as RW
+
+@ADDR_EN
+0 is low
+2 is high
+8 is low
+
+@0
+ADDR is {-}
+DATA_EN is low
+DATA is {-}
+
+@1
+ADDR is "VALID ADDRESS"
+
+@2
+DATA is "VALID DATA"
+RW is high
+
+@3
+DATA_EN is high
+
+@7
+DATA_EN is low
+RW is low
+
+@8
+DATA is {-}
+
+@9
+ADDR is {-}
+
+DATA_EN@3 <-> @7 : {>=4 cycles}
+highlight 2 to 8 #technology;line:DimGrey : Data transfer region
 
 @enduml
 ```
