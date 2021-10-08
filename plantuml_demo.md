@@ -50,6 +50,7 @@ data_visualization:
 uml_diagrams:
     - sequence diagram
     - class diagram
+    - state diagram
 common_features:
     - colours
     - openiconic
@@ -86,6 +87,7 @@ PlantUML draws beautiful UML diagrams from simple textual descriptions. This doc
 
 * Sequence Diagram
 * Class Diagram
+* State Diagram
 
 ### Sequence Diagram
 
@@ -236,6 +238,76 @@ Bishop <|-- Queen
 Rook <|-- Queen
 
 hide Queen members
+@enduml
+```
+
+### State Diagram
+
+The below state diagram describes a state transition workflow of an issue tracking systems. This demo illustrates a few features:
+
+* Defining states and substates
+* Specifying the state attribute
+* Using hidden connectors to guide the diagram layout
+* Specifying the state transitions
+
+Refer the [documentation](https://plantuml.com/state-diagram) for the full set of features and configuration options.
+
+```plantuml
+@startuml
+title **State Diagram Demo**\n\n
+
+state Start #AntiqueWhite {
+  state Open
+  Open: New ticket \nis created
+  state Reopen
+  Reopen: Previously completed ticket\nwas reopened
+}
+
+state Active #LightGreen {
+  state Analyzing
+  Analyzing: Accepted the ticket\nand started analyzing
+  state Working
+  Working: Identified a solution\nand started implementing
+  state Testing
+  Testing: Testing the solution
+}
+
+state Inactive #DarkGray {
+  state "Need Info" as Info
+  Info: Need information\nto proceed
+  state Blocked #IndianRed
+  Blocked: Work cannot progress\ndue to dependency
+}
+
+state Completed #CornflowerBlue {
+  state Resolved #Gold
+  Resolved: Solution provided
+  state Rejected #Tomato
+  Rejected: Ticket is invalid\ncannot provide solution
+}
+
+' hidden connectors to "guide" the layout
+Open -down[hidden]-> Reopen
+Info -down[hidden]-> Blocked
+Rejected -down[hidden]-> Resolved
+Reopen -down[hidden]-> Rejected
+
+Open -right-> Analyzing
+
+Analyzing -down--> Working
+Working -right-> Testing
+Testing --> Analyzing: test\nfailed
+Testing --> Resolved: test passed
+
+Analyzing -right-> Info: description not clear
+Info -left-> Analyzing: description updated
+Working -down--> Blocked: dependency found
+Blocked ---> Working: dependency resolved
+
+Analyzing --> Rejected
+Resolved --> Reopen: solution\nnot working
+Reopen --> Analyzing
+
 @enduml
 ```
 
