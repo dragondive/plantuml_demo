@@ -1,0 +1,116 @@
+@startwbs
+
+!$test_cricket_matches_data = {
+"name": "All", "list": [
+    {"name": "India", "list": [
+        {"name": "Eden Gardens, Kolkata", "count": 42},
+        {"name": "Chinnaswamy Stadium, Bengaluru", "count": 23},
+        {"name": "Wankhede Stadium, Mumbai", "count": 25},
+        {"name": "Brabourne Stadium, Mumbai", "count": 18},
+        {"name": "Green Park, Kanpur", "count": 22},
+        {"name": "Arun Jaitley Stadium, Delhi", "count": 34},
+        {"name": "Chidambaram Stadium, Chennai", "count": 34},
+        {"name": "Others", "count": 80}
+    ]},
+    {"name": "Australia", "list": [
+        {"name": "Adelaide Oval, Adelaide", "count": 79},
+        {"name": "Gabba, Brisbane", "count": 63},
+        {"name": "MCG, Melbourne", "count": 113},
+        {"name": "WACA, Perth", "count": 44},
+        {"name": "SCG, Sydney", "count": 109},
+        {"name": "Bellerive Oval, Hobart", "count": 13},
+        {"name": "Others", "count": 9}
+    ]},
+    {"name": "Pakistan", "list": [
+        {"name": "Gaddafi Stadium, Lahore", "count": 40},
+        {"name": "National Stadium, Karachi", "count": 43},
+        {"name": "Iqbal Stadium", "count": 24},
+        {"name": "Others", "count": 42}
+    ]},
+    {"name": "England", "list": [
+        {"name": "Lord's, London", "count": 141},
+        {"name": "Kennington Oval, London", "count": 103},
+        {"name": "Trent Bridge, Nottingham", "count": 64},
+        {"name": "Edgbaston, Birmingham", "count": 53},
+        {"name": "Headingley, Leeds", "count": 79},
+        {"name": "Old Trafford, Manchester", "count": 82},
+        {"name": "Others", "count": 14}
+    ]},
+    {"name": "South Africa", "list": [
+        {"name": "Supersport Park, Centurion", "count": 26},
+        {"name": "Newlands, Cape Town", "count": 58},
+        {"name": "Wanderers, Johannesburg", "count": 42},
+        {"name": "Kingsmead, Durban", "count": 44},
+        {"name": "St George's Park, Port Elizabeth", "count": 31},
+        {"name": "Others", "count": 40}
+    ]},
+    {"name": "New Zealand", "list": [
+        {"name": "Lancaster Park, Christchurch", "count": 40},
+        {"name": "Basin Reserve, Wellington", "count": 65},
+        {"name": "Eden Park, Auckland", "count": 50},
+        {"name": "Seddon Park, Hamilton", "count": 44},
+        {"name": "Others", "count": 21}
+    ]},
+    {"name": "Sri Lanka", "list": [
+        {"name": "SSC, Colombo", "count": 43},
+        {"name": "Galle Stadium, Galle", "count": 35},
+        {"name": "Asgiriya Stadium, Kandy", "count": 21},
+        {"name": "P Sara Oval, Colombo", "count": 22},
+        {"name": "Others", "count": 25}
+    ]},
+    {"name": "West Indies", "list": [
+        {"name": "Antigua Ground, St. John's", "count": 22},
+        {"name": "Kensington Oval, Bridgetown", "count": 54},
+        {"name": "Queen's Park, Port-of-Spain", "count": 61},
+        {"name": "Sabina Park, Kingston", "count": 54},
+        {"name": "Others", "count": 65}
+    ]},
+    {"name": "Others", "count": 177}
+]}
+
+!function $repeat_string($input_string, $times)
+!$str = ""
+!while $times != 0
+    !$str = $str + $input_string
+    !$times = $times - 1
+!endwhile
+!return $str
+!endfunction
+
+!procedure $append_wbs_line($name, $count, $level)
+!$wbs_code_string = $repeat_string("*", $level) + " " +  %string($name) + " : " + %string($count) + %newline() + $wbs_code_string
+!endprocedure
+
+!function $compute_levelwise_sum($data, $level)
+    !$count = 0
+    !foreach $item in $data.list
+        !if %strlen($item.list) != 0 /' hack to decide if it is a leaf node! '/
+            /' it is not a leaf node, recurse to the inner level '/
+            !$count = $count + $compute_levelwise_sum($item, $level + 1)
+        !else /' it is a leaf node, add its count to the running sum '/
+        /' bug: indentation gets included in the string and the extra spaces at
+                the start is deemed invalid token. to avoid this, break the
+                indentation until this bug is fixed. '/
+$append_wbs_line($item.name, $item.count, $level + 1)
+            !$count = $count + %intval($item.count)
+        !endif
+    !endfor
+/' bug: see above bug description '/
+$append_wbs_line($data.name, $count, $level)
+    !return $count
+!endfunction
+
+/' generates wbs (work breakdown structure) diagram from json data.
+   the json data has a recursive structure, consisting of the following fields:
+   - name: string
+   - count: integer (OR)
+   - list: array of this data structure recursively '/
+!procedure $generate_wbs($data)
+!global $wbs_code_string = ""
+!$ignore = $compute_levelwise_sum($data, 1)
+$wbs_code_string
+!endprocedure
+
+$generate_wbs($test_cricket_matches_data)
+
+@endwbs
