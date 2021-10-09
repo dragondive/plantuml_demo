@@ -52,6 +52,7 @@ uml_diagrams:
     - class diagram
     - state diagram
     - timing diagram
+    - object diagram
 common_features:
     - colours
     - openiconic
@@ -91,6 +92,7 @@ PlantUML draws beautiful UML diagrams from simple textual descriptions. This doc
 * Class Diagram
 * State Diagram
 * Timing Diagram
+* Object Diagram
 
 ### Sequence Diagram
 
@@ -370,7 +372,132 @@ highlight 2 to 8 #technology;line:DimGrey : Data transfer region
 
 @enduml
 ```
+### Object Diagram
 
+The below object diagram illustrates a common implementation of virtual functions in C++. This demo illustrates a few features:
+
+* Declaring object type and map type
+* Adding link from a map field to an object
+* Specifying fields in an object
+* Using divider to split a diagram into logical sections
+* Specifying direction for arrow connectors
+* Using hidden connectors to guide the diagram layout
+* Using class diagram and object diagram together
+
+Refer the [documentation](https://plantuml.com/object-diagram) for the full set of features and configuration options.
+
+```plantuml
+@startuml
+<style>
+classDiagram {
+    class {
+        BackgroundColor BurlyWood
+        LineColor FireBrick
+
+        header {
+            FontStyle Bold
+        }
+    }
+}
+
+object {
+    BackgroundColor PaleGreen
+
+    header {
+        FontColor DarkGreen
+        FontStyle Bold
+    }
+}
+
+.non_virtual {
+    BackgroundColor PaleTurquoise
+
+    header {
+        FontColor MidnightBlue
+        FontStyle Bold
+    }
+}
+</style>
+
+title **Object Diagram Demo**\n\n
+
+class Base {
+    + void non_virtual()
+    + virtual void virtual_function()
+    + virtual void overridden_virtual()
+}
+
+class Derived {
+    + virtual void overridden_virtual() override
+}
+Base <|== Derived
+hide class fields
+
+map "**Base OBJECT**" as BO {
+    VPTR=>
+    non_virtual=><color:Blue>0x9900</color>
+    overridden_virtual=>
+    virtual_function=>
+}
+
+map "**Derived OBJECT**" as DO {
+    VPTR=>
+    non_virtual=><color:Blue>0x9900</color>
+    overridden_virtual=>
+    virtual_function=>
+}
+
+map "**Derived VTABLE**" as DV {
+    overridden_virtual => <color:Red>0x4448</color>
+    virtual_function => <color:Green>0x1112</color>
+}
+
+map "**Base VTABLE**" as BV {
+    overridden_virtual => <color:Green>0x2224</color>
+    virtual_function => <color:Green>0x1112</color>
+}
+
+' bug: both custom style and stereotype are applied as they have the same syntax
+' see: https://forum.plantuml.net/14692/user-defined-style-applied-on-class-also-becomes-stereotype
+object "Base::non_virtual" as non_virtual <<non_virtual>> {
+    0x9900
+}
+
+object "Base::virtual_function" as base_virtual {
+    0x1112
+}
+
+object "Base::overridden_virtual" as overridden_virtual {
+    0x2224
+}
+
+object "Derived::overridden_virtual" as derived_overridden_virtual {
+    0x4448
+}
+
+BO::non_virtual -[#Blue]> non_virtual
+DO::non_virtual -up[#Blue]> non_virtual
+
+BO::VPTR -right-> BV
+DO::VPTR -right-> DV
+
+BV::virtual_function -[#Green]> base_virtual
+BV::overridden_virtual -right[#Green]> overridden_virtual
+
+DV::virtual_function -[#Green]-> base_virtual
+DV::overridden_virtual -up[#Green]> derived_overridden_virtual
+
+' hidden connectors to "guide" the layout
+Base -right[hidden]> BO
+BO -down[hidden]--> DO
+BV -down[hidden]--> DV
+base_virtual -[hidden]down-> derived_overridden_virtual
+BV -down[hidden]-> non_virtual
+non_virtual -down[hidden]-> DV
+overridden_virtual -down[hidden]-> derived_overridden_virtual
+
+@enduml
+```
 ## Common Features
 
 This section includes demo of the common features that apply to all or multiple diagram types:
