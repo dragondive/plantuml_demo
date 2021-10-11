@@ -58,6 +58,8 @@ common_features:
     - openiconic
     - fonts
     - zoom
+non_uml_diagrams:
+    - gantt chart
 general_information:
     - how to run plantuml
     - license information
@@ -746,6 +748,66 @@ $factorial_question_answer_sequence(\
 @enduml
 ```
 
+## Non-UML Diagrams
+
+PlantUML can also draw several types of non-UML diagrams from simple textual descriptions. This document gives a demo of the following types of non-UML diagrams:
+
+* Gantt Chart
+
+### Gantt Chart
+
+The below gantt chart illustrates the schedule of a fictional project. This demo illustrates a few features:
+
+* Declaring tasks on the chart
+* Specifying start date for task
+* Specifying task duration
+* Separating tasks into logical sections
+* Showing milestones on the chart
+* Assigning workers to tasks
+* Indicating constraints between tasks or milestones
+
+Refer the [documentation](https://plantuml.com/gantt-diagram) for the full set of features and configuration options.
+
+```plantuml
+@startgantt
+printscale yearly
+scale 1.5
+
+title Moon's Eye Plan
+project starts on 2022-01-01
+-- Control Akatsuki --
+[Manipulate Obito] as [Obito] on {Uchiha Madara} starts at 2022-01-15
+[Obito] lasts 12 weeks
+
+[Sanbi attack on Konoha] happens at 2022-02-28
+[Temporarily Die] on {Uchiha Madara} happens at [Obito]'s end
+
+[Convince Nagato] as [Nagato] on {Obito} lasts 78 weeks
+[Nagato] starts 4 weeks after [Obito]'s end
+
+-- Capture the Tailed Beasts --
+[Capture Ichibi] as [Ichibi] on {Deidara} lasts 4 weeks
+[Ichibi] starts 8 weeks after [Nagato]'s end
+
+[Capture Sanbi] as [Sanbi] on {Deidara} {Obito} lasts 4 weeks
+[Sanbi] starts 8 weeks after [Ichibi]'s end
+
+[Capture Hachibi] as [Hachibi] on {Sasuke} lasts 8 weeks
+[Hachibi] starts 8 weeks after [Sanbi]'s end
+
+[Capture Kyuubi] as [Kyuubi] on {Nagato} lasts 12 weeks
+[Kyuubi] starts 6 weeks after [Sanbi]'s end
+
+-- Final Stage --
+[Reincarnate Madara] as [Re] on {Nagato} lasts 4 weeks
+[Re] starts after [Kyuubi]'s end
+[Cast Genjutsu on Moon] as [Genjutsu] on {Uchiha Madara} lasts 8 weeks
+[Genjutsu] starts at [Re]'s end
+[Moon's Eye Plan Complete!] as [Complete] happens at [Genjutsu]'s end
+[Complete] is colored in Red
+
+@endgantt
+```
 ## General Information
 
 ### How to run PlantUML
