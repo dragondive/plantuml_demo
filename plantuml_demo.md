@@ -60,6 +60,7 @@ common_features:
     - zoom
 non_uml_diagrams:
     - gantt chart
+    - mindmap
 general_information:
     - how to run plantuml
     - license information
@@ -753,6 +754,7 @@ $factorial_question_answer_sequence(\
 PlantUML can also draw several types of non-UML diagrams from simple textual descriptions. This document gives a demo of the following types of non-UML diagrams:
 
 * Gantt Chart
+* Mindmap
 
 ### Gantt Chart
 
@@ -807,6 +809,67 @@ project starts on 2022-01-01
 [Complete] is colored in Red
 
 @endgantt
+```
+
+### Mindmap
+
+The below mindmap illustrates some investment options available in India. This demo illustrates a few features:
+
+* Adding items to the mindmap heirarchically
+* Splitting the mindmap into left side and right side
+* Applying styles to various parts of the diagram
+
+Refer the [documentation](https://plantuml.com/mindmap-diagram) for the full set of features and configuration options.
+
+```plantuml
+@startmindmap
+<style>
+    mindmapDiagram {
+        node {
+            BackgroundColor PaleGreen
+            FontColor Black
+            LineColor DarkGreen
+        }
+
+        rootNode {
+            BackgroundColor DodgerBlue
+            FontColor White
+            FontStyle Bold
+            LineColor DarkBlue
+        }
+
+        :depth(1) {
+            BackgroundColor LightSalmon
+        }
+
+        arrow {
+            LineColor Brown
+        }
+    }
+</style>
+title <size:24>Investment Options in India</size>
+
+* Investments
+** Equity
+*** Stocks
+*** Equity ETF
+*** Equity Mutual Funds
+** Debt
+*** Debt Mutual Funds
+*** Government Bonds
+*** Fixed Deposits
+
+left side
+** Assets
+*** Real Estate
+*** Commodities
+**** Gold
+**** Silver
+**** Crude Oil
+** Retirals
+*** Public Provident Fund
+*** National Pension System
+@endmindmap
 ```
 ## General Information
 
