@@ -5,6 +5,7 @@
 PlantUML can _also_ be used to visualize data written in various data representation formats. This document gives a demo of visualization for the following formats:
 
 * YAML: YAML Ain't Markup Language
+* JSON: Javascript Object Notation
 
 ### YAML Data Visualization
 
@@ -47,6 +48,7 @@ of the outer markdown document.
 **table_of_contents**: ""  /' workaround: empty string here to avoid dummy link '/
 data_visualization:
     yaml_data : table_of_contents //(this!)//
+    json_data : about_me
 uml_diagrams:
     - sequence diagram
     - class diagram
@@ -86,6 +88,62 @@ fun_stuff:
     - sudoku
     - oregon trail
 @endyaml
+```
+
+### JSON Data Visualization
+
+The below demo has some information about me written in JSON. To create a visual representation with PlantUML, enclose the JSON data within `@startjson` and `@endjson`.
+
+Refer the [documentation](https://plantuml.com/json) for the full set of features and configuration options.
+
+```plantuml
+@startjson
+<style>
+jsonDiagram {
+    node {
+        FontName Segoe Print
+        LineColor Brown
+        BackgroundColor f8e4d0
+    }
+
+    arrow {
+        LineColor Brown
+    }
+}
+</style>
+{
+    "Identity Info": {
+        "Name" : {
+            "First Name": "Aravind",
+            "Last Name": "Pai"
+        },
+        "Pronouns": "he/his/him"
+    },
+    "Work History": {
+        "Duration": "14 years",
+        "Employers": {
+            "IBM": "2007–2014",
+            "Wipro": "2014-2015",
+            "Bosch": "2015–present"
+        },
+        "Domains": ["VLSI", "EDA", "Navigation", "AD"]
+    },
+    "Skills Summary": {
+        "Roles": [
+            "Hardware Verification",
+            "Software Development",
+            "Applications Engineering"],
+        "Languages": ["C++", "C", "Python", "VHDL", "Java", "SQL", "HTML"],
+        "Tools": ["Git", "Google Test", "Doxygen", "Conan", "PlantUML"]
+    },
+    "Interests": ["Animal Care", "Anime/Manga", "Finance", "Reading"],
+    "Online Locations": {
+        "LinkedIn" : "[[https://www.linkedin.com/in/apai/]]",
+        "Telegram" : "[[https://t.me/haoshoku]]",
+        "Github" : "[[https://github.com/dragondive]]"
+    }
+}
+@endjson
 ```
 
 ## UML Diagrams
