@@ -61,6 +61,7 @@ common_features:
 non_uml_diagrams:
     - gantt chart
     - mindmap
+    - wireframe
 general_information:
     - how to run plantuml
     - license information
@@ -755,6 +756,7 @@ PlantUML can also draw several types of non-UML diagrams from simple textual des
 
 * Gantt Chart
 * Mindmap
+* Wireframe
 
 ### Gantt Chart
 
@@ -871,6 +873,64 @@ left side
 *** National Pension System
 @endmindmap
 ```
+
+### Wireframe
+
+The below wireframe illustrates the user interface of a social media site. This demo illustrates a few features:
+
+* Use of a few standard UI elements, such as buttons, dropdown
+* Organizing the UI elements using table
+* Formatting the text elements using Creole markup
+
+Refer the [documentation](https://plantuml.com/salt) for the full set of features and configuration options.
+
+```plantuml
+@startsalt
+scale 1.5
+skinparam padding 10
+
+{+
+    {
+        <size:20>**<&script> Storybook**</size>
+    }
+    {
+        {
+            What is your story? <&fullscreen-enter>
+            .
+            .
+            .
+        } | . |
+        {
+            <size:16>**Popular Storytellers**</size>
+            .
+            <&person> **Rahul Dravid** [<&script> 164 stories]
+            <&person> **Bill Watterson** [<&script> 3160 stories]
+            .
+            .
+        }
+        {
+            [<&circle-check> Post] | [<&paperclip>Attach...]
+        }
+    }
+    {
+        <size:16>**Trending Stories <&bolt>**</size> | ^Today^
+        .
+        {
+            **Jacinda Ardern** <&heart>2.5M
+            Our country is getting back on track. There's still a lot more to do.
+            We cannot do it without your support. <i>continue reading ...</i>
+        }
+        {
+            .
+            **Elon Musk** <&heart>1.6M
+            Forget spaceships, we should teleport to Mars by 2030,
+            because ... why not? <i>continue reading ...</i>
+        }
+    }
+}
+@endsalt
+```
+
 ## General Information
 
 ### How to run PlantUML
