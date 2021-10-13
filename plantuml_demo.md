@@ -60,6 +60,7 @@ common_features:
     - openiconic
     - fonts
     - zoom
+    - sprites
 non_uml_diagrams:
     - gantt chart
     - mindmap
@@ -568,6 +569,7 @@ This section includes demo of the common features that apply to all or multiple 
 * OpenIconic
 * Fonts
 * Zoom
+* Sprites
 
 ### Colours
 
@@ -806,6 +808,47 @@ $factorial_question_answer_sequence(\
     $color_number_in_answer = darkviolet, $color_number_in_question = red\
 )
 @enduml
+```
+
+### Sprites
+
+Small graphical known as sprites can be used in diagrams.
+
+* **Encoding an image into sprite**: Any image can be encoded into a sprite using a command like below:
+
+  ```
+  java -jar plantuml.jar -encodesprite 16z <image>
+  ```
+
+* **Including sprites into diagrams**: The encoded sprite can be included either inline or as a file through `!include` directive.
+
+* **PlantUML StdLib**: PlantUML includes a huge collection of sprites in its standard library. Refer the [documentation](https://plantuml.com/sprite) for further information.
+
+#### Demo
+
+```plantuml
+<style>
+classDiagram {
+    class {
+        LineColor Black
+        BackGroundColor White
+        FontSize 40
+        FontStyle Bold
+    }
+}
+</style>
+
+!include demo_src/sprites/batman.puml
+
+hide circle
+hide class members
+
+class "<$batman>\n\
+KEEP\n\
+CALM\n\
+AND\n\
+CALL\n\
+BATMAN"
 ```
 
 ## Non-UML Diagrams
