@@ -5,23 +5,23 @@
     {"name": "India", "list": [
         {"name": "Eden Gardens, Kolkata", "count": 42},
         {"name": "Chinnaswamy Stadium, Bengaluru", "count": 23},
-        /'{"name": "Wankhede Stadium, Mumbai", "count": 25},
+        {"name": "Wankhede Stadium, Mumbai", "count": 25},
         {"name": "Brabourne Stadium, Mumbai", "count": 18},
         {"name": "Green Park, Kanpur", "count": 22},
         {"name": "Arun Jaitley Stadium, Delhi", "count": 34},
-        {"name": "Chidambaram Stadium, Chennai", "count": 34},'/
+        {"name": "Chidambaram Stadium, Chennai", "count": 34},
         {"name": "Others", "count": 80}
     ]},
     {"name": "Australia", "list": [
         {"name": "Adelaide Oval, Adelaide", "count": 79},
         {"name": "Gabba, Brisbane", "count": 63},
-        /'{"name": "MCG, Melbourne", "count": 113},
+        {"name": "MCG, Melbourne", "count": 113},
         {"name": "WACA, Perth", "count": 44},
         {"name": "SCG, Sydney", "count": 109},
-        {"name": "Bellerive Oval, Hobart", "count": 13},'/
+        {"name": "Bellerive Oval, Hobart", "count": 13},
         {"name": "Others", "count": 9}
     ]},
-    /'{"name": "Pakistan", "list": [
+    {"name": "Pakistan", "list": [
         {"name": "Gaddafi Stadium, Lahore", "count": 40},
         {"name": "National Stadium, Karachi", "count": 43},
         {"name": "Iqbal Stadium", "count": 24},
@@ -64,7 +64,7 @@
         {"name": "Queen's Park, Port-of-Spain", "count": 61},
         {"name": "Sabina Park, Kingston", "count": 54},
         {"name": "Others", "count": 65}
-    ]},'/
+    ]},
     {"name": "Others", "count": 177}
 ]}
 
@@ -78,12 +78,11 @@
 !endfunction
 
 !function $make_wbs_code($name, $sum, $level)
-'!$wbs_code_string = $repeat_string("*", $level) + " " +  %string($name) + " : " + %string($count) + %newline() + $wbs_code_string
 !$wbs_code = $repeat_string("*", $level) + " " +  %string($name) + " : " + %string($sum) + %newline()
 !return $wbs_code
 !endfunction
 
-!function $get_wbs_code($data, $level = 1)
+!function $generate_wbs_code($data, $level = 1)
     !$code_string = ""
     !$sum = 0
 
@@ -91,85 +90,48 @@
         !$inner_item_wbs_code = ""
         !$inner_item_name = ""
 
-        !if %strlen($item.list) != 0
+        !if %strlen($item.list) != 0 /' hack to check if it is a leaf node '/
+            /' bug/hack: need to store the inner item's name before recursing. below we update a dictionary 
+            where each item is mapped to the sum of the counts below it. the preprocessor seems to have 
+            either an implementation bug or stack limitation, so $item.name gets replaced at each level, 
+            thus the sum gets mapped to the innermost item's name instead.'/
             !$inner_item_name = $item.name
-            !log here inner_item_name=$inner_item_name
 
-            !$inner_item_wbs_code = $get_wbs_code($item, $level + 1)
-            !log getting variable value for $inner_item_name=%get_variable_value($inner_item_name)
+            /' it is not a leaf node, recurse to the inner level. '/
+            !$inner_item_wbs_code = $generate_wbs_code($item, $level + 1)
+
+            /' recursive function call at the inner level would have mapped the sum in the dictionary,
+            so add it to the running sum at this level. '/
             !$sum = $sum + %get_variable_value($inner_item_name)
-            !log after $inner_item_name, sum=$sum
         !else
+            /' it is a leaf node, so it is placed at the next level in the wbs code. '/
             !$inner_item_wbs_code = $make_wbs_code($item.name, $item.count, $level + 1)
+
+            /' for a leaf node, the sum is simply its own count. '/
             !$sum = $sum + %intval($item.count)
-            !log after $item.name, sum=$sum, inner_item_wbs_code=$inner_item_wbs_code
         !endif
+
+        /' concatenate the wbs code of this item to the overall wbs code for this level. this works correctly 
+        for leaf nodes or non-leaf nodes or mix of the two. leaf node's wbs code is directly computed here. 
+        for non-leaf nodes, recursive function call computes the wbs code for lower levels, then that level's
+        wbs code is pre-concatenated outside the loop and returned as the overall wbs code for that level. '/
         !$code_string = $code_string + $inner_item_wbs_code
     !endfor
 
+    /' pre-concatenate this level's wbs code to the lower level's wbs code '/
     !$code_string = $make_wbs_code($data.name, $sum, $level) + $code_string
+
+    /' map the sum of the counts below this level to this level's name. during the recursion unwinding, the outer
+    level functions can refer to this dictionary entry to update the count at that level. '/
     %set_variable_value($data.name, $sum)
-    !log setting variable $data.name=$sum
-    !log for $data.name, code_string=$code_string
     !return $code_string
 !endfunction
 
-'!$value = $get_wbs_string($test_cricket_matches_data, 1)
-'!log $value
-
-'!function $append_wbs_line($name, $count, $level)
-''!$wbs_code_string = $repeat_string("*", $level) + " " +  %string($name) + " : " + %string($count) + %newline() + $wbs_code_string
-'!$out = $repeat_string("*", $level) + " " +  %string($name) + " : " + %string($count) + %newline()
-'!return $out
-'!endfunction
-'
-'!function $compute_levelwise_sum($data, $level)
-'
-'    !$count = 0
-'    !$str_total = ""
-'    !foreach $item in $data.list
-'        !$str_hold = ""
-'        !if %strlen($item.list) != 0 /' hack to decide if it is a leaf node! '/
-'            /' it is not a leaf node, recurse to the inner level '/
-'            !$count = $count + $compute_levelwise_sum($item, $level + 1)
-'        !else /' it is a leaf node, add its count to the running sum '/
-'        /' bug: indentation gets included in the string and the extra spaces at
-'        the start is deemed invalid token. to avoid this, break the
-'        indentation until this bug is fixed. '/
-'        !$str_hold=$append_wbs_line($item.name, $item.count, $level + 1)
-'            !$str_total = $str_total + $str_hold
-'            !log %newline() ++++
-'            !log hold: $str_hold
-'            !log total: $str_total
-'            !log ----
-'            !$count = $count + %intval($item.count)
-'        !endif
-'    !endfor
-'/' bug: see above bug description '/
-'!$dummy = ""
-'!$dummy=$append_wbs_line($data.name, $count, $level)
-'!$str_total = $dummy + $str_total
-'!log ++++ ++++ ++++
-'!log dummy: $dummy
-'!log total: $str_total
-'!log ---- ---- ----
-'    !return $count
-'!endfunction
-'
 /' generates wbs (work breakdown structure) diagram from json data.
    the json data has a recursive structure, consisting of the following fields:
    - name: string
    - count: integer (OR)
    - list: array of this data structure recursively '/
-!procedure $generate_wbs($data)
-'!global $wbs_code_string = ""
-'!$ignore = $compute_levelwise_sum($data, 1)
-!$wbs_code_string = $get_wbs_code($data)
-!log wbs_code_string=$wbs_code_string
-$wbs_code_string 
-!endprocedure
-
-
-$generate_wbs($test_cricket_matches_data)
+$generate_wbs_code($test_cricket_matches_data)
 
 @endwbs
