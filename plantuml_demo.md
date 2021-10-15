@@ -74,6 +74,12 @@ general_information:
     - cypher
     - generating huge diagrams
     - getting help
+using_with_other_tools:
+    editors:
+        - vscode
+        - atom
+        - eclipse
+        - word
 customization:
     - skinparams
     - themes
@@ -1101,6 +1107,41 @@ PlantUML restricts image width and height to 4096 pixels by default. This can be
 ### Getting Help
 
 Questions not answered from the documentation can be asked either on the [PlantUML forum](https://forum.plantuml.net/) or on [PlantUML's github page](https://github.com/plantuml/plantuml/issues). PlantUML's source code is available on [github](https://github.com/plantuml).
+
+## Using with other tools
+
+PlantUML can be used together with several tools. This document describes use of PlantUML with the following tools:
+
+* Editors
+    * VSCode
+    * Atom
+    * Eclipse
+    * Word
+
+### Editors
+
+#### VSCode
+
+* **Preview PlantUML diagrams directly**: PlantUML plugins enable generating a preview of the plantuml diagram descriptions directly from VSCode.
+* **Preview PlantUML diagrams included in markdown**: PlantUML diagram descriptions can also be included inside markdown code. Markdown plugins enable generating the diagram preview inline within the markdown preview.
+
+The [attached video](videos/plantuml_vscode_demo.mp4) shows a demo of both the options.
+
+#### Atom
+
+Atom editor has plugins to preview the PlantUML diagram descriptions, for both standalone files and when included in a markdown file.
+
+The [attached video](videos/plantuml_atom_demo.mp4) shows a demo of both the options.
+
+#### Eclipse
+
+PlantUML plugins are also available for the Eclipse IDE which enable generating a preview of the diagrams.
+
+#### Word
+
+PlantUML addin for Microsoft Word generates the diagrams for the plantuml diagram description and includes them directly into the same document.
+
+The [attached video](videos/plantuml_word_demo.mp4) shows a demo of using this addin.
 
 ## Customization
 
