@@ -833,6 +833,7 @@ Small graphical known as sprites can be used in diagrams.
 #### Demo
 
 ```plantuml
+@startuml
 <style>
 classDiagram {
     class {
@@ -855,6 +856,7 @@ CALM\n\
 AND\n\
 CALL\n\
 BATMAN"
+@enduml
 ```
 
 ## Non-UML Diagrams
