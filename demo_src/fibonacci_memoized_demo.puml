@@ -29,7 +29,18 @@
     %set_variable_value($to_variable($n), $value)
 !endprocedure
 
+/' computes the nth fibonacci number '/
 !function $fibonacci($n)
+    /' Return value of this function is memoized because it uses recursion.
+    PlantUML preprocessor doesn't provide dictionary or array data structure,
+    hence a "hack" simulates a dictionary. For every input integer, a variable
+    is created with the stringized integer as its name, and the return value is
+    assigned to it. Thus, the variable's name serves as the "key".
+
+    The methods $is_memoized() $get_from_memo() and $update_memo() are helper
+    function to make this more readable.
+    '/
+
     !if $is_memoized($n)
         !return $get_from_memo($n)
     !endif
@@ -39,6 +50,8 @@
     !elseif $n == 1
         !$fibonacci_n = 1
     !else
+        /' preprocessor seems unable to maintain two unnamed temporary variables,
+        hence create local variables to hold return values of the recursive calls. '/
         !$fibonacci_n_minus_2 = $fibonacci($n - 2)
         !$fibonacci_n_minus_1 = $fibonacci($n - 1)
         !$fibonacci_n = $fibonacci_n_minus_1 + $fibonacci_n_minus_2
@@ -54,6 +67,7 @@
     !return $fibonacci_n
 !endfunction
 
+' assign return value to avoid syntax error
 !$ignore = $fibonacci(10)
 
 @enduml
