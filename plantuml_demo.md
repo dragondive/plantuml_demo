@@ -80,6 +80,7 @@ using_with_other_tools:
         - atom
         - eclipse
         - word
+    web_browsers: ""
 customization:
     - skinparams
     - themes
@@ -1119,6 +1120,7 @@ PlantUML can be used together with several tools. This document describes use of
     * Atom
     * Eclipse
     * Word
+* Browsers
 
 ### Editors
 
@@ -1144,6 +1146,10 @@ PlantUML plugins are also available for the Eclipse IDE which enable generating 
 PlantUML addin for Microsoft Word generates the diagrams for the plantuml diagram description and includes them directly into the same document.
 
 The [attached video](videos/plantuml_word_demo.mp4) shows a demo of using this addin.
+
+### Web Browsers
+
+Browser extensions are available to render PlantUML in the Chrome and Firefox web browsers. The [attached video](videos/plantuml_browsers_demo.mp4) shows a demo of using these plugins.
 
 ## Customization
 
