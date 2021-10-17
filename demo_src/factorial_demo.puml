@@ -12,7 +12,9 @@
    and connects every state to its preceding state, denoting the recursive
    nature of the factorial function computation. '/
 !function $factorial($n)
-    !if $n == 0
+    !assert ($n >= 0) : "input is " + $n + " but should be non-negative."
+
+    !if ($n == 0)
         !$value = 1
         $create_state($n, $value)
     !else

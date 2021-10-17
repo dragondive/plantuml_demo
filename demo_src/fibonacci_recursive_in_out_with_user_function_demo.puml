@@ -4,7 +4,18 @@
     !return $state_name == 0 || $state_name == 1
 !endfunction
 
-!procedure $create_state($name, $instance_name, $value, $name_based_highlight_function, $value_based_highlight_expression)
+!function $always_false($ignore)
+    !return %false()
+!endfunction
+
+/' creates a state with options to highlight it in two ways,
+based on a user-defined function and a lambda function respectively.'/
+!procedure $create_state(\
+        $name,\
+        $instance_name,\
+        $value,\
+        $name_based_highlight_function = $always_false,\
+        $value_based_highlight_expression = %false())
     !if %call_user_func($name_based_highlight_function, $name)
         !$background_color = "#technology"
     !else

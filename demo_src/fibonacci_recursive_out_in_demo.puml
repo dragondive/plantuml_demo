@@ -18,7 +18,7 @@
 !endfunction
 
 !procedure $create_state($name, $instance_name, $value)
-    State "$name" as $instance_name 
+    state "$name" as $instance_name
     $instance_name : $value
 !endprocedure
 

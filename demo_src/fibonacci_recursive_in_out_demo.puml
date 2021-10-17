@@ -1,6 +1,7 @@
 @startuml
 
 !procedure $create_state($name, $instance_name, $value)
+    /' just to demonstrate customization based on value, nothing special about this check. '/
     !if $name >= 4
         !$color = "#LightSalmon"
     !else
@@ -21,6 +22,8 @@
     !elseif $n == 1
         !$fibonacci_n = 1
     !else
+        /' preprocessor seems unable to maintain two unnamed temporary variables,
+        hence create local variables to hold return values of the recursive calls. '/
         !$fibonacci_n_minus_1 = $fibonacci($n - 1, $index * 2 + 1)
         !$fibonacci_n_minus_2 = $fibonacci($n - 2, $index * 2 + 2)
         !$fibonacci_n = $fibonacci_n_minus_1 + $fibonacci_n_minus_2
