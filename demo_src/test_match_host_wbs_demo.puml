@@ -5,12 +5,16 @@
     {"name": "India", "list": [
         {"name": "Eden Gardens, Kolkata", "count": 42},
         {"name": "Chinnaswamy Stadium, Bengaluru", "count": 23},
-        {"name": "Wankhede Stadium, Mumbai", "count": 25},
-        {"name": "Brabourne Stadium, Mumbai", "count": 18},
+        {"name": "Mumbai", "list": [
+            {"name": "Wankhede Stadium", "count": 25},
+            {"name": "Brabourne Stadium", "count": 18}
+        ]},
         {"name": "Green Park, Kanpur", "count": 22},
         {"name": "Arun Jaitley Stadium, Delhi", "count": 34},
         {"name": "Chidambaram Stadium, Chennai", "count": 34},
-        {"name": "Others", "count": 80}
+        {"name": "Narendra Modi Stadium, Ahmedabad", "count": 14},
+        {"name": "IS Bindra Stadium, Mohali", "count": 13},
+        {"name": "Others", "count": 53}
     ]},
     {"name": "Australia", "list": [
         {"name": "Adelaide Oval, Adelaide", "count": 79},
@@ -24,7 +28,7 @@
     {"name": "Pakistan", "list": [
         {"name": "Gaddafi Stadium, Lahore", "count": 40},
         {"name": "National Stadium, Karachi", "count": 43},
-        {"name": "Iqbal Stadium", "count": 24},
+        {"name": "Iqbal Stadium, Faisalabad", "count": 24},
         {"name": "Others", "count": 42}
     ]},
     {"name": "England", "list": [
@@ -52,10 +56,12 @@
         {"name": "Others", "count": 21}
     ]},
     {"name": "Sri Lanka", "list": [
-        {"name": "SSC, Colombo", "count": 43},
+        {"name": "Colombo", "list": [
+            {"name": "SSC", "count": 43},
+            {"name": "P Sara Oval", "count": 22}
+        ]},
         {"name": "Galle Stadium, Galle", "count": 35},
         {"name": "Asgiriya Stadium, Kandy", "count": 21},
-        {"name": "P Sara Oval, Colombo", "count": 22},
         {"name": "Others", "count": 25}
     ]},
     {"name": "West Indies", "list": [
@@ -78,7 +84,13 @@
 !endfunction
 
 !function $make_wbs_code($name, $sum, $level)
-!$wbs_code = $repeat_string("*", $level) + " " +  %string($name) + " : " + %string($sum) + %newline()
+!if %intval($level) >=3 && %intval($sum) >= 100
+    !$background_colour = "[#PaleGreen]"
+!else
+    !$background_colour = ""
+!endif
+
+!$wbs_code = $repeat_string("*", $level) + $background_colour + " <b>" + $name + "</b>  " + $sum + %newline()
 !return $wbs_code
 !endfunction
 
@@ -126,6 +138,15 @@
     %set_variable_value($data.name, $sum)
     !return $code_string
 !endfunction
+
+<style>
+wbsDiagram {
+    LineColor Black
+    arrow {
+        LineColor Blue
+    }
+}
+</style>
 
 /' generates wbs (work breakdown structure) diagram from json data.
    the json data has a recursive structure, consisting of the following fields:
