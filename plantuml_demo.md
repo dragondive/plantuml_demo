@@ -1055,25 +1055,35 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
     Refer the [documentation](https://plantuml.com/command-line) for the full set of features and configuration options.
 
-* **Using the PlantUML server**: The PlantUML server hosted as a web service at http://www.plantuml.com/plantuml/ can be used to generate the diagram. A PlantUML server instance can also be hosted locally on a private server.
+* **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either by double clicking the `plantuml.jar` or using the following command:
+
+        ```
+        java -jar plantuml.jar -gui
+        ```
+
+        Then the file or directory containing the diagram descriptions can be selected from the GUI to generate the diagrams.
+
+* **As a web service**: PlantUML can be hosted as a web service, which is then used to generate the diagrams. There are three approaches available to use the web service:
+    1. Enter the diagram description into the text box on the web page.
+    2. Encode the diagram description into a string, using the command line option `-encodeurl`. Use it with the web service corresponding to the image type to obtain the diagram.
+    3. Enter the encoded URL into the web browser which displays the diagram.
+
+    The web service can be used in the following ways:
+    * **On the PlantUML server**: PlantUML hosts the web service at http://www.plantuml.com/plantuml/
+    * **Locally as a docker container**: PlantUML web service can be hosted locally using the official docker image, with the following commands:
+
+      ```
+      docker pull plantuml/plantuml-server
+      docker run -d -p 8080:8080 plantuml/plantuml-server
+      ```
+
+      It hosts the plantuml server locally on `http://localhost:8080`.
 
     Refer the [documentation](https://plantuml.com/server) for the full set of features and configuration options.
 
-* **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either by double clicking the `plantuml.jar` or using the following command:
+#### Demo
 
-    ```
-    java -jar plantuml.jar -gui
-    ```
-
-    Then the file or directory containing the diagram descriptions can be selected from the GUI to generate the diagrams.
-
-* **As a docker container**: PlantUML's official docker image can be downloaded with the following command:
-
-    ```
-    docker pull plantuml/plantuml-server
-    ```
-
-    It hosts the plantuml server locally on `http://localhost:8080`.
+The [attached video](videos/plantuml_docker_demo.mp4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
 
 ### License Information
 
