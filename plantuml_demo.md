@@ -80,6 +80,8 @@ using_with_other_tools:
         - atom
         - eclipse
         - word
+    document_generation:
+        - doxygen
     web_browsers: ""
 customization:
     - skinparams
@@ -1156,6 +1158,14 @@ PlantUML plugins are also available for the Eclipse IDE which enable generating 
 PlantUML addin for Microsoft Word generates the diagrams for the plantuml diagram description and includes them directly into the same document.
 
 The [attached video](videos/plantuml_word_demo.mp4) shows a demo of using this addin.
+
+### Document Generation
+
+#### Integration with Doxygen
+
+PlantUML diagrams can be embedded directly into the doxygen documents. PlantUML diagram description enclosed within the doxygen commands `\startuml` and `\enduml` appears inline in the generated document.
+
+The [attached video](videos/plantuml_doxygen_demo.mp4) shows a demo.
 
 ### Web Browsers
 
