@@ -1,0 +1,54 @@
+@startuml
+
+!$customer_data = {
+    "customer_list" : [
+        {
+            "name": "Initech",
+            "is_premium": "false",
+            "delivery_path": "https://initech.com/tps/", 
+            "release_number": "VIII.XV.XXXIX" /' If you could use Roman numerals for the release numbers, that would be great.'/
+        },
+        {
+            "name": "Acme",
+            "is_premium": "true",
+            "delivery_path": "https://acme.com/creativemayhem/", 
+            "release_number": "4.1.6"
+        }
+    ]
+}
+
+actor Developer
+actor Tester
+actor Integrator
+
+!foreach $customer in $customer_data.customer_list
+    !assert $customer.name != ""
+    !assert $customer.delivery_path != ""
+    !assert $customer.release_number != ""
+
+    newpage Customer $customer.name: Developer Workflow
+    Developer -> %string("dev_" + $customer.name) : publish code changes
+    
+    !if ($customer.is_premium == "true")
+        alt if premium feature
+            Developer -> Developer : prepare Premium Order Report
+            Developer -> %string("dev_" + $customer.name) : publish premium feature
+        end
+    !endif
+
+    newpage Customer $customer.name: Tester Workflow
+    Tester <- %string("dev_" + $customer.name) : checkout %string("RC_" + $customer.release_number)
+    Tester <- Tester : run all tests\nand verify results
+
+    newpage Customer $customer.name: Integrator Workflow
+    Integrator -> Integrator : integrate all components\nfor project $customer.name
+    Integrator -> Integrator : publish libmagic.so to\n%string($customer.delivery_path + $customer.release_number)
+
+    !if ($customer.is_premium == "true")
+        alt if premium feature
+            Integrator -> Integrator : publish libpremium.so to\n%string($customer.delivery_path + $customer.release_number)
+        end
+    !endif
+!endfor
+
+@enduml
