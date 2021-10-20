@@ -67,6 +67,7 @@ non_uml_diagrams:
     - mindmap
     - wireframe
 general_information:
+    - plantuml overview
     - how to run plantuml
     - license information
     - language description
@@ -1067,6 +1068,21 @@ skinparam padding 10
 ```
 
 ## General Information
+
+### PlantUML Overview
+
+As a text-based drawing tool, PlantUML offers the following benefits over a GUI-based tool:
+* **Convenience**: Writing the diagram description is often more convenient than dragging items on a canvas from a GUI toolbox.
+* **Revision control**: Diagram descriptions are saved in text files which are well suited for use with revision control systems as compared to images.
+* **Easier reviews**: diff tools make it easy to identify changes to the diagram, which make reviews easier. Any deviations between the source code and the diagrams describing them are more likely to be identified and fixed during the code reviews, making the documentation more reliable.
+* **Continuous integration for documentation**: Diagrams are frequently an indespensible component of good documentations. Continuous integration systems can be configured to automatically generate and update the diagrams.
+* **Uniform and standardized diagrams**: Generated diagrams are more uniform and standardized which reduces hurdles in understanding and discussing them.
+
+Text-based drawing tools, such as PlantUML, are an important enabler for the [docs-as-code](https://www.writethedocs.org/guide/docs-as-code/) approach.
+
+**What PlantUML cannot do**: PlantUML is not a [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument) for all documentation needs. It serves reasonably well for lightweight architectures and for diagrams of simple to moderate complexity.
+
+For more complex modelling requirements of bigger software systems, PlantUML alone is not sufficient. This especially holds when we need to reuse the models to provide different views of the system. PlantUML is an important tool in the developer's documentation toolbox but it is often best used in symphony with other tools. 
 
 ### How to run PlantUML
 
