@@ -83,6 +83,9 @@ using_with_other_tools:
         - word
     document_generation:
         - doxygen
+        - java_doclet
+        - hpp2plantuml
+        - py2puml
     web_browsers: ""
 customization:
     - skinparams
@@ -1152,6 +1155,11 @@ PlantUML can be used together with several tools. This document describes use of
     * Atom
     * Eclipse
     * Word
+* Document Generation
+    * Doxygen
+    * Java Doclet
+    * hpp2plantuml
+    * py2puml
 * Browsers
 
 ### Editors
@@ -1185,7 +1193,19 @@ The [attached video](videos/plantuml_word_demo.mp4) shows a demo of using this a
 
 PlantUML diagrams can be embedded directly into the doxygen documents. PlantUML diagram description enclosed within the doxygen commands `\startuml` and `\enduml` appears inline in the generated document.
 
-The [attached video](videos/plantuml_doxygen_demo.mp4) shows a demo.
+The [attached video](videos/plantuml_doxygen_demo.mp4) shows a demo using my [conan_learning](https://github.com/dragondive/conan_learning) project.
+
+#### Java Doclet
+
+`uml-java-doclet` plugin can generate class diagrams from the Java code and embed them into the javadoc. The [documentation](https://plantuml.com/doclet) describes how to obtain this plugin. The [attached video](videos/plantuml_java_doclet_demo.mp4) shows a demo of using this plugin to generate the class diagrams for PlantUML's own source code.
+
+#### hpp2plantuml
+
+Python module `hpp2plantuml` available [here](https://pypi.org/project/hpp2plantuml/) on PyPI can generate class diagrams from C++ code. The [attached video](videos/plantuml_hpp2plantuml_demo.mp4) shows a demo of using this module to generate class diagrams for VLC media player's source code.
+
+#### py2puml
+
+Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-tools) on github can generate class diagrams from Python code. The [attached video](videos/plantuml_py2puml_demo.mp4) shows a demo of using this module to generate class diagrams for my ongoing hobby project [multibeggar](https://github.com/dragondive/hebi/tree/main/multibeggar).
 
 ### Web Browsers
 
