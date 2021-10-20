@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="556px" preserveAspectRatio="none" style="width:873px;height:556px;background:#FFFFFF;" version="1.1" viewBox="0 0 873 556" width="873px" zoomAndPan="magnify"><defs><filter height="300%" id="f1jjvo3rba2gcq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="none" height="62.8281" style="stroke:none;stroke-width:1.0;" width="161" x="349.25" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="151" x="354.25" y="24.5332">Object Diagram Demo</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="0" x="431.75" y="42.1426"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="0" x="431.75" y="59.752"/><!--MD5=[ae336da5efe52b168083e063e86251c2]
+class Base--><rect codeLine="34" fill="#DEB887" filter="url(#f1jjvo3rba2gcq)" height="92.8281" id="Base" style="stroke:#B22222;stroke-width:1.5;" width="222" x="35" y="80.8281"/><ellipse cx="125.75" cy="96.8281" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M128.5156,92.7031 Q128.6719,92.4844 128.8594,92.375 Q129.0469,92.2656 129.2656,92.2656 Q129.6406,92.2656 129.875,92.5234 Q130.1094,92.7813 130.1094,93.3906 L130.1094,94.8438 Q130.1094,95.4531 129.875,95.7188 Q129.6406,95.9844 129.2656,95.9844 Q128.9219,95.9844 128.7188,95.7813 Q128.5156,95.5938 128.4063,95.0781 Q128.3594,94.7188 128.1719,94.5313 Q127.8438,94.1563 127.2344,93.9375 Q126.625,93.7188 126,93.7188 Q125.2344,93.7188 124.6016,94.0469 Q123.9688,94.375 123.4766,95.125 Q122.9844,95.875 122.9844,96.9063 L122.9844,98 Q122.9844,99.2344 123.875,100.0547 Q124.7656,100.875 126.3594,100.875 Q127.2969,100.875 127.9531,100.625 Q128.3438,100.4688 128.7656,100.0313 Q129.0313,99.7656 129.1797,99.6875 Q129.3281,99.6094 129.5313,99.6094 Q129.8594,99.6094 130.1172,99.8672 Q130.375,100.125 130.375,100.4688 Q130.375,100.8125 130.0313,101.2188 Q129.5313,101.7969 128.7344,102.125 Q127.6563,102.5781 126.3594,102.5781 Q124.8438,102.5781 123.6406,101.9531 Q122.6563,101.4531 121.9688,100.3828 Q121.2813,99.3125 121.2813,98.0313 L121.2813,96.875 Q121.2813,95.5469 121.8984,94.3984 Q122.5156,93.25 123.6094,92.6328 Q124.7031,92.0156 125.9375,92.0156 Q126.6719,92.0156 127.3203,92.1797 Q127.9688,92.3438 128.5156,92.7031 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="146.25" y="102.5566">Base</text><line style="stroke:#B22222;stroke-width:1.5;" x1="36" x2="256" y1="112.8281" y2="112.8281"/><ellipse cx="46" cy="123.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="55" y="131.3613">void non_virtual()</text><ellipse cx="46" cy="141.4375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="55" y="148.9707">virtual void virtual_function()</text><ellipse cx="46" cy="159.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="55" y="166.5801">virtual void overridden_virtual()</text><!--MD5=[115a9824115b13ae500bf0292c1636ac]
+class Derived--><rect codeLine="40" fill="#DEB887" filter="url(#f1jjvo3rba2gcq)" height="57.6094" id="Derived" style="stroke:#B22222;stroke-width:1.5;" width="278" x="7" y="233.8281"/><ellipse cx="117.25" cy="249.8281" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M120.0156,245.7031 Q120.1719,245.4844 120.3594,245.375 Q120.5469,245.2656 120.7656,245.2656 Q121.1406,245.2656 121.375,245.5234 Q121.6094,245.7813 121.6094,246.3906 L121.6094,247.8438 Q121.6094,248.4531 121.375,248.7188 Q121.1406,248.9844 120.7656,248.9844 Q120.4219,248.9844 120.2188,248.7813 Q120.0156,248.5938 119.9063,248.0781 Q119.8594,247.7188 119.6719,247.5313 Q119.3438,247.1563 118.7344,246.9375 Q118.125,246.7188 117.5,246.7188 Q116.7344,246.7188 116.1016,247.0469 Q115.4688,247.375 114.9766,248.125 Q114.4844,248.875 114.4844,249.9063 L114.4844,251 Q114.4844,252.2344 115.375,253.0547 Q116.2656,253.875 117.8594,253.875 Q118.7969,253.875 119.4531,253.625 Q119.8438,253.4688 120.2656,253.0313 Q120.5313,252.7656 120.6797,252.6875 Q120.8281,252.6094 121.0313,252.6094 Q121.3594,252.6094 121.6172,252.8672 Q121.875,253.125 121.875,253.4688 Q121.875,253.8125 121.5313,254.2188 Q121.0313,254.7969 120.2344,255.125 Q119.1563,255.5781 117.8594,255.5781 Q116.3438,255.5781 115.1406,254.9531 Q114.1563,254.4531 113.4688,253.3828 Q112.7813,252.3125 112.7813,251.0313 L112.7813,249.875 Q112.7813,248.5469 113.3984,247.3984 Q114.0156,246.25 115.1094,245.6328 Q116.2031,245.0156 117.4375,245.0156 Q118.1719,245.0156 118.8203,245.1797 Q119.4688,245.3438 120.0156,245.7031 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="137.75" y="255.5566">Derived</text><line style="stroke:#B22222;stroke-width:1.5;" x1="8" x2="284" y1="265.8281" y2="265.8281"/><ellipse cx="18" cy="276.8281" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="27" y="284.3613">virtual void overridden_virtual() override</text><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="85.4063" style="stroke:#A80036;stroke-width:1.5;" width="140" x="300" y="85.8281"/><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="78" x="331" y="100.2852">Base OBJECT</text><line style="stroke:#A80036;stroke-width:1.0;" x1="300" x2="440" y1="104.9219" y2="104.9219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="28" x="333.5" y="117.3027">VPTR</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="403" y="117.3027"/><line style="stroke:#A80036;stroke-width:1.0;" x1="395" x2="395" y1="104.9219" y2="121.5"/><line style="stroke:#A80036;stroke-width:1.0;" x1="300" x2="440" y1="121.5" y2="121.5"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="53" x="321" y="133.8809">non_virtual</text><text fill="#0000FF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="400" y="133.8809">0x9900</text><line style="stroke:#A80036;stroke-width:1.0;" x1="395" x2="395" y1="121.5" y2="138.0781"/><line style="stroke:#A80036;stroke-width:1.0;" x1="300" x2="440" y1="138.0781" y2="138.0781"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="305" y="150.459">overridden_virtual</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="403" y="150.459"/><line style="stroke:#A80036;stroke-width:1.0;" x1="395" x2="395" y1="138.0781" y2="154.6563"/><line style="stroke:#A80036;stroke-width:1.0;" x1="300" x2="440" y1="154.6563" y2="154.6563"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="74" x="310.5" y="167.0371">virtual_function</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="403" y="167.0371"/><line style="stroke:#A80036;stroke-width:1.0;" x1="395" x2="395" y1="154.6563" y2="171.2344"/><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="85.4063" style="stroke:#A80036;stroke-width:1.5;" width="140" x="263" y="355.8281"/><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="92" x="287" y="370.2852">Derived OBJECT</text><line style="stroke:#A80036;stroke-width:1.0;" x1="263" x2="403" y1="374.9219" y2="374.9219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="28" x="296.5" y="387.3027">VPTR</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="366" y="387.3027"/><line style="stroke:#A80036;stroke-width:1.0;" x1="358" x2="358" y1="374.9219" y2="391.5"/><line style="stroke:#A80036;stroke-width:1.0;" x1="263" x2="403" y1="391.5" y2="391.5"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="53" x="284" y="403.8809">non_virtual</text><text fill="#0000FF" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="363" y="403.8809">0x9900</text><line style="stroke:#A80036;stroke-width:1.0;" x1="358" x2="358" y1="391.5" y2="408.0781"/><line style="stroke:#A80036;stroke-width:1.0;" x1="263" x2="403" y1="408.0781" y2="408.0781"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="268" y="420.459">overridden_virtual</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="366" y="420.459"/><line style="stroke:#A80036;stroke-width:1.0;" x1="358" x2="358" y1="408.0781" y2="424.6563"/><line style="stroke:#A80036;stroke-width:1.0;" x1="263" x2="403" y1="424.6563" y2="424.6563"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="74" x="273.5" y="437.0371">virtual_function</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="0" x="366" y="437.0371"/><line style="stroke:#A80036;stroke-width:1.0;" x1="358" x2="358" y1="424.6563" y2="441.2344"/><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="52.25" style="stroke:#A80036;stroke-width:1.5;" width="140" x="454" y="371.8281"/><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="91" x="478.5" y="386.2852">Derived VTABLE</text><line style="stroke:#A80036;stroke-width:1.0;" x1="454" x2="594" y1="390.9219" y2="390.9219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="459" y="403.3027">overridden_virtual</text><text fill="#FF0000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="554" y="403.3027">0x4448</text><line style="stroke:#A80036;stroke-width:1.0;" x1="549" x2="549" y1="390.9219" y2="407.5"/><line style="stroke:#A80036;stroke-width:1.0;" x1="454" x2="594" y1="407.5" y2="407.5"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="74" x="464.5" y="419.8809">virtual_function</text><text fill="#008000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="554" y="419.8809">0x1112</text><line style="stroke:#A80036;stroke-width:1.0;" x1="549" x2="549" y1="407.5" y2="424.0781"/><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="52.25" style="stroke:#A80036;stroke-width:1.5;" width="140" x="491" y="101.8281"/><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="77" x="522.5" y="116.2852">Base VTABLE</text><line style="stroke:#A80036;stroke-width:1.0;" x1="491" x2="631" y1="120.9219" y2="120.9219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="85" x="496" y="133.3027">overridden_virtual</text><text fill="#008000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="591" y="133.3027">0x2224</text><line style="stroke:#A80036;stroke-width:1.0;" x1="586" x2="586" y1="120.9219" y2="137.5"/><line style="stroke:#A80036;stroke-width:1.0;" x1="491" x2="631" y1="137.5" y2="137.5"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="74" x="501.5" y="149.8809">virtual_function</text><text fill="#008000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="591" y="149.8809">0x1112</text><line style="stroke:#A80036;stroke-width:1.0;" x1="586" x2="586" y1="137.5" y2="154.0781"/><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="54.7656" style="stroke:#A80036;stroke-width:1.5;" width="109" x="396.5" y="235.3281"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="75" x="413.5" y="247.7852">«non_virtual»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="403.5" y="264.8789">Base::non_virtual</text><line style="stroke:#A80036;stroke-width:1.5;" x1="397.5" x2="504.5" y1="269.5156" y2="269.5156"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="402.5" y="283.8965">0x9900</text><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="39.6719" style="stroke:#A80036;stroke-width:1.5;" width="131" x="589.5" y="502.8281"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="117" x="596.5" y="517.2852">Base::virtual_function</text><line style="stroke:#A80036;stroke-width:1.5;" x1="590.5" x2="719.5" y1="521.9219" y2="521.9219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="595.5" y="536.3027">0x1112</text><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="39.6719" style="stroke:#A80036;stroke-width:1.5;" width="146" x="679" y="107.3281"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="132" x="686" y="121.7852">Base::overridden_virtual</text><line style="stroke:#A80036;stroke-width:1.5;" x1="680" x2="824" y1="126.4219" y2="126.4219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="685" y="140.8027">0x2224</text><rect fill="#FEFECE" filter="url(#f1jjvo3rba2gcq)" height="39.6719" style="stroke:#A80036;stroke-width:1.5;" width="159" x="700.5" y="242.8281"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="145" x="707.5" y="257.2852">Derived::overridden_virtual</text><line style="stroke:#A80036;stroke-width:1.5;" x1="701.5" x2="858.5" y1="261.9219" y2="261.9219"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="35" x="706.5" y="276.3027">0x4448</text><!--MD5=[3e73db6754f8304d3846306b03b36ebf]
+reverse link Base to Derived--><path codeLine="43" d="M146,193.9881 C146,207.9281 146,221.9281 146,233.5681 " fill="none" id="Base-backto-Derived" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="139,193.8981,146,173.8981,153,193.8981,139,193.8981" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f5fd59197c26560ae7bc05a72010c628]
+link BO to non_virtual--><path codeLine="88" d="M441,129.3281 C461.09,129.3281 458.47,190.6681 454.75,229.8781 " fill="none" id="BO-to-non_virtual" style="stroke:#0000FF;stroke-width:1.0;"/><polygon fill="#0000FF" points="454.24,235.0181,459.0962,226.4497,454.7262,230.0418,451.1341,225.6718,454.24,235.0181" style="stroke:#0000FF;stroke-width:1.0;"/><!--MD5=[4ba6ca21acd21e48b9bbabf9377b6266]
+reverse link non_virtual to DO--><path codeLine="89" d="M443.16,295.8481 C432.88,335.9081 414.9,399.3281 404,399.3281 " fill="none" id="non_virtual-backto-DO" style="stroke:#0000FF;stroke-width:1.0;"/><polygon fill="#0000FF" points="444.49,290.5981,438.3838,298.3256,443.2505,295.4421,446.1341,300.3088,444.49,290.5981" style="stroke:#0000FF;stroke-width:1.0;"/><!--MD5=[6e21fab7d2a1e2026f4262ac813b6c34]
+link BO to BV--><path codeLine="91" d="M441,113.3281 C451.35,116.6281 462.18,119.8281 472.9,122.6981 " fill="none" id="BO-to-BV" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="482.7,125.2381,474.9938,119.1051,477.8604,123.9818,472.9837,126.8485,482.7,125.2381" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2ce3ae1e5c4ce7d783df231a16ea27eb]
+link DO to DV--><path codeLine="92" d="M404,383.3281 C414.35,386.6281 425.18,389.8281 435.9,392.6981 " fill="none" id="DO-to-DV" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="445.7,395.2381,437.9938,389.1051,440.8604,393.9818,435.9837,396.8485,445.7,395.2381" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2d13b94b5dc85928ef9d38934658dc97]
+link BV to base_virtual--><path codeLine="94" d="M632,145.3281 C667.4,145.3281 659.41,413.9881 656.07,497.4181 " fill="none" id="BV-to-base_virtual" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="655.86,502.6381,660.2417,493.8177,656.0741,497.6427,652.249,493.4751,655.86,502.6381" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[4a8cdeb95acb4d66af756719a28b512f]
+link BV to overridden_virtual--><path codeLine="95" d="M632,129.3281 C643.86,133.1381 656.39,135.9981 668.69,137.9481 " fill="none" id="BV-to-overridden_virtual" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="678.95,139.3681,670.583,134.1726,673.9972,138.683,669.4868,142.0972,678.95,139.3681" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[4fb7233f6ffa474074bc3cee5559e9ce]
+link DV to base_virtual--><path codeLine="97" d="M595,415.3281 C613.83,415.3281 635.4,466.5281 646.85,497.9281 " fill="none" id="DV-to-base_virtual" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="648.6,502.7881,649.3003,492.9642,646.8993,498.0862,641.7773,495.6853,648.6,502.7881" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[b3d955973134802424b7348f2949e5a4]
+reverse link derived_overridden_virtual to DV--><path codeLine="98" d="M763.91,287.0481 C734.96,325.7681 670.1,399.3281 595,399.3281 " fill="none" id="derived_overridden_virtual-backto-DV" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="766.93,282.9581,758.3604,287.8121,763.9552,286.9769,764.7905,292.5718,766.93,282.9581" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[345e4be324c10ffed612ebfeea3c5139]
+link Base to BO--><!--MD5=[3ec1cb0549cc29fcc91332796049bd4e]
+link BO to DO--><!--MD5=[2934f00d8d1b1cbc11dbd9e3918fe6c3]
+link BV to DV--><!--MD5=[f1ea950ef4599ac2f53039c587021b61]
+link base_virtual to derived_overridden_virtual--><!--MD5=[490eb567f2ff30db741c692e973ee36c]
+link BV to non_virtual--><!--MD5=[cc96b5e8d241264175e6c311ac8288d7]
+link non_virtual to DV--><!--MD5=[8754930bf5034219f1280fb169e0f631]
+link overridden_virtual to derived_overridden_virtual--><!--MD5=[e026f3de922752cb6d052eeb979cb4dc]
+@startuml
+<style>
+classDiagram {
+    class {
+        BackgroundColor BurlyWood
+        LineColor FireBrick
+
+        header {
+            FontStyle Bold
+        }
+    }
+}
+
+object {
+    BackgroundColor PaleGreen
+
+    header {
+        FontColor DarkGreen
+        FontStyle Bold
+    }
+}
+
+.non_virtual {
+    BackgroundColor PaleTurquoise
+
+    header {
+        FontColor MidnightBlue
+        FontStyle Bold
+    }
+}
+</style>
+
+title **Object Diagram Demo**\n\n
+
+class Base {
+    + void non_virtual()
+    + virtual void virtual_function()
+    + virtual void overridden_virtual()
+}
+
+class Derived {
+    + virtual void overridden_virtual() override
+}
+Base <|== Derived
+hide class fields
+
+map "**Base OBJECT**" as BO {
+    VPTR=>
+    non_virtual=><color:Blue>0x9900</color>
+    overridden_virtual=>
+    virtual_function=>
+}
+
+map "**Derived OBJECT**" as DO {
+    VPTR=>
+    non_virtual=><color:Blue>0x9900</color>
+    overridden_virtual=>
+    virtual_function=>
+}
+
+map "**Derived VTABLE**" as DV {
+    overridden_virtual => <color:Red>0x4448</color>
+    virtual_function => <color:Green>0x1112</color>
+}
+
+map "**Base VTABLE**" as BV {
+    overridden_virtual => <color:Green>0x2224</color>
+    virtual_function => <color:Green>0x1112</color>
+}
+
+' bug: both custom style and stereotype are applied as they have the same syntax
+' see: https://forum.plantuml.net/14692/user-defined-style-applied-on-class-also-becomes-stereotype
+object "Base::non_virtual" as non_virtual <<non_virtual>> {
+    0x9900
+}
+
+object "Base::virtual_function" as base_virtual {
+    0x1112
+}
+
+object "Base::overridden_virtual" as overridden_virtual {
+    0x2224
+}
+
+object "Derived::overridden_virtual" as derived_overridden_virtual {
+    0x4448
+}
+
+BO::non_virtual -[#Blue]> non_virtual
+DO::non_virtual -up[#Blue]> non_virtual
+
+BO::VPTR -right-> BV
+DO::VPTR -right-> DV
+
+BV::virtual_function -[#Green]> base_virtual
+BV::overridden_virtual -right[#Green]> overridden_virtual
+
+DV::virtual_function -[#Green]-> base_virtual
+DV::overridden_virtual -up[#Green]> derived_overridden_virtual
+
+' hidden connectors to "guide" the layout
+Base -right[hidden]> BO
+BO -down[hidden]- -> DO
+BV -down[hidden]- -> DV
+base_virtual -[hidden]down-> derived_overridden_virtual
+BV -down[hidden]-> non_virtual
+non_virtual -down[hidden]-> DV
+overridden_virtual -down[hidden]-> derived_overridden_virtual
+
+@enduml
+
+@startuml
+<style>
+classDiagram {
+    class {
+        BackgroundColor BurlyWood
+        LineColor FireBrick
+
+        header {
+            FontStyle Bold
+        }
+    }
+}
+
+object {
+    BackgroundColor PaleGreen
+
+    header {
+        FontColor DarkGreen
+        FontStyle Bold
+    }
+}
+
+.non_virtual {
+    BackgroundColor PaleTurquoise
+
+    header {
+        FontColor MidnightBlue
+        FontStyle Bold
+    }
+}
+</style>
+
+title **Object Diagram Demo**\n\n
+
+class Base {
+    + void non_virtual()
+    + virtual void virtual_function()
+    + virtual void overridden_virtual()
+}
+
+class Derived {
+    + virtual void overridden_virtual() override
+}
+Base <|== Derived
+hide class fields
+
+map "**Base OBJECT**" as BO {
+    VPTR=>
+    non_virtual=><color:Blue>0x9900</color>
+    overridden_virtual=>
+    virtual_function=>
+}
+
+map "**Derived OBJECT**" as DO {
+    VPTR=>
+    non_virtual=><color:Blue>0x9900</color>
+    overridden_virtual=>
+    virtual_function=>
+}
+
+map "**Derived VTABLE**" as DV {
+    overridden_virtual => <color:Red>0x4448</color>
+    virtual_function => <color:Green>0x1112</color>
+}
+
+map "**Base VTABLE**" as BV {
+    overridden_virtual => <color:Green>0x2224</color>
+    virtual_function => <color:Green>0x1112</color>
+}
+
+object "Base::non_virtual" as non_virtual <<non_virtual>> {
+    0x9900
+}
+
+object "Base::virtual_function" as base_virtual {
+    0x1112
+}
+
+object "Base::overridden_virtual" as overridden_virtual {
+    0x2224
+}
+
+object "Derived::overridden_virtual" as derived_overridden_virtual {
+    0x4448
+}
+
+BO::non_virtual -[#Blue]> non_virtual
+DO::non_virtual -up[#Blue]> non_virtual
+
+BO::VPTR -right-> BV
+DO::VPTR -right-> DV
+
+BV::virtual_function -[#Green]> base_virtual
+BV::overridden_virtual -right[#Green]> overridden_virtual
+
+DV::virtual_function -[#Green]-> base_virtual
+DV::overridden_virtual -up[#Green]> derived_overridden_virtual
+
+Base -right[hidden]> BO
+BO -down[hidden]- -> DO
+BV -down[hidden]- -> DV
+base_virtual -[hidden]down-> derived_overridden_virtual
+BV -down[hidden]-> non_virtual
+non_virtual -down[hidden]-> DV
+overridden_virtual -down[hidden]-> derived_overridden_virtual
+
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 15:43:56 IST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: IN
+--></g></svg>
