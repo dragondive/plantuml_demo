@@ -1,0 +1,121 @@
+@startuml
+!procedure $connect_entities($name1, $name2, $direction)
+    $name1 -$direction-> $name2
+!endprocedure
+
+!procedure $create_rectangle($name, $stereotype)
+    rectangle $name <<$stereotype>>
+!endprocedure
+
+!function $is_even($num)
+    /' as the preprocessor currently doesn't have a modulus operator, use this
+    "hack" of checking the last digit to decide if the number is even.
+    the "mathematical approach" of successive subtraction to determine the
+    remainder runs into memory problems at runtime for long sequences. '/
+    !$num_str = %string($num)
+    !$last_digit = %substr($num_str, %strlen($num_str) -1, 1)
+    !return ($last_digit == "0"\
+            || $last_digit == "2"\
+            || $last_digit == "4"\
+            || $last_digit == "6"\
+            || $last_digit == "8")
+!endfunction
+
+' unit tests for the $is_even function :-)
+!assert $is_even(0) == 1
+!assert $is_even(11) == 0
+!assert $is_even(292) == 1
+!assert $is_even(1663) == 0
+!assert $is_even(10824) == 1
+!assert $is_even(652665) == 0
+!assert $is_even(9188316) == 1
+!assert $is_even(79430237) == 0
+!assert $is_even(340931238) == 1
+!assert $is_even(394237819) == 0
+!assert $is_even(518026430) == 1
+
+!function $get_last_hex_digit($num)
+    !$num_str = %dec2hex($num)
+    !$last_digit = %substr($num_str, %strlen($num_str) -1, 1)
+    !return $last_digit
+!endfunction
+
+' unit tests for the $get_last_hex_digit function :-)
+!assert $get_last_hex_digit(0) == "0"
+!assert $get_last_hex_digit(17) == "1"
+!assert $get_last_hex_digit(290) == "2"
+!assert $get_last_hex_digit(1667) == "3"
+!assert $get_last_hex_digit(10820) == "4"
+!assert $get_last_hex_digit(652661) == "5"
+!assert $get_last_hex_digit(9188310) == "6"
+!assert $get_last_hex_digit(79430247) == "7"
+!assert $get_last_hex_digit(340931240) == "8"
+!assert $get_last_hex_digit(394237817) == "9"
+!assert $get_last_hex_digit(518026426) == "a"
+!assert $get_last_hex_digit(390243419) == "b"
+!assert $get_last_hex_digit(890540140) == "c"
+!assert $get_last_hex_digit(623489357) == "d"
+!assert $get_last_hex_digit(216487342) == "e"
+!assert $get_last_hex_digit(938476831) == "f"
+
+!procedure $make_direction_map()
+    /' use this workaround to manually wrap the chain like a snake. :-)
+       otherwise the chain will grow in only one direction, which would be inefficient
+       use of the defined "canvas" and also difficult to read. as the preprocessor currently
+       does not have a modulus operator, use this workaround to map a direction manually. '/
+    %set_variable_value("0", "right")
+    %set_variable_value("1", "right")
+    %set_variable_value("2", "right")
+    %set_variable_value("3", "right")
+    %set_variable_value("4", "right")
+    %set_variable_value("5", "right")
+    %set_variable_value("6", "right")
+    %set_variable_value("7", "down")
+    %set_variable_value("8", "left")
+    %set_variable_value("9", "left")
+    %set_variable_value("a", "left")
+    %set_variable_value("b", "left")
+    %set_variable_value("c", "left")
+    %set_variable_value("d", "left")
+    %set_variable_value("e", "left")
+    %set_variable_value("f", "down")
+!endprocedure
+$make_direction_map()
+
+!function $collatz($in_num)
+    !if $is_even($in_num)
+        !return $in_num / 2
+    !else
+        !return 3 * $in_num + 1
+    !endif
+!endfunction
+
+!assert $collatz(13) == 40
+!assert $collatz(40) == 20
+
+!procedure $make_collatz_sequence($num)
+    !$counter = 0
+    $create_rectangle($num, $counter)
+
+    !while $num != 1
+        !$prev = $num
+
+        !$num = $collatz($num)
+        !$direction = %get_variable_value($get_last_hex_digit($counter))
+
+        !$counter = $counter + 1
+
+        $create_rectangle($num, $counter)
+        $connect_entities($prev, $num, $direction)
+    !endwhile
+!endprocedure
+
+!$count = 1
+!$limit = 100
+!while $count <= $limit
+    newpage
+    $make_collatz_sequence($count)
+    !$count = $count + 1
+!endwhile
+
+@enduml
