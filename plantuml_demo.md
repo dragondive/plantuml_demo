@@ -84,7 +84,7 @@ using_with_other_tools:
         - word
     document_generation:
         - doxygen
-        - java_doclet
+        - java doclet
         - hpp2plantuml
         - py2puml
     markup_language:
@@ -740,7 +740,7 @@ listopeniconic
 ```plantuml
 @startuml
 
-:<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size> ;
+rectangle "<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size>"
 @enduml
 ```
 
@@ -828,7 +828,7 @@ $factorial_question_answer_sequence(\
 
 ### Sprites
 
-Small graphical known as sprites can be used in diagrams.
+Small graphical elements known as sprites can be used in diagrams.
 
 * **Encoding an image into sprite**: Any image can be encoded into a sprite using a command like below:
 
@@ -848,19 +848,23 @@ Small graphical known as sprites can be used in diagrams.
 classDiagram {
     class {
         LineColor Black
-        BackGroundColor White
+        BackGroundColor LemonChiffon
         FontSize 40
         FontStyle Bold
     }
+}
+rectangle {
+    FontSize 40
+    FontStyle Bold
+    HorizontalAlignment Center
+    LineColor Black
+    BackGroundColor White
 }
 </style>
 
 !include src/sprites/batman.puml
 
-hide circle
-hide class members
-
-class "<$batman>\n\
+rectangle "<$batman>\n\
 KEEP\n\
 CALM\n\
 AND\n\
@@ -1054,9 +1058,9 @@ skinparam padding 10
         <size:16>**Trending Stories <&bolt>**</size> | ^Today^
         .
         {
-            **Jacinda Ardern** <&heart>2.5M
-            Our country is getting back on track. There's still a lot more to do.
-            We cannot do it without your support. <i>continue reading ...</i>
+            **Compassion Unlimited Plus Action (CUPA)** <&heart>2.5M
+            Be a part of our community,
+            Give the animals some of your time. <i>continue reading ...</i>
         }
         {
             .
@@ -1084,7 +1088,7 @@ Text-based drawing tools, such as PlantUML, are an important enabler for the [do
 
 **What PlantUML cannot do**: PlantUML is not a [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument) for all documentation needs. It serves reasonably well for lightweight architectures and for diagrams of simple to moderate complexity.
 
-For more complex modelling requirements of bigger software systems, PlantUML alone is not sufficient. This especially holds when we need to reuse the models to provide different views of the system. PlantUML is an important tool in the developer's documentation toolbox but it is often best used in symphony with other tools. 
+For more complex modelling requirements of bigger software systems, PlantUML alone is not sufficient. This especially holds when we need to reuse the models to provide different views of the system. PlantUML is an important tool in the developer's documentation toolbox but it is often best used in symphony with other tools.
 
 ### How to run PlantUML
 
@@ -1100,11 +1104,11 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
 * **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either by double clicking the `plantuml.jar` or using the following command:
 
-        ```
-        java -jar plantuml.jar -gui
-        ```
+    ```
+    java -jar plantuml.jar -gui
+    ```
 
-        Then the file or directory containing the diagram descriptions can be selected from the GUI to generate the diagrams.
+    Then the file or directory containing the diagram descriptions can be selected from the GUI to generate the diagrams.
 
 * **As a web service**: PlantUML can be hosted as a web service, which is then used to generate the diagrams. There are three approaches available to use the web service:
     1. Enter the diagram description into the text box on the web page.
