@@ -260,9 +260,9 @@ The demo also introduces the following common features:
 @startuml
 title **Class Diagram Demo**\n\n
 
-!include demo_src/sprites/chess_king.puml /' load sprite from file '/
-!include demo_src/sprites/chess_pawn.puml
-!include demo_src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
+!include src/sprites/chess_king.puml /' load sprite from file '/
+!include src/sprites/chess_pawn.puml
+!include src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
 
 sprite $chess_piece_colour {  /' define sprite directly in the description '/
     FFFFFFFFFFFFFFFFFF
@@ -660,9 +660,9 @@ end alt
 ```plantuml
 @startuml
 title **Class Diagram Demo**\n\n
-!include demo_src/sprites/chess_king.puml /' load sprite from file '/
-!include demo_src/sprites/chess_pawn.puml
-!include demo_src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
+!include src/sprites/chess_king.puml /' load sprite from file '/
+!include src/sprites/chess_pawn.puml
+!include src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
 
 sprite $chess_piece_colour {  /' define sprite directly in the description '/
     FFFFFFFFFFFFFFFFFF
@@ -849,7 +849,7 @@ classDiagram {
 }
 </style>
 
-!include demo_src/sprites/batman.puml
+!include src/sprites/batman.puml
 
 hide circle
 hide class members
@@ -1357,9 +1357,9 @@ CSS-like styles can be applied to the diagrams. The stylesheet can be either inc
 </style>
 title **Class Diagram Demo**\n\n
 
-!include demo_src/sprites/chess_king.puml /' load sprite from file '/
-!include demo_src/sprites/chess_pawn.puml
-!include demo_src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
+!include src/sprites/chess_king.puml /' load sprite from file '/
+!include src/sprites/chess_pawn.puml
+!include src/sprites/chess_bishop_rook.puml  /' load file having multiple sprites '/
 
 sprite $chess_piece_colour {  /' define sprite directly in the description '/
     FFFFFFFFFFFFFFFFFF
