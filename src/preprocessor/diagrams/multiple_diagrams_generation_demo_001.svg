@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="265px" preserveAspectRatio="none" style="width:726px;height:265px;background:#FFFFFF;" version="1.1" viewBox="0 0 726 265" width="726px" zoomAndPan="magnify"><defs><filter height="300%" id="fxofohmmq02wi" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="305" x="207.25" y="30.6855">Customer Initech: Developer Workflow</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="55" x2="55" y1="126.25" y2="179.6016"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="246" x2="246" y1="126.25" y2="179.6016"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="313" x2="313" y1="126.25" y2="179.6016"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="560.5" x2="560.5" y1="126.25" y2="179.6016"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="657.5" x2="657.5" y1="126.25" y2="179.6016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="20" y="123.1738">Developer</text><ellipse cx="55.5" cy="51.6406" fill="#FEFECE" filter="url(#fxofohmmq02wi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M55.5,59.6406 L55.5,86.6406 M42.5,67.6406 L68.5,67.6406 M55.5,86.6406 L42.5,101.6406 M55.5,86.6406 L68.5,101.6406 " fill="none" filter="url(#fxofohmmq02wi)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="20" y="193.1348">Developer</text><ellipse cx="55.5" cy="206.2109" fill="#FEFECE" filter="url(#fxofohmmq02wi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M55.5,214.2109 L55.5,241.2109 M42.5,222.2109 L68.5,222.2109 M55.5,241.2109 L42.5,256.2109 M55.5,241.2109 L68.5,256.2109 " fill="none" filter="url(#fxofohmmq02wi)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="223" y="123.1738">Tester</text><ellipse cx="246.5" cy="51.6406" fill="#FEFECE" filter="url(#fxofohmmq02wi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M246.5,59.6406 L246.5,86.6406 M233.5,67.6406 L259.5,67.6406 M246.5,86.6406 L233.5,101.6406 M246.5,86.6406 L259.5,101.6406 " fill="none" filter="url(#fxofohmmq02wi)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="223" y="193.1348">Tester</text><ellipse cx="246.5" cy="206.2109" fill="#FEFECE" filter="url(#fxofohmmq02wi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M246.5,214.2109 L246.5,241.2109 M233.5,222.2109 L259.5,222.2109 M246.5,241.2109 L233.5,256.2109 M246.5,241.2109 L259.5,256.2109 " fill="none" filter="url(#fxofohmmq02wi)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="280" y="123.1738">Integrator</text><ellipse cx="313.5" cy="51.6406" fill="#FEFECE" filter="url(#fxofohmmq02wi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M313.5,59.6406 L313.5,86.6406 M300.5,67.6406 L326.5,67.6406 M313.5,86.6406 L300.5,101.6406 M313.5,86.6406 L326.5,101.6406 " fill="none" filter="url(#fxofohmmq02wi)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="280" y="193.1348">Integrator</text><ellipse cx="313.5" cy="206.2109" fill="#FEFECE" filter="url(#fxofohmmq02wi)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M313.5,214.2109 L313.5,241.2109 M300.5,222.2109 L326.5,222.2109 M313.5,241.2109 L300.5,256.2109 M313.5,241.2109 L326.5,256.2109 " fill="none" filter="url(#fxofohmmq02wi)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fxofohmmq02wi)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="86" x="515.5" y="89.6406"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="522.5" y="111.1738">dev_Initech</text><rect fill="#FEFECE" filter="url(#fxofohmmq02wi)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="86" x="515.5" y="178.6016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="522.5" y="200.1348">dev_Initech</text><rect fill="#FEFECE" filter="url(#fxofohmmq02wi)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="80" x="615.5" y="89.6406"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="622.5" y="111.1738">dev_Acme</text><rect fill="#FEFECE" filter="url(#fxofohmmq02wi)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="80" x="615.5" y="178.6016"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="622.5" y="200.1348">dev_Acme</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="0" x2="719.5" y1="136.25" y2="136.25"/><polygon fill="#A80036" points="548.5,155.6016,558.5,159.6016,548.5,163.6016,552.5,159.6016" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="554.5" y1="159.6016" y2="159.6016"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="62.5" y="154.7451">publish code changes</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="0" x2="719.5" y1="167.6016" y2="167.6016"/><!--MD5=[2d43cab125a0ec9b0526fdf13fd36835]
+@startuml
+
+!$customer_data = {
+    "customer_list" : [
+        {
+            "name": "Initech",
+            "is_premium": "false",
+            "delivery_path": "https://initech.com/tps/", 
+            "release_number": "VIII.XV.XXXIX" /' If you could use Roman numerals for the release numbers, that would be great.'/
+        },
+        {
+            "name": "Acme",
+            "is_premium": "true",
+            "delivery_path": "https://acme.com/creativemayhem/", 
+            "release_number": "4.1.6"
+        }
+    ]
+}
+
+actor Developer
+actor Tester
+actor Integrator
+
+!foreach $customer in $customer_data.customer_list
+    !assert $customer.name != ""
+    !assert $customer.delivery_path != ""
+    !assert $customer.release_number != ""
+
+    newpage Customer $customer.name: Developer Workflow
+    Developer -> %string("dev_" + $customer.name) : publish code changes
+    
+    !if ($customer.is_premium == "true")
+        alt if premium feature
+            Developer -> Developer : prepare Premium Order Report
+            Developer -> %string("dev_" + $customer.name) : publish premium feature
+        end
+    !endif
+
+    newpage Customer $customer.name: Tester Workflow
+    Tester <- %string("dev_" + $customer.name) : checkout %string("RC_" + $customer.release_number)
+    Tester <- Tester : run all tests\nand verify results
+
+    newpage Customer $customer.name: Integrator Workflow
+    Integrator -> Integrator : integrate all components\nfor project $customer.name
+    Integrator -> Integrator : publish libmagic.so to\n%string($customer.delivery_path + $customer.release_number)
+
+    !if ($customer.is_premium == "true")
+        alt if premium feature
+            Integrator -> Integrator : publish libpremium.so to\n%string($customer.delivery_path + $customer.release_number)
+        end
+    !endif
+!endfor
+
+@enduml
+
+@startuml
+
+
+actor Developer
+actor Tester
+actor Integrator
+
+
+    newpage Customer Initech: Developer Workflow
+    Developer -> dev_Initech : publish code changes
+    
+
+    newpage Customer Initech: Tester Workflow
+    Tester <- dev_Initech : checkout RC_VIII.XV.XXXIX
+    Tester <- Tester : run all tests\nand verify results
+
+    newpage Customer Initech: Integrator Workflow
+    Integrator -> Integrator : integrate all components\nfor project Initech
+    Integrator -> Integrator : publish libmagic.so to\nhttps://initech.com/tps/VIII.XV.XXXIX
+
+
+    newpage Customer Acme: Developer Workflow
+    Developer -> dev_Acme : publish code changes
+    
+        alt if premium feature
+            Developer -> Developer : prepare Premium Order Report
+            Developer -> dev_Acme : publish premium feature
+        end
+
+    newpage Customer Acme: Tester Workflow
+    Tester <- dev_Acme : checkout RC_4.1.6
+    Tester <- Tester : run all tests\nand verify results
+
+    newpage Customer Acme: Integrator Workflow
+    Integrator -> Integrator : integrate all components\nfor project Acme
+    Integrator -> Integrator : publish libmagic.so to\nhttps://acme.com/creativemayhem/4.1.6
+
+        alt if premium feature
+            Integrator -> Integrator : publish libpremium.so to\nhttps://acme.com/creativemayhem/4.1.6
+        end
+
+@enduml
+
+PlantUML version 1.2021.9(Sun Jul 25 15:43:56 IST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: IN
+--></g></svg>
