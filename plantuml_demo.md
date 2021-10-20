@@ -87,6 +87,8 @@ using_with_other_tools:
         - java_doclet
         - hpp2plantuml
         - py2puml
+    markup_language:
+        - markdown
     web_browsers: ""
 customization:
     - skinparams
@@ -1176,6 +1178,8 @@ PlantUML can be used together with several tools. This document describes use of
     * Java Doclet
     * hpp2plantuml
     * py2puml
+* Markup Languages
+    * markdown
 * Browsers
 
 ### Editors
@@ -1222,6 +1226,12 @@ Python module `hpp2plantuml` available [here](https://pypi.org/project/hpp2plant
 #### py2puml
 
 Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-tools) on github can generate class diagrams from Python code. The [attached video](videos/plantuml_py2puml_demo.mp4) shows a demo of using this module to generate class diagrams for my ongoing hobby project [multibeggar](https://github.com/dragondive/hebi/tree/main/multibeggar).
+
+### Markup Languages
+
+#### markdown
+
+Python module `plantuml-markdown` available [here](https://pypi.org/project/plantuml-markdown/) on PyPI can generate HTML page from a markdown file that has plantuml source code included. The [attached video](videos/plantuml_markdown_py_demo.mp4) shows a demo of using this module to generate the HTML for this document itself, making it another example of self-reference. :grin:
 
 ### Web Browsers
 
