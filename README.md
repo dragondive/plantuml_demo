@@ -19,9 +19,9 @@ The demo also introduces the following common features:
 
 * Customizing the diagram using `<style>`
 * Single line comment using `'`
-    * Should be placed on its own separate line, otherwise it is parsed as continuation of the preceding text (unlike `//` comments of C, C++, and Java)
+  * Should be placed on its own separate line, otherwise it is parsed as continuation of the preceding text (unlike `//` comments of C, C++, and Java)
 * Multiline comment using `/' ... '/`
-    * Can be used anywhere, including on a line having the diagram description
+  * Can be used anywhere, including on a line having the diagram description
 * Use of the lightweight markup language creole
 
 ```plantuml
@@ -394,6 +394,7 @@ Reopen --> Analyzing
 
 @enduml
 ```
+
 ### Timing Diagram
 
 The below timing diagram shows a hypothetical data transfer protocol. This demo illustrates a few features:
@@ -451,6 +452,7 @@ highlight 2 to 8 #technology;line:DimGrey : Data transfer region
 
 @enduml
 ```
+
 ### Object Diagram
 
 The below object diagram illustrates a common implementation of virtual functions in C++. This demo illustrates a few features:
@@ -577,6 +579,7 @@ overridden_virtual -down[hidden]-> derived_overridden_virtual
 
 @enduml
 ```
+
 ## Common Features
 
 This section includes demo of the common features that apply to all or multiple diagram types:
@@ -881,7 +884,7 @@ The PlantUML preprocessor provides variables, conditional expressions (with `!if
 
 Refer the [documentation](https://plantuml.com/preprocessor) for the syntax rules, full set of features and builtin functions.
 
-Several preprocessor code examples are available in [src/preprocessor](src/preprocessor) and some of them are described briefly here. All these examples are my original work. I created some of them initially to self-learn the preprocessor, but ended up having too much fun and created more preprocessor codes mainly for enjoyment. :happy:
+Several preprocessor code examples are available in [src/preprocessor](src/preprocessor) and some of them are described briefly here. All these examples are my original work. I created some of them initially to self-learn the preprocessor, but ended up having too much fun and created more preprocessor codes mainly for enjoyment. :satisfied:
 
 * **[fibonacci_recursive_in_out_with_user_function_demo.puml](src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml)**: Generates the fibonacci recursion tree in the form of a state diagram. It also demonstrates simple customization based on conditional expressions in two ways: using a user-defined function, and using a lambda expression.
 * **[fibonacci_memoized_demo.puml](src/preprocessor/fibonacci_memoized_demo.puml)**: Generates the graph of the memoized approach for the computation of fibonacci number.
@@ -1078,6 +1081,7 @@ skinparam padding 10
 ### PlantUML Overview
 
 As a text-based drawing tool, PlantUML offers the following benefits over a GUI-based tool:
+
 * **Convenience**: Writing the diagram description is often more convenient than dragging items on a canvas from a GUI toolbox.
 * **Revision control**: Diagram descriptions are saved in text files which are well suited for use with revision control systems as compared to images.
 * **Easier reviews**: diff tools make it easy to identify changes to the diagram, which make reviews easier. Any deviations between the source code and the diagrams describing them are more likely to be identified and fixed during the code reviews, making the documentation more reliable.
@@ -1116,8 +1120,8 @@ There are several ways to run PlantUML. The most commonly used ways are:
     3. Enter the encoded URL into the web browser which displays the diagram.
 
     The web service can be used in the following ways:
-    * **On the PlantUML server**: PlantUML hosts the web service at http://www.plantuml.com/plantuml/
-    * **Locally as a docker container**: PlantUML web service can be hosted locally using the official docker image, with the following commands:
+  * **On the PlantUML server**: PlantUML hosts the web service at <http://www.plantuml.com/plantuml/>
+  * **Locally as a docker container**: PlantUML web service can be hosted locally using the official docker image, with the following commands:
 
       ```
       docker pull plantuml/plantuml-server
@@ -1173,17 +1177,17 @@ Questions not answered from the documentation can be asked either on the [PlantU
 PlantUML can be used together with several tools. This document describes use of PlantUML with the following tools:
 
 * Editors
-    * VSCode
-    * Atom
-    * Eclipse
-    * Word
+  * VSCode
+  * Atom
+  * Eclipse
+  * Word
 * Document Generation
-    * Doxygen
-    * Java Doclet
-    * hpp2plantuml
-    * py2puml
+  * Doxygen
+  * Java Doclet
+  * hpp2plantuml
+  * py2puml
 * Markup Languages
-    * markdown
+  * markdown
 * Browsers
 
 ### Editors
@@ -1325,7 +1329,7 @@ note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bf
 
 The command `skinparameters` can be used to generate a diagram with a list of all the available skinparams. This list can also be generated by executing PlantUML on the command line with the `-language` option.
 
-```plantuml
+```console
 skinparameters
 ```
 
@@ -1333,7 +1337,7 @@ skinparameters
 
 Themes can be applied to the PlantUML diagrams. The command `help themes` lists the themes available in the core library. Some themes include procedures to colour messages.
 
-```plantuml
+```console
 help themes
 ```
 
@@ -1487,7 +1491,7 @@ Write your own dedication!
 @enduml
 ```
 
-The currently added public dedications can be seen directly from the source code: https://github.com/plantuml/plantuml/blob/master/src/net/sourceforge/plantuml/dedication/Dedications.java
+The currently added public dedications can be seen directly from the source code: <https://github.com/plantuml/plantuml/blob/master/src/net/sourceforge/plantuml/dedication/Dedications.java>
 
 #### Donation
 
@@ -1500,7 +1504,6 @@ Some user-contributed PlantUML themes are available at [Puml Themes](https://bsc
 ### UML for Blind People
 
 [This web page](http://www.bfg-it.de/wiki/Blind_mit_UML_arbeiten) describes PlantUML as part of a solution to describe UML to blind people. (The page is written in German, and can be translated to English or other languages using a language translation engine.)
-
 
 ## Fun Stuff
 
