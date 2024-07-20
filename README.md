@@ -106,6 +106,7 @@ fun_stuff:
     - oregon trail
 @endyaml
 ```
+![output: readme diagram 0](src/diagrams/readme/readme_diagram_0.svg)
 
 ### JSON Data Visualization
 
@@ -162,6 +163,7 @@ jsonDiagram {
 }
 @endjson
 ```
+![output: readme diagram 1](src/diagrams/readme/readme_diagram_1.svg)
 
 ## UML Diagrams
 
@@ -243,6 +245,7 @@ Repository --> Tracker : close issue
 note right: for simplicity, assume\nno merge conflicts.
 @enduml
 ```
+![output: readme diagram 2](src/diagrams/readme/readme_diagram_2.svg)
 
 ### Class Diagram
 
@@ -324,6 +327,7 @@ Rook <|-- Queen
 hide Queen members
 @enduml
 ```
+![output: readme diagram 3](src/diagrams/readme/readme_diagram_3.svg)
 
 ### State Diagram
 
@@ -394,6 +398,7 @@ Reopen --> Analyzing
 
 @enduml
 ```
+![output: readme diagram 4](src/diagrams/readme/readme_diagram_4.svg)
 
 ### Timing Diagram
 
@@ -452,6 +457,7 @@ highlight 2 to 8 #technology;line:DimGrey : Data transfer region
 
 @enduml
 ```
+![output: readme diagram 5](src/diagrams/readme/readme_diagram_5.svg)
 
 ### Object Diagram
 
@@ -579,6 +585,7 @@ overridden_virtual -down[hidden]-> derived_overridden_virtual
 
 @enduml
 ```
+![output: readme diagram 6](src/diagrams/readme/readme_diagram_6.svg)
 
 ## Common Features
 
@@ -603,6 +610,7 @@ PlantUML also defines names for some common colours. These names can be also be 
 colors
 @enduml
 ```
+![output: readme diagram 7](src/diagrams/readme/readme_diagram_7.svg)
 
 #### Similar Colours
 
@@ -613,12 +621,14 @@ The `colors` command can also be called with an argument, which is either a name
 colors Yellow
 @enduml
 ```
+![output: readme diagram 8](src/diagrams/readme/readme_diagram_8.svg)
 
 ```plantuml
 @startuml
 colors #ffb36a
 @enduml
 ```
+![output: readme diagram 9](src/diagrams/readme/readme_diagram_9.svg)
 
 #### Demo
 
@@ -663,6 +673,7 @@ end alt
 
 @enduml
 ```
+![output: readme diagram 10](src/diagrams/readme/readme_diagram_10.svg)
 
 <br><br>
 
@@ -727,6 +738,7 @@ Rook <|-- Queen
 hide Queen members
 @enduml
 ```
+![output: readme diagram 11](src/diagrams/readme/readme_diagram_11.svg)
 
 ### OpenIconic
 
@@ -737,6 +749,7 @@ The open source icon set OpenIconic can be used in diagrams using the syntax `<&
 listopeniconic
 @enduml
 ```
+![output: readme diagram 12](src/diagrams/readme/readme_diagram_12.svg)
 
 #### Demo
 
@@ -746,6 +759,7 @@ listopeniconic
 rectangle "<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size>"
 @enduml
 ```
+![output: readme diagram 13](src/diagrams/readme/readme_diagram_13.svg)
 
 ### Fonts
 
@@ -756,6 +770,7 @@ The font can be configured for almost all the text that appears in PlantUML diag
 listfonts
 @enduml
 ```
+![output: readme diagram 14](src/diagrams/readme/readme_diagram_14.svg)
 
 #### Demo
 
@@ -773,6 +788,7 @@ skinparam DefaultFontSize 16
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
+![output: readme diagram 15](src/diagrams/readme/readme_diagram_15.svg)
 
 ### Zoom
 
@@ -828,6 +844,7 @@ $factorial_question_answer_sequence(\
 )
 @enduml
 ```
+![output: readme diagram 16](src/diagrams/readme/readme_diagram_16.svg)
 
 ### Sprites
 
@@ -875,6 +892,7 @@ CALL\n\
 BATMAN"
 @enduml
 ```
+![output: readme diagram 17](src/diagrams/readme/readme_diagram_17.svg)
 
 ## Preprocessor
 
@@ -957,6 +975,7 @@ project starts on 2022-01-01
 
 @endgantt
 ```
+![output: readme diagram 18](src/diagrams/readme/readme_diagram_18.svg)
 
 ### Mindmap
 
@@ -1018,6 +1037,7 @@ left side
 *** National Pension System
 @endmindmap
 ```
+![output: readme diagram 19](src/diagrams/readme/readme_diagram_19.svg)
 
 ### Wireframe
 
@@ -1075,6 +1095,7 @@ skinparam padding 10
 }
 @endsalt
 ```
+![output: readme diagram 20](src/diagrams/readme/readme_diagram_20.svg)
 
 ## General Information
 
@@ -1147,6 +1168,7 @@ The special command `license` prints the license text.
 license
 @enduml
 ```
+![output: readme diagram 21](src/diagrams/readme/readme_diagram_21.svg)
 
 ### Language Description
 
@@ -1274,6 +1296,7 @@ skinparam DefaultFontSize 16
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
+![output: readme diagram 22](src/diagrams/readme/readme_diagram_22.svg)
 
 * **handwritten diagram**: The skinparam `handwritten` is used to give a hand-drawn appearance to the diagram.
 
@@ -1286,6 +1309,7 @@ skinparam DefaultFontSize 16
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
+![output: readme diagram 23](src/diagrams/readme/readme_diagram_23.svg)
 
 * **dark mode diagram**: The skinparam `monochrome` set to `reverse` generates a dark mode diagram, suitable for placing the diagram on a black background.
 
@@ -1298,6 +1322,7 @@ skinparam DefaultFontSize 16
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
+![output: readme diagram 24](src/diagrams/readme/readme_diagram_24.svg)
 
 * **customize individual entities**: Skinparam can be used not only to customize the overall look and feel of the diagram, but also of individual entities in the diagram. The below demo shows customization of the participants and the note.
 
@@ -1324,6 +1349,7 @@ skinparam SequenceLifeLineColor Red
 note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bfe98196d5 On the Origin of "Hello, World!"]]
 @enduml
 ```
+![output: readme diagram 25](src/diagrams/readme/readme_diagram_25.svg)
 
 #### List of all skinparams
 
@@ -1383,6 +1409,7 @@ end alt
 
 @enduml
 ```
+![output: readme diagram 26](src/diagrams/readme/readme_diagram_26.svg)
 
 ### Styles
 
@@ -1469,6 +1496,7 @@ Rook <|-- Queen
 hide Queen members
 @enduml
 ```
+![output: readme diagram 27](src/diagrams/readme/readme_diagram_27.svg)
 
 ## Miscellaneous
 
@@ -1490,6 +1518,7 @@ The dedication can be public or private. It will be available in each and every 
 Write your own dedication!
 @enduml
 ```
+![output: readme diagram 28](src/diagrams/readme/readme_diagram_28.svg)
 
 The currently added public dedications can be seen directly from the source code: <https://github.com/plantuml/plantuml/blob/master/src/net/sourceforge/plantuml/dedication/Dedications.java>
 
@@ -1531,6 +1560,7 @@ gridP = true
 gridDivision = 30
 @enduml
 ```
+![output: readme diagram 29](src/diagrams/readme/readme_diagram_29.svg)
 
 ### sudoku
 
@@ -1541,6 +1571,7 @@ This demo shows the use of `sudoku` command to generate a randomized sudoku puzz
 sudoku
 @enduml
 ```
+![output: readme diagram 30](src/diagrams/readme/readme_diagram_30.svg)
 
 The `sudoku` command can also be called with an argument, which is the seed to generate a specific sudoku puzzle.
 
@@ -1549,6 +1580,7 @@ The `sudoku` command can also be called with an argument, which is the seed to g
 sudoku 4nk3o5djfhu
 @enduml
 ```
+![output: readme diagram 31](src/diagrams/readme/readme_diagram_31.svg)
 
 ### oregon trail
 
@@ -1559,3 +1591,4 @@ This demo shows the text-based adventure game "Oregon Trail".
 run oregon trail
 @enduml
 ```
+![output: readme diagram 32](src/diagrams/readme/readme_diagram_32.svg)
