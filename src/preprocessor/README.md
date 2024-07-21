@@ -12,6 +12,11 @@ document, I describe some such examples. **All of them are my original work.**
 The example diagrams shown here are _computed_ by PlantUML, not manually described in
 puml files.
 
+> :bulb: **TIP**
+>
+> Some diagrams shown below are too big to be easily readable from the webpage. You may
+> use your browser's facility to open them in a new window/tab for better clarity.
+
 1. **Compute factorial of a number**: uses and draws the recursion!
 
    This _hacks_ a state diagram to denote the recursive calls and the computed
@@ -45,3 +50,53 @@ puml files.
    https://github.com/dragondive/plantuml_demo/blob/caa5d1bb507f01448a85e9fd16860f3af0e73780/src/preprocessor/factorial_question_answer_sequence.puml#L1-L42
 
    ![Compute factorial for a sequence of numbers](diagrams/factorial_question_answer_sequence.svg)
+
+4. **Compute fibonacci series and draw the recursion tree** (out-in computation)
+
+   The state diagram is once again _hacked_ to draw a fibonacci recursion tree. This
+   diagram is more complicated to compute than the factorial recursion because:
+
+   1. Each non-leaf node connects to two other nodes.
+   2. There are multiple instances of leaf node and non-leaf nodes in the tree, so a
+      mechanism is needed to identify each such instance.
+   3. As there are multiple leaf nodes, the end of recursion needs to be computed
+      carefully to prevent an accidental endless recursion.
+
+   I called this computation _out-in_ because it primarily focusses on drawing the tree,
+   while computing and filling in the fibonacci series numbers along the way.
+
+   I created this approach in my early days of learning when I was less well-versed with
+   using the preprocessor for recursion. I created the more intuitive _in-out_ approach
+   shortly afterwards.
+
+   https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa121188950/src/preprocessor/fibonacci_recursive_out_in_demo.puml#L1-L53
+
+   ![Fibonacci recursion tree using out-in computation](diagrams/fibonacci_recursive_out_in_demo.svg)
+
+5. **Compute fibonacci series and draw the recursion tree** (in-out computation)
+
+   This also _hacks_ the state diagram to draw the Fibonacci recursion tree. However,
+   it uses an _in-out_ computation, where the primary focus is on computing the
+   Fibonacci series numbers, then drawing the nodes (states) around them and connecting
+   them to form the tree.
+
+   This code is more intuitive for a human reader as it looks similar to the naive
+   recursive Fibonacci implementation in conventional programming languages.
+
+   https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa121188950/src/preprocessor/fibonacci_recursive_in_out_demo.puml#L1-L44
+
+   ![Fibonacci recursion tree using in-out computation](diagrams/fibonacci_recursive_in_out_demo.svg)
+
+6. **Customizing generated diagram with user-defined function and lambda function**
+
+   PlantUML preprocessor has first class functions and even lambda functions! This is
+   unexpectedly remarkable for what was not even intended to be a programming language.
+
+   I customized the node (state) and the value formatting by passing in a user-defined
+   function and a lambda expression. These are respectively used to draw the leaf nodes
+   with a different background colour, and a different border style for nodes having
+   values up to 10.
+
+   https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa121188950/src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml#L1-L62
+
+   ![User-defined function and lambda function](diagrams/fibonacci_recursive_in_out_with_user_function_demo.svg)
