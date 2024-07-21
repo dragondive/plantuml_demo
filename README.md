@@ -640,7 +640,7 @@ colors #ffb36a
 
 ![output: readme diagram 9](src/diagrams/readme/readme_diagram_9.svg)
 
-#### Demo
+**Demo**
 
 This demo shows the use of various colours in a sequence diagram and a class diagram.
 
@@ -686,7 +686,7 @@ end alt
 
 ![output: readme diagram 10](src/diagrams/readme/readme_diagram_10.svg)
 
-<br><br>
+---
 
 ```plantuml
 @startuml
@@ -764,7 +764,7 @@ listopeniconic
 
 ![output: readme diagram 12](src/diagrams/readme/readme_diagram_12.svg)
 
-#### Demo
+**Demo**
 
 ```plantuml
 @startuml
@@ -787,7 +787,7 @@ listfonts
 
 ![output: readme diagram 14](src/diagrams/readme/readme_diagram_14.svg)
 
-#### Demo
+**Demo**
 
 This demo shows the customization of font used in a sequence diagram.
 
@@ -869,7 +869,7 @@ Small graphical elements known as sprites can be used in diagrams.
 
 * **Encoding an image into sprite**: Any image can be encoded into a sprite using a command like below:
 
-  ```
+  ```console
   java -jar plantuml.jar -encodesprite 16z <image>
   ```
 
@@ -877,7 +877,7 @@ Small graphical elements known as sprites can be used in diagrams.
 
 * **PlantUML StdLib**: PlantUML includes a huge collection of sprites in its standard library. Refer the [documentation](https://plantuml.com/sprite) for further information.
 
-#### Demo
+**Demo**
 
 ```plantuml
 @startuml
@@ -1142,7 +1142,7 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
 * **From the command line**: Download the latest precompiled binary `plantuml.jar` from the [download page](https://plantuml.com/download). Execute it from the command line. Provide the text files or directory containing the diagram descriptions as arguments. (requires [Java](https://www.java.com/en/download/) and [Graphviz](https://graphviz.org/download/))
 
-    ```
+    ```console
     java -jar plantuml.jar file1 file2 file3
     ```
 
@@ -1150,7 +1150,7 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
 * **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either by double clicking the `plantuml.jar` or using the following command:
 
-    ```
+    ```console
     java -jar plantuml.jar -gui
     ```
 
@@ -1165,7 +1165,7 @@ There are several ways to run PlantUML. The most commonly used ways are:
   * **On the PlantUML server**: PlantUML hosts the web service at <http://www.plantuml.com/plantuml/>
   * **Locally as a docker container**: PlantUML web service can be hosted locally using the official docker image, with the following commands:
 
-      ```
+      ```console
       docker pull plantuml/plantuml-server
       docker run -d -p 8080:8080 plantuml/plantuml-server
       ```
@@ -1174,7 +1174,7 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
     Refer the [documentation](https://plantuml.com/server) for the full set of features and configuration options.
 
-#### Demo
+**Demo**
 
 The [attached video](videos/plantuml_docker_demo.mp4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
 
@@ -1301,7 +1301,7 @@ PlantUML provides a number of features for customizing the look and feel of the 
 
 The colors and fonts of the diagram can be changed by specifying one or more `skinparam` declarations in the diagram description, with the following syntax:
 
-```
+```console
 skinparam <parameter> <value>
 ```
 
@@ -1397,7 +1397,7 @@ help themes
 
 ![output: readme diagram 26](src/diagrams/readme/readme_diagram_26.svg)
 
-#### Demo
+**Demo**
 
 ```plantuml
 @startuml
@@ -1446,7 +1446,7 @@ end alt
 
 CSS-like styles can be applied to the diagrams. The stylesheet can be either included inline in the diagram description between `<style>` and `</style>` tags, or included from a separate file.
 
-#### Demo
+**Demo**
 
 ```plantuml
 @startuml
