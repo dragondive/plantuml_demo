@@ -1179,6 +1179,8 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
     The [attached video](videos/plantuml_docker_demo.mp4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
 
+    https://github.com/dragondive/plantuml_demo/raw/main/videos/plantuml_docker_demo.mp4
+
 ### License Information
 
 PlantUML is licensed under the GPL license. It is also available under other licenses (LGPL, Apache, Eclipse Public, MIT) with some missing features. The generated images are owned by the author of the diagram description.
