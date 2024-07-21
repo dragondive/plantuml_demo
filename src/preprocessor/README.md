@@ -35,3 +35,13 @@ puml files.
    https://github.com/dragondive/plantuml_demo/blob/3166a462a51904b0d822291bd61657bcb1650376/src/preprocessor/factorial_demo_test.puml#L1-L32
 
    ![Hack showing unit testing of factorial function](diagrams/factorial_demo_test.svg)
+
+3. **Compute factorial for a sequence of numbers**:
+
+   The factorial function is now memoized to reuse the computed factorial value for a
+   number. As the preprocessor does not provide any array or hashmap data structure,
+   string concatenation is _hacked_ to create a hashmap (dictionary).
+
+   https://github.com/dragondive/plantuml_demo/blob/caa5d1bb507f01448a85e9fd16860f3af0e73780/src/preprocessor/factorial_question_answer_sequence.puml#L1-L42
+
+   ![Compute factorial for a sequence of numbers](diagrams/factorial_question_answer_sequence.svg)
