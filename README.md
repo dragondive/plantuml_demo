@@ -1177,7 +1177,9 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
     **Demo**
 
-    The [attached video](videos/plantuml_docker_demo.mp4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
+    [My video on YouTube](https://www.youtube.com/watch?v=hSDdGrJ1cx4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
+
+    [![Generate PlantUML diagram using Docker](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhSDdGrJ1cx4)](https://www.youtube.com/watch?v=hSDdGrJ1cx4)
 
 ### License Information
 
@@ -1242,13 +1244,17 @@ PlantUML can be used together with several tools. This document describes use of
 * **Preview PlantUML diagrams directly**: PlantUML plugins enable generating a preview of the plantuml diagram descriptions directly from VSCode.
 * **Preview PlantUML diagrams included in markdown**: PlantUML diagram descriptions can also be included inside markdown code. Markdown plugins enable generating the diagram preview inline within the markdown preview.
 
-The [attached video](videos/plantuml_vscode_demo.mp4) shows a demo of both the options.
+[My video on YouTube](https://www.youtube.com/watch?v=md86dxdb3ow) shows a demo of both the options.
+
+[![PlantUML preview in VSCode](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dmd86dxdb3ow)](https://www.youtube.com/watch?v=md86dxdb3ow)
 
 #### Atom
 
 Atom editor has plugins to preview the PlantUML diagram descriptions, for both standalone files and when included in a markdown file.
 
-The [attached video](videos/plantuml_atom_demo.mp4) shows a demo of both the options.
+[My video on YouTube](https://www.youtube.com/watch?v=ifh7KRUutBY) shows a demo of both the options.
+
+[![PlantUML preview in Atom editor](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Difh7KRUutBY)](https://www.youtube.com/watch?v=ifh7KRUutBY)
 
 #### Eclipse
 
@@ -1258,7 +1264,9 @@ PlantUML plugins are also available for the Eclipse IDE which enable generating 
 
 PlantUML addin for Microsoft Word generates the diagrams for the plantuml diagram description and includes them directly into the same document.
 
-The [attached video](videos/plantuml_word_demo.mp4) shows a demo of using this addin.
+The [My video on YouTube](https://www.youtube.com/watch?v=nGNqLCgfQyg) shows a demo of using this addin.
+
+[![PlantUML preview in Microsoft Word](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DnGNqLCgfQyg)](https://www.youtube.com/watch?v=nGNqLCgfQyg)
 
 ### Document Generation
 
@@ -1266,29 +1274,41 @@ The [attached video](videos/plantuml_word_demo.mp4) shows a demo of using this a
 
 PlantUML diagrams can be embedded directly into the doxygen documents. PlantUML diagram description enclosed within the doxygen commands `\startuml` and `\enduml` appears inline in the generated document.
 
-The [attached video](videos/plantuml_doxygen_demo.mp4) shows a demo using my [conan_learning](https://github.com/dragondive/conan_learning) project.
+The [My video on YouTube](https://www.youtube.com/watch?v=4a1sdOkSc2Q) shows a demo using my [conan_learning](https://github.com/dragondive/conan_learning) project.
+
+[![PlantUML integration with doxygen document generator](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4a1sdOkSc2Q)](https://www.youtube.com/watch?v=4a1sdOkSc2Q)
 
 #### Java Doclet
 
-`uml-java-doclet` plugin can generate class diagrams from the Java code and embed them into the javadoc. The [documentation](https://plantuml.com/doclet) describes how to obtain this plugin. The [attached video](videos/plantuml_java_doclet_demo.mp4) shows a demo of using this plugin to generate the class diagrams for PlantUML's own source code.
+`uml-java-doclet` plugin can generate class diagrams from the Java code and embed them into the javadoc. The [documentation](https://plantuml.com/doclet) describes how to obtain this plugin. The [My video on YouTube](https://www.youtube.com/watch?v=yzo2mLTevIA) shows a demo of using this plugin to generate the class diagrams for PlantUML's own source code.
+
+[![PlantUML Java class diagram generation using uml-java-doclet](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dyzo2mLTevIA)](https://www.youtube.com/watch?v=yzo2mLTevIA)
 
 #### hpp2plantuml
 
-Python module `hpp2plantuml` available [here](https://pypi.org/project/hpp2plantuml/) on PyPI can generate class diagrams from C++ code. The [attached video](videos/plantuml_hpp2plantuml_demo.mp4) shows a demo of using this module to generate class diagrams for VLC media player's source code.
+Python module `hpp2plantuml` available [here](https://pypi.org/project/hpp2plantuml/) on PyPI can generate class diagrams from C++ code. The [My video on YouTube](https://www.youtube.com/watch?v=Da-q15EUQqc) shows a demo of using this module to generate class diagrams for VLC media player's source code.
+
+[![PlantUML C++ class diagram generation using hpp2plantuml](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDa-q15EUQqc)](https://www.youtube.com/watch?v=Da-q15EUQqc)
 
 #### py2puml
 
-Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-tools) on github can generate class diagrams from Python code. The [attached video](videos/plantuml_py2puml_demo.mp4) shows a demo of using this module to generate class diagrams for my ongoing hobby project [multibeggar](https://github.com/dragondive/hebi/tree/main/multibeggar).
+Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-tools) on github can generate class diagrams from Python code. The [My video on YouTube](https://www.youtube.com/watch?v=JHRy_C8dkaE) shows a demo of using this module to generate class diagrams for my ongoing hobby project [multibeggar](https://github.com/dragondive/hebi/tree/main/multibeggar).
+
+[![PlantUML Python class diagram generation using py2puml](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJHRy_C8dkaE)](https://www.youtube.com/watch?v=JHRy_C8dkaE)
 
 ### Markup Languages
 
 #### markdown
 
-Python module `plantuml-markdown` available [here](https://pypi.org/project/plantuml-markdown/) on PyPI can generate HTML page from a markdown file that has plantuml source code included. The [attached video](videos/plantuml_markdown_py_demo.mp4) shows a demo of using this module to generate the HTML for this document itself, making it another example of self-reference. :grin:
+Python module `plantuml-markdown` available [here](https://pypi.org/project/plantuml-markdown/) on PyPI can generate HTML page from a markdown file that has plantuml source code included. The [My video on YouTube](https://www.youtube.com/watch?v=dcGaxTEiztw) shows a demo of using this module to generate the HTML for this document itself, making it another example of self-reference. :grin:
+
+[![PlantUML in Markdown - generate HTML using plantuml-markdown](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdcGaxTEiztw)](https://www.youtube.com/watch?v=dcGaxTEiztw)
 
 ### Web Browsers
 
-Browser extensions are available to render PlantUML in the Chrome and Firefox web browsers. The [attached video](videos/plantuml_browsers_demo.mp4) shows a demo of using these plugins.
+Browser extensions are available to render PlantUML in the Chrome and Firefox web browsers. The [My video on YouTube](https://www.youtube.com/watch?v=MhFjz8i8nBI) shows a demo of using these plugins.
+
+[![PlantUML web browser extensions demo](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMhFjz8i8nBI)](https://www.youtube.com/watch?v=MhFjz8i8nBI)
 
 ## Customization
 
@@ -1638,3 +1658,11 @@ run oregon trail
 ```
 
 ![output: readme diagram 34](src/diagrams/readme/readme_diagram_34.svg)
+
+---
+
+**Acknowledgements**
+
+* Many thanks to [Markdown-Videos](https://github.com/Snailedlt/Markdown-Videos/) for the convenient YouTube thumbnail and link embedding used in this document.
+
+  Github in its infinite wisdom stubbornly refuses to support embedding YouTube videos, while videos uploaded to Github are conveniently embedded complete with a play button and progress bar! Apparently, the only thing Microsoft learned from all the anti-competitive lawsuits is figuring out what unethical behaviour they can likely get away with.
