@@ -100,3 +100,33 @@ puml files.
    https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa121188950/src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml#L1-L62
 
    ![User-defined function and lambda function](diagrams/fibonacci_recursive_in_out_with_user_function_demo.svg)
+
+7. **Generate multiple customized diagrams from diagram template**
+
+   A diagram template defines the overall structure with some customizable portions. A
+   JSON file is read to configure those customizable portions to generate multiple
+   diagram instances.
+
+   The below demo shows three diagrams being generated for each customer. The customer
+   data specified in JSON format is used to customize the diagrams. Both values and
+   objects appearing in the diagram can be customized.
+
+   > :bangbang: **MISSING FEATURE/BUG**
+   >
+   > In the sequence diagrams, the actors not involved on the current page also appear,
+   > which is usually not the desired behaviour. This is due to a missing feature/bug
+   > in PlantUML reported on the PlantUML forum [here](https://forum.plantuml.net/14773/how-to-hide-participants-not-on-current-page).
+
+   https://github.com/dragondive/plantuml_demo/blob/c8847caa8d8eb803960590141ba1c58f26cba7ae/src/preprocessor/multiple_diagrams_generation_demo.puml#L1-L54
+
+   **Diagrams generated for non-premium customer Initech**
+
+   ![Developer Workflow for non-premium customer Initech](diagrams/multiple_diagrams_generation_demo_001.svg)
+   ![Tester Workflow for non-premium customer Initech](diagrams/multiple_diagrams_generation_demo_002.svg)
+   ![Integrator Workflow for non-premium customer Initech](diagrams/multiple_diagrams_generation_demo_003.svg)
+
+   **Diagrams generated for premium customer Acme**
+
+   ![Developer Workflow for premium customer Acme](diagrams/multiple_diagrams_generation_demo_004.svg)
+   ![Tester Workflow for premium customer Acme](diagrams/multiple_diagrams_generation_demo_005.svg)
+   ![Integrator Workflow for premium customer Acme](diagrams/multiple_diagrams_generation_demo_006.svg)
