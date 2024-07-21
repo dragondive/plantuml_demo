@@ -1363,8 +1363,10 @@ skinparameters
 
 Themes can be applied to the PlantUML diagrams. The command `help themes` lists the themes available in the core library. Some themes include procedures to colour messages.
 
-```console
+```plantuml
+@startuml
 help themes
+@enduml
 ```
 
 #### Demo
