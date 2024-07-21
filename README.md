@@ -11,7 +11,9 @@ PlantUML can _also_ be used to visualize data written in various data representa
 
 The below demo has the table of contents of this document written in YAML. To create a visual representation with PlantUML, enclose the YAML data within `@startyaml` and `@endyaml`. This YAML data visualization is one of the PlantUML demos, making it an example of self-reference. :grin:
 
-_Note_: PlantUML's YAML support is limited. It doesn't recognize several valid YAML constructs. For example, it considers [YAML's homepage](https://yaml.org/), written in YAML, as invalid YAML.
+> :pencil: **NOTE**
+>
+> PlantUML's YAML support is limited. It doesn't recognize several valid YAML constructs. For example, it considers [YAML's homepage](https://yaml.org/), written in YAML, as invalid YAML.
 
 Refer the [documentation](https://plantuml.com/yaml) for the full set of features and configuration options.
 
@@ -768,7 +770,6 @@ listopeniconic
 
 ```plantuml
 @startuml
-
 rectangle "<size:32>**Developers <&monitor><&tablet><&phone> of the world <&globe>, unite! <&people><&people>**</size>"
 @enduml
 ```
@@ -1174,9 +1175,9 @@ There are several ways to run PlantUML. The most commonly used ways are:
 
     Refer the [documentation](https://plantuml.com/server) for the full set of features and configuration options.
 
-**Demo**
+    **Demo**
 
-The [attached video](videos/plantuml_docker_demo.mp4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
+    The [attached video](videos/plantuml_docker_demo.mp4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
 
 ### License Information
 
@@ -1559,6 +1560,14 @@ The currently added public dedications can be seen directly from the source code
 
 To support PlantUML via crowdfunding, donate using [Paypal](http://plantuml.com/paypal), [Patreon](http://plantuml.com/patreon) or [Liberapay](http://plantuml.com/lp). The special `donors` command prints the list of donors and sponsors.
 
+```plantuml
+@startuml
+donors
+@enduml
+```
+
+![output: readme diagram 30](src/diagrams/readme/readme_diagram_30.svg)
+
 ### PlantUML Themes
 
 Some user-contributed PlantUML themes are available at [Puml Themes](https://bschwarz.github.io/puml-themes/) and [RedDress-PlantUML](https://github.com/Drakemor/RedDress-PlantUML)
@@ -1588,13 +1597,13 @@ viewPositionType = Fixed
 viewPosLat = 12.971563711294497    /' ಬ್ರಿಗೇಡ್ ರಸ್ತೆ, '/
 viewPosLong = 77.60679643358596    /' ಬೆಂಗಳೂರು, ಭಾರತ '/
 12.971563711294497 77.60679643358596   "Brigade Road, Bengaluru, India"
-shadeP = false  /' if true, the Earth's surface is shaded based on its current position relative to the Sun. '/
+shadeP = true  /' if true, the Earth's surface is shaded based on its current position relative to the Sun. '/
 gridP = true
 gridDivision = 30
 @enduml
 ```
 
-![output: readme diagram 30](src/diagrams/readme/readme_diagram_30.svg)
+![output: readme diagram 31](src/diagrams/readme/readme_diagram_31.svg)
 
 ### sudoku
 
@@ -1606,7 +1615,7 @@ sudoku
 @enduml
 ```
 
-![output: readme diagram 31](src/diagrams/readme/readme_diagram_31.svg)
+![output: readme diagram 32](src/diagrams/readme/readme_diagram_32.svg)
 
 The `sudoku` command can also be called with an argument, which is the seed to generate a specific sudoku puzzle.
 
@@ -1616,7 +1625,7 @@ sudoku 4nk3o5djfhu
 @enduml
 ```
 
-![output: readme diagram 32](src/diagrams/readme/readme_diagram_32.svg)
+![output: readme diagram 33](src/diagrams/readme/readme_diagram_33.svg)
 
 ### oregon trail
 
@@ -1628,4 +1637,4 @@ run oregon trail
 @enduml
 ```
 
-![output: readme diagram 33](src/diagrams/readme/readme_diagram_33.svg)
+![output: readme diagram 34](src/diagrams/readme/readme_diagram_34.svg)
