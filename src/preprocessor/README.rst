@@ -113,6 +113,17 @@ https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa
 .. image:: diagrams/fibonacci_recursive_in_out_demo.svg
    :alt: Fibonacci recursion tree using in-out computation
 
+Memoized computation
+~~~~~~~~~~~~~~~~~~~~
+
+The fibonacci computation is memoized using a hack similar to the one used
+for the factorial function, and the drawing illustrates the memoized computation.
+The drawings of the recursive and the memoized approach can be a useful
+visualization to demonstrate how memoization cuts off the recursive calls.
+
+.. image:: diagrams/fibonacci_memoized_demo.svg
+   :alt: Memoized fibonacci computation
+
 Generate a full binary tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
