@@ -21,8 +21,11 @@ PlantUML, not manually described.
 
 .. contents:: **Table of Contents**
 
-Compute factorial of a number
------------------------------
+Factorial function computation and drawings
+-------------------------------------------
+
+Recursive computation of factorial
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This *hacks* a state diagram to denote the recursive calls and the
 computed factorial value for each number. The ``!function`` feature
@@ -36,7 +39,7 @@ https://github.com/dragondive/plantuml_demo/blob/bfd3b1c018fe5893a8f37a9a01a6d9e
    :alt: State Diagram hack showing factorial computation
 
 "Unit tests" for the factorial function
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This *hacks* the preprocessor's JSON parsing utility and ``!assert``
 macro to run "unit tests" for the factorial function. For an invalid
@@ -52,7 +55,7 @@ https://github.com/dragondive/plantuml_demo/blob/3166a462a51904b0d822291bd61657b
    :alt: Hack showing unit testing of factorial function
 
 Compute factorial for a sequence of numbers
--------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The factorial function is now memoized to reuse the computed factorial
 value for a number. As the preprocessor does not provide any array or
@@ -64,8 +67,11 @@ https://github.com/dragondive/plantuml_demo/blob/caa5d1bb507f01448a85e9fd16860f3
 .. image:: diagrams/factorial_question_answer_sequence.svg
    :alt: Compute factorial for a sequence of numbers
 
-Compute fibonacci series and draw the recursion tree (out-in computation)
--------------------------------------------------------------------------
+Fibonacci series computation and drawings
+-----------------------------------------
+
+Recursive computation and out-in drawing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The state diagram is once again *hacked* to draw a fibonacci recursion
 tree. This diagram is more complicated to compute than the factorial
@@ -90,8 +96,8 @@ https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa
 .. image:: diagrams/fibonacci_recursive_out_in_demo.svg
    :alt: Fibonacci recursion tree using out-in computation
 
-Compute fibonacci series and draw the recursion tree (in-out computation)
--------------------------------------------------------------------------
+Recursive computation and in-out drawing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This also *hacks* the state diagram to draw the fibonacci recursion
 tree. However, it uses an *in-out* computation, where the primary focus
@@ -106,6 +112,17 @@ https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa
 
 .. image:: diagrams/fibonacci_recursive_in_out_demo.svg
    :alt: Fibonacci recursion tree using in-out computation
+
+Generate a full binary tree
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This was an intermediate diagram computation I created while trying to
+solve the fibonacci recursion tree diagram computation described above.
+
+https://github.com/dragondive/plantuml_demo/blob/bb16912a54baa4188ae5ebfcffe77acb2cb0bc27/src/preprocessor/full_binary_tree_demo.puml#L1-L24
+
+.. image:: diagrams/full_binary_tree_demo.svg
+   :alt: Binary tree
 
 Customizing generated diagram with user-defined function and lambda function
 ----------------------------------------------------------------------------
@@ -124,16 +141,53 @@ https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa
 .. image:: diagrams/fibonacci_recursive_in_out_with_user_function_demo.svg
    :alt: User-defined function and lambda function
 
-Generate a full binary tree
----------------------------
+Compute and draw Test cricket matches hosting data in hierarchical structure
+----------------------------------------------------------------------------
 
-This was an intermediate diagram computation I created while trying to
-solve the fibonacci recursion tree diagram computation described above.
+This *hacks* the Work Breakdown Structure (WBS) diagram to represent Test cricket
+matches hosting data in a hierarchical structure. The JSON data file contains the
+following information:
+1. Number of matches played at various cricket grounds.
+2. Hierarchical structure of the location (city, country) the cricket ground belongs to.
 
-https://github.com/dragondive/plantuml_demo/blob/bb16912a54baa4188ae5ebfcffe77acb2cb0bc27/src/preprocessor/full_binary_tree_demo.puml#L1-L24
+The WBS diagram represents the hierarchy as a tree to any depth, while also summing up
+the count at every level beneath it. This naturally resembles the
+`Composite design pattern <https://refactoring.guru/design-patterns/composite>`__, and
+the computation follows such a recursive structure.
 
-.. image:: diagrams/full_binary_tree_demo.svg
-   :alt: Binary tree
+In addition, the grounds that have hosted 100 or more matches are highlighted.
+
+https://github.com/dragondive/plantuml_demo/blob/cba7f530562a3fbf7c8bd4315af51a57302f4ea5/src/preprocessor/test_match_host_wbs_demo.puml#L1-L100
+
+https://github.com/dragondive/plantuml_demo/blob/cba7f530562a3fbf7c8bd4315af51a57302f4ea5/src/preprocessor/test_cricket_matches_data.puml#L1-L218
+
+.. image:: diagrams/test_match_host_wbs_demo.svg
+   :alt: Hierarchical structure representing Test matches hosting data
+
+Compute and draw Collatz sequence for a sequence of numbers
+-----------------------------------------------------------
+
+This diagram computation draws the `Collatz
+sequence <https://en.wikipedia.org/wiki/Collatz_conjecture>`__ using
+rectangle objects. Multiple separate diagrams are drawn for the positive
+integers up to 100.
+
+At the time of this writing, the preprocessor does not support modulo
+division, so I used my primary school (class 1) definition of even
+number (numbers ending in digits 0, 2, 4, 6, 8) :smile_cat:. I also used this
+hack to wrap the chain like a snake :snake: for both readability and
+aesthetics. This overrides the default PlantUML behaviour of connecting
+the rectangles in a straight line, which can be tiring to read for some
+long chains.
+
+The Collatz sequence chains are shown only for a few selected numbers
+below. The complete set of chains is available in the directory
+`diagrams <https://github.com/dragondive/plantuml_demo/tree/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/diagrams>`__.
+
+https://github.com/dragondive/plantuml_demo/blob/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/collatz_sequence.puml#L1-L127
+
+|Collatz sequence for 9| |Collatz sequence for 43| |Collatz sequence for
+97|
 
 Generate multiple customized diagrams from diagram template
 -----------------------------------------------------------
@@ -167,53 +221,6 @@ customer Initech|
 |Developer Workflow for premium customer Acme| |Tester Workflow for
 premium customer Acme| |Integrator Workflow for premium customer Acme|
 
-Compute and draw Collatz sequence for a sequence of numbers
------------------------------------------------------------
-
-This diagram computation draws the `Collatz
-sequence <https://en.wikipedia.org/wiki/Collatz_conjecture>`__ using
-rectangle objects. Multiple separate diagrams are drawn for the positive
-integers up to 100.
-
-At the time of this writing, the preprocessor does not support modulo
-division, so I used my primary school (class 1) definition of even
-number (numbers ending in digits 0, 2, 4, 6, 8) :smile_cat:. I also used this
-hack to wrap the chain like a snake :snake: for both readability and
-aesthetics. This overrides the default PlantUML behaviour of connecting
-the rectangles in a straight line, which can be tiring to read for some
-long chains.
-
-The Collatz sequence chains are shown only for a few selected numbers
-below. The complete set of chains is available in the directory
-`diagrams <https://github.com/dragondive/plantuml_demo/tree/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/diagrams>`__.
-
-https://github.com/dragondive/plantuml_demo/blob/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/collatz_sequence.puml#L1-L127
-
-|Collatz sequence for 9| |Collatz sequence for 43| |Collatz sequence for
-97|
-
-Compute and draw Test cricket matches hosting data in hierarchical structure
-----------------------------------------------------------------------------
-
-This *hacks* the Work Breakdown Structure (WBS) diagram to represent Test cricket
-matches hosting data in a hierarchical structure. The JSON data file contains the
-following information:
-1. Number of matches played at various cricket grounds.
-2. Hierarchical structure of the location (city, country) the cricket ground belongs to.
-
-The WBS diagram represents the hierarchy as a tree to any depth, while also summing up
-the count at every level beneath it. This naturally resembles the
-`Composite design pattern <https://refactoring.guru/design-patterns/composite>`__, and
-the computation follows such a recursive structure.
-
-In addition, the grounds that have hosted 100 or more matches are highlighted.
-
-https://github.com/dragondive/plantuml_demo/blob/cba7f530562a3fbf7c8bd4315af51a57302f4ea5/src/preprocessor/test_match_host_wbs_demo.puml#L1-L100
-
-https://github.com/dragondive/plantuml_demo/blob/cba7f530562a3fbf7c8bd4315af51a57302f4ea5/src/preprocessor/test_cricket_matches_data.puml#L1-L218
-
-.. image:: diagrams/test_match_host_wbs_demo.svg
-   :alt: Hierarchical structure representing Test matches hosting data
 
 .. |Developer Workflow for non-premium customer Initech| image:: diagrams/multiple_diagrams_generation_demo_001.svg
 .. |Tester Workflow for non-premium customer Initech| image:: diagrams/multiple_diagrams_generation_demo_002.svg
