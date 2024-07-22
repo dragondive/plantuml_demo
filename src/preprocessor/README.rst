@@ -19,6 +19,8 @@ PlantUML, not manually described.
    webpage. You may use your browser's facility to open them in a new
    window/tab for better clarity.
 
+.. contents:: **Table of Contents**
+
 Compute factorial of a number
 -----------------------------
 
@@ -189,6 +191,29 @@ https://github.com/dragondive/plantuml_demo/blob/63b36f833afd6c53edd86806516bd93
 
 |Collatz sequence for 9| |Collatz sequence for 43| |Collatz sequence for
 97|
+
+Compute and draw Test cricket matches hosting data in hierarchical structure
+----------------------------------------------------------------------------
+
+This *hacks* the Work Breakdown Structure (WBS) diagram to represent Test cricket
+matches hosting data in a hierarchical structure. The JSON data file contains the
+following information:
+1. Number of matches played at various cricket grounds.
+2. Hierarchical structure of the location (city, country) the cricket ground belongs to.
+
+The WBS diagram represents the hierarchy as a tree to any depth, while also summing up
+the count at every level beneath it. This naturally resembles the
+`Composite design pattern <https://refactoring.guru/design-patterns/composite>`__, and
+the computation follows such a recursive structure.
+
+In addition, the grounds that have hosted 100 or more matches are highlighted.
+
+https://github.com/dragondive/plantuml_demo/blob/453dc194a3a43394265c8d1f80e304c57c4ede57/src/preprocessor/test_match_host_wbs_demo.puml#L1-L88
+
+https://github.com/dragondive/plantuml_demo/blob/453dc194a3a43394265c8d1f80e304c57c4ede57/src/preprocessor/test_cricket_matches_data.puml#L1-L73
+
+.. image:: diagrams/test_match_host_wbs_demo.svg
+   :alt: Hierarchical structure representing Test matches hosting data
 
 .. |Developer Workflow for non-premium customer Initech| image:: diagrams/multiple_diagrams_generation_demo_001.svg
 .. |Tester Workflow for non-premium customer Initech| image:: diagrams/multiple_diagrams_generation_demo_002.svg
