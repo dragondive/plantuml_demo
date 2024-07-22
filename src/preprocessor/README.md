@@ -101,6 +101,15 @@ https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa
 
 ![User-defined function and lambda function](diagrams/fibonacci_recursive_in_out_with_user_function_demo.svg)
 
+## Generate a full binary tree**
+
+This was an intermediate diagram computation I created while trying to solve the
+fibonacci recursion tree diagram computation described above.
+
+https://github.com/dragondive/plantuml_demo/blob/bb16912a54baa4188ae5ebfcffe77acb2cb0bc27/src/preprocessor/full_binary_tree_demo.puml#L1-L24
+
+![Binary tree](diagrams/full_binary_tree_demo.svg)
+
 ## Generate multiple customized diagrams from diagram template
 
 A diagram template defines the overall structure with some customizable portions. A
@@ -130,3 +139,25 @@ https://github.com/dragondive/plantuml_demo/blob/c8847caa8d8eb803960590141ba1c58
 ![Developer Workflow for premium customer Acme](diagrams/multiple_diagrams_generation_demo_004.svg)
 ![Tester Workflow for premium customer Acme](diagrams/multiple_diagrams_generation_demo_005.svg)
 ![Integrator Workflow for premium customer Acme](diagrams/multiple_diagrams_generation_demo_006.svg)
+
+## Compute and draw Collatz sequence for a sequence of numbers
+
+This diagram computation draws the [Collatz sequence](https://en.wikipedia.org/wiki/Collatz_conjecture) using rectangle objects. Multiple separate diagrams are drawn for
+the positive integers up to 100.
+
+At the time of this writing, the preprocessor does not support modulo division, so I
+used my primary school (class 1) definition of even number (numbers ending in
+digits 0, 2, 4, 6, 8) :smile_cat:. I also used this hack to wrap the chain like a
+snake :snake: for both readability and aesthetics. This overrides the default
+PlantUML behaviour of connecting the rectangles in a straight line, which can be tiring
+to read for some long chains.
+
+The Collatz sequence chains are shown only for a few selected numbers below. The
+complete set of chains is available in the directory
+[`diagrams`](https://github.com/dragondive/plantuml_demo/tree/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/diagrams).
+
+https://github.com/dragondive/plantuml_demo/blob/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/collatz_sequence.puml#L1-L127
+
+![Collatz sequence for 9](diagrams/collatz_sequence_009.svg)
+![Collatz sequence for 43](diagrams/collatz_sequence_043.svg)
+![Collatz sequence for 97](diagrams/collatz_sequence_097.svg)
