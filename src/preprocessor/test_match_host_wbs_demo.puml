@@ -3,23 +3,24 @@
 !include test_cricket_matches_data.puml
 
 !function $repeat_string($input_string, $times)
-!$str = ""
-!while $times != 0
-    !$str = $str + $input_string
-    !$times = $times - 1
-!endwhile
-!return $str
+    !$str = ""
+    !while $times != 0
+        !$str = $str + $input_string
+        !$times = $times - 1
+    !endwhile
+    !return $str
 !endfunction
 
-!function $make_wbs_code($name, $sum, $level)
-!if %intval($level) >=3 && %intval($sum) >= 100
-    !$background_colour = "[#PaleGreen]"
-!else
+!function $make_wbs_code($name, $value, $level, $highlight_expression = %false())
     !$background_colour = ""
-!endif
+    !if %eval($highlight_expression)
+        !$background_colour = "[#PaleGreen]"
+    !endif
 
-!$wbs_code = $repeat_string("*", $level) + $background_colour + " <b>" + $name + "</b>  " + $sum + %newline()
-!return $wbs_code
+    !$wbs_code \
+        = $repeat_string("*", $level) + $background_colour \
+        + " <b>" + $name + "</b>  " + $value + %newline()
+    !return $wbs_code
 !endfunction
 
 !function $generate_wbs_code($data, $level = 1)
@@ -31,38 +32,44 @@
         !$inner_item_name = ""
 
         !if %strlen($item.list) != 0 /' hack to check if it is a leaf node '/
-            /' bug/hack: need to store the inner item's name before recursing. below we update a dictionary
-            where each item is mapped to the sum of the counts below it. the preprocessor seems to have
-            either an implementation bug or stack limitation, so $item.name gets replaced at each level,
-            thus the sum gets mapped to the innermost item's name instead.'/
+            /' bug/hack: need to store the inner item's name before recursing. below we
+            update a dictionary where each item is mapped to the sum of the counts below
+            it. the preprocessor seems to have either an implementation bug or stack
+            limitation, so $item.name gets replaced at each level, thus the sum gets
+            mapped to the innermost item's name instead.'/
             !$inner_item_name = $item.name
 
             /' it is not a leaf node, recurse to the inner level. '/
             !$inner_item_wbs_code = $generate_wbs_code($item, $level + 1)
 
-            /' recursive function call at the inner level would have mapped the sum in the dictionary,
-            so add it to the running sum at this level. '/
+            /' recursive function call at the inner level would have mapped the sum in
+            the dictionary, so add it to the running sum at this level. '/
             !$sum = $sum + %get_variable_value($inner_item_name)
         !else
             /' it is a leaf node, so it is placed at the next level in the wbs code. '/
-            !$inner_item_wbs_code = $make_wbs_code($item.name, $item.count, $level + 1)
+            !$count = %intval($item.count)
+            !$inner_item_wbs_code \
+                = $make_wbs_code($item.name, $count, $level + 1, "$value >= 100")
 
             /' for a leaf node, the sum is simply its own count. '/
-            !$sum = $sum + %intval($item.count)
+            !$sum = $sum + $count
         !endif
 
-        /' concatenate the wbs code of this item to the overall wbs code for this level. this works correctly
-        for leaf nodes or non-leaf nodes or mix of the two. leaf node's wbs code is directly computed here.
-        for non-leaf nodes, recursive function call computes the wbs code for lower levels, then that level's
-        wbs code is pre-concatenated outside the loop and returned as the overall wbs code for that level. '/
+        /' concatenate the wbs code of this item to the overall wbs code for this level.
+        this works correctly for leaf nodes or non-leaf nodes or mix of the two. leaf
+        node's wbs code is directly computed here. for non-leaf nodes, recursive
+        function call computes the wbs code for lower levels, then that level's wbs code
+        is pre-concatenated outside the loop and returned as the overall wbs code for
+        that level. '/
         !$code_string = $code_string + $inner_item_wbs_code
     !endfor
 
     /' pre-concatenate this level's wbs code to the lower level's wbs code '/
     !$code_string = $make_wbs_code($data.name, $sum, $level) + $code_string
 
-    /' map the sum of the counts below this level to this level's name. during the recursion unwinding, the outer
-    level functions can refer to this dictionary entry to update the count at that level. '/
+    /' map the sum of the counts below this level to this level's name. during the
+    recursion unwinding, the outer level functions can refer to this dictionary entry
+    to update the count at that level. '/
     %set_variable_value($data.name, $sum)
     !return $code_string
 !endfunction
@@ -77,6 +84,11 @@ wbsDiagram {
 </style>
 
 title <size:40>**Test cricket matches hosted by cricket grounds**</size>
+legend top center
+<size:24>Last updated: 22 July 2024</size>
+
+|<#PaleGreen>    | Hosted 100 or more matches |
+end legend
 
 /' generates wbs (work breakdown structure) diagram from json data.
    the json data has a recursive structure, consisting of the following fields:
