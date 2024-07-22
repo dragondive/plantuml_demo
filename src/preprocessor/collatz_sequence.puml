@@ -94,28 +94,34 @@ $make_direction_map()
 !assert $collatz(40) == 20
 
 !procedure $make_collatz_sequence($num)
-    !$counter = 0
-    $create_rectangle($num, $counter)
-
-    !while $num != 1
-        !$prev = $num
-
-        !$num = $collatz($num)
-        !$direction = %get_variable_value($get_last_hex_digit($counter))
-
-        !$counter = $counter + 1
-
+    !if $num > 0
+        !$counter = 0
         $create_rectangle($num, $counter)
-        $connect_entities($prev, $num, $direction)
-    !endwhile
+
+        !while $num != 1
+            !$prev = $num
+
+            !$num = $collatz($num)
+            !$direction = %get_variable_value($get_last_hex_digit($counter))
+
+            !$counter = $counter + 1
+
+            $create_rectangle($num, $counter)
+            $connect_entities($prev, $num, $direction)
+        !endwhile
+    !else
+        !log input is $num but should be positive.
+    !endif
+
 !endprocedure
 
-!$count = 1
+!$count = 0
 !$limit = 100
 !while $count <= $limit
-    newpage
-    $make_collatz_sequence($count)
+    title Collatz sequence for $count
+    $make_collatz_sequence(%intval($count))
     !$count = $count + 1
+    newpage
 !endwhile
 
 @enduml
