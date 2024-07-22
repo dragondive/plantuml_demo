@@ -3,20 +3,17 @@ Fun and learning with the PlantUML preprocessor
 
 The PlantUML preprocessor provides a higher level abstraction to
 generate the diagram descriptions. It can also be used as a programming
-language to *compute* the diagrams!
-
-The preprocessor provides variables, conditional expressions, looping
-constructs, and even functions, making it a full fledged Turing complete
+language to *compute* the diagrams! The preprocessor provides variables, conditional expressions, looping
+constructs, and functions, making it a full fledged Turing complete
 language.
 
-This also enables having some fun while learning the preprocessor
-features. In this document, I describe some such examples. **All of them
-are my original work.**
+This also enables having some fun while learning the preprocessor features. In this
+document, I describe some such examples. These example diagrams are *computed* by
+PlantUML, not manually described.
 
-The example diagrams shown here are *computed* by PlantUML, not manually
-described in puml files.
+**All of them are my original work.**
 
-   :bulb: **TIP**
+   \:bulb: **TIP**
 
    Some diagrams shown below are too big to be easily readable from the
    webpage. You may use your browser's facility to open them in a new
@@ -125,8 +122,8 @@ https://github.com/dragondive/plantuml_demo/blob/536fc83590d02723a864357afabf5fa
 .. image:: diagrams/fibonacci_recursive_in_out_with_user_function_demo.svg
    :alt: User-defined function and lambda function
 
-Generate a full binary tree*\*
-------------------------------
+Generate a full binary tree
+---------------------------
 
 This was an intermediate diagram computation I created while trying to
 solve the fibonacci recursion tree diagram computation described above.
@@ -148,7 +145,7 @@ The customer data specified in JSON format is used to customize the
 diagrams. Both values and objects appearing in the diagram can be
 customized.
 
-   :bangbang: **MISSING FEATURE/BUG**
+   \:bangbang: **MISSING FEATURE/BUG**
 
    In the sequence diagrams, the actors not involved on the current page
    also appear, which is usually not the desired behaviour. This is due
@@ -186,7 +183,7 @@ long chains.
 
 The Collatz sequence chains are shown only for a few selected numbers
 below. The complete set of chains is available in the directory
-```diagrams`` <https://github.com/dragondive/plantuml_demo/tree/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/diagrams>`__.
+`diagrams <https://github.com/dragondive/plantuml_demo/tree/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/diagrams>`__.
 
 https://github.com/dragondive/plantuml_demo/blob/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/collatz_sequence.puml#L1-L127
 
