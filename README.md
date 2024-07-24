@@ -2,26 +2,34 @@
 
 ## Data Visualization
 
-PlantUML can _also_ be used to visualize data written in various data representation formats. This document gives a demo of visualization for the following formats:
+PlantUML can _also_ be used to visualize data written in various data representation
+formats. This document gives a demo of visualization for the following formats:
 
 * YAML: YAML Ain't Markup Language
 * JSON: Javascript Object Notation
 
 ### YAML Data Visualization
 
-The below demo has the table of contents of this document written in YAML. To create a visual representation with PlantUML, enclose the YAML data within `@startyaml` and `@endyaml`. This YAML data visualization is one of the PlantUML demos, making it an example of self-reference. :grin:
+The below demo has the table of contents of this document written in YAML. To create a
+visual representation with PlantUML, enclose the YAML data within `@startyaml` and
+`@endyaml`. This YAML data visualization is one of the PlantUML demos, making it an
+example of self-reference. :grin:
 
 > :pencil: **NOTE**
 >
-> PlantUML's YAML support is limited. It doesn't recognize several valid YAML constructs. For example, it considers [YAML's homepage](https://yaml.org/), written in YAML, as invalid YAML.
+> PlantUML's YAML support is limited. It doesn't recognize several valid YAML
+> constructs. For example, it considers [YAML's homepage](https://yaml.org/), written
+> in YAML, as invalid YAML.
 
-Refer the [documentation](https://plantuml.com/yaml) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/yaml) for the full set of features and
+configuration options.
 
 The demo also introduces the following common features:
 
 * Customizing the diagram using `<style>`
 * Single line comment using `'`
-  * Should be placed on its own separate line, otherwise it is parsed as continuation of the preceding text (unlike `//` comments of C, C++, and Java)
+  * Should be placed on its own separate line, otherwise it is parsed as continuation of
+    the preceding text (unlike `//` comments of C, C++, and Java)
 * Multiline comment using `/' ... '/`
   * Can be used anywhere, including on a line having the diagram description
 * Use of the lightweight markup language creole
@@ -113,9 +121,11 @@ fun_stuff:
 
 ### JSON Data Visualization
 
-The below demo has some information about me written in JSON. To create a visual representation with PlantUML, enclose the JSON data within `@startjson` and `@endjson`.
+The below demo has some information about me written in JSON. To create a visual
+representation with PlantUML, enclose the JSON data within `@startjson` and `@endjson`.
 
-Refer the [documentation](https://plantuml.com/json) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/json) for the full set of features and
+configuration options.
 
 ```plantuml
 @startjson
@@ -171,7 +181,8 @@ jsonDiagram {
 
 ## UML Diagrams
 
-PlantUML draws beautiful UML diagrams from simple textual descriptions. This document gives a demo of the following types of UML diagrams:
+PlantUML draws beautiful UML diagrams from simple textual descriptions. This document
+gives a demo of the following types of UML diagrams:
 
 * Sequence Diagram
 * Class Diagram
@@ -181,7 +192,8 @@ PlantUML draws beautiful UML diagrams from simple textual descriptions. This doc
 
 ### Sequence Diagram
 
-The below sequence diagram describes a workflow of a software developer working on an issue. This demo illustrates a few features:
+The below sequence diagram describes a workflow of a software developer working on an
+issue. This demo illustrates a few features:
 
 * A few different participant types
 * Encompassing participants in a box
@@ -191,7 +203,8 @@ The below sequence diagram describes a workflow of a software developer working 
 * Delay between steps
 * Different arrow types
 
-Refer the [documentation](https://plantuml.com/sequence-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/sequence-diagram) for the full set of
+features and configuration options.
 
 The demo also introduces the following common features:
 
@@ -254,7 +267,8 @@ note right: for simplicity, assume\nno merge conflicts.
 
 ### Class Diagram
 
-The below class diagram describes the relationships between the chess piece types. This demo illustrates a few features:
+The below class diagram describes the relationships between the chess piece types. This
+demo illustrates a few features:
 
 * Defining an abstract class
 * Adding methods and attributes to a class
@@ -262,7 +276,8 @@ The below class diagram describes the relationships between the chess piece type
 * Describing inheritance relationship between classes
 * Hiding sections from the class
 
-Refer the [documentation](https://plantuml.com/class-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/class-diagram) for the full set of
+features and configuration options.
 
 The demo also introduces the following common features:
 
@@ -337,14 +352,16 @@ hide Queen members
 
 ### State Diagram
 
-The below state diagram describes a state transition workflow of an issue tracking systems. This demo illustrates a few features:
+The below state diagram describes a state transition workflow of an issue tracking
+systems. This demo illustrates a few features:
 
 * Defining states and substates
 * Specifying the state attribute
 * Using hidden connectors to guide the diagram layout
 * Specifying the state transitions
 
-Refer the [documentation](https://plantuml.com/state-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/state-diagram) for the full set of
+features and configuration options.
 
 ```plantuml
 @startuml
@@ -409,14 +426,16 @@ Reopen --> Analyzing
 
 ### Timing Diagram
 
-The below timing diagram shows a hypothetical data transfer protocol. This demo illustrates a few features:
+The below timing diagram shows a hypothetical data transfer protocol. This demo
+illustrates a few features:
 
 * Declaring various types of elements in a timing diagram
 * Specifying transitions as either time-oriented or participant-oriented
 * Displaying time constraints
 * Highlighting a region of the diagram
 
-Refer the [documentation](https://plantuml.com/timing-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/timing-diagram) for the full set of
+features and configuration options.
 
 ```plantuml
 @startuml
@@ -469,7 +488,8 @@ highlight 2 to 8 #technology;line:DimGrey : Data transfer region
 
 ### Object Diagram
 
-The below object diagram illustrates a common implementation of virtual functions in C++. This demo illustrates a few features:
+The below object diagram illustrates a common implementation of virtual functions in
+C++. This demo illustrates a few features:
 
 * Declaring object type and map type
 * Adding link from a map field to an object
@@ -479,7 +499,8 @@ The below object diagram illustrates a common implementation of virtual function
 * Using hidden connectors to guide the diagram layout
 * Using class diagram and object diagram together
 
-Refer the [documentation](https://plantuml.com/object-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/object-diagram) for the full set of
+features and configuration options.
 
 ```plantuml
 @startuml
@@ -598,7 +619,8 @@ overridden_virtual -down[hidden]-> derived_overridden_virtual
 
 ## Common Features
 
-This section includes demo of the common features that apply to all or multiple diagram types:
+This section includes demo of the common features that apply to all or multiple
+diagram types:
 
 * Colours
 * OpenIconic
@@ -608,11 +630,13 @@ This section includes demo of the common features that apply to all or multiple 
 
 ### Colours
 
-The colour can be configured for almost all the entities that appear in PlantUML diagrams. The colour can be specified by its hexadecimal RGB value.
+The colour can be configured for almost all the entities that appear in PlantUML
+diagrams. The colour can be specified by its hexadecimal RGB value.
 
 #### Named Colours
 
-PlantUML also defines names for some common colours. These names can be also be used to specify the colour. The `colors` command prints the palette of all the named colours.
+PlantUML also defines names for some common colours. These names can be also be used to
+specify the colour. The `colors` command prints the palette of all the named colours.
 
 ```plantuml
 @startuml
@@ -624,7 +648,9 @@ colors
 
 #### Similar Colours
 
-The `colors` command can also be called with an argument, which is either a named colour or a hexadecimal RGB colour value. It prints the palette of named colours similar to the specified colour.
+The `colors` command can also be called with an argument, which is either a named colour
+or a hexadecimal RGB colour value. It prints the palette of named colours similar to the
+specified colour.
 
 ```plantuml
 @startuml
@@ -641,8 +667,6 @@ colors #ffb36a
 ```
 
 ![output: readme diagram 9](src/diagrams/readme/readme_diagram_9.svg)
-
-**Demo**
 
 This demo shows the use of various colours in a sequence diagram and a class diagram.
 
@@ -756,7 +780,8 @@ hide Queen members
 
 ### OpenIconic
 
-The open source icon set OpenIconic can be used in diagrams using the syntax `<&icon_name>`. The `listopeniconic` command lists the available icons.
+The open source icon set OpenIconic can be used in diagrams using the syntax
+`<&icon_name>`. The `listopeniconic` command lists the available icons.
 
 ```plantuml
 @startuml
@@ -765,8 +790,6 @@ listopeniconic
 ```
 
 ![output: readme diagram 12](src/diagrams/readme/readme_diagram_12.svg)
-
-**Demo**
 
 ```plantuml
 @startuml
@@ -778,7 +801,8 @@ rectangle "<size:32>**Developers <&monitor><&tablet><&phone> of the world <&glob
 
 ### Fonts
 
-The font can be configured for almost all the text that appears in PlantUML diagrams. The `listfonts` command lists all the fonts available on the system.
+The font can be configured for almost all the text that appears in PlantUML diagrams.
+The `listfonts` command lists all the fonts available on the system.
 
 ```plantuml
 @startuml
@@ -787,8 +811,6 @@ listfonts
 ```
 
 ![output: readme diagram 14](src/diagrams/readme/readme_diagram_14.svg)
-
-**Demo**
 
 This demo shows the customization of font used in a sequence diagram.
 
@@ -868,17 +890,19 @@ $factorial_question_answer_sequence(\
 
 Small graphical elements known as sprites can be used in diagrams.
 
-* **Encoding an image into sprite**: Any image can be encoded into a sprite using a command like below:
+* **Encoding an image into sprite**: Any image can be encoded into a sprite using a
+  command like below:
 
   ```console
   java -jar plantuml.jar -encodesprite 16z <image>
   ```
 
-* **Including sprites into diagrams**: The encoded sprite can be included either inline or as a file through `!include` directive.
+* **Including sprites into diagrams**: The encoded sprite can be included either inline
+  or as a file through `!include` directive.
 
-* **PlantUML StdLib**: PlantUML includes a huge collection of sprites in its standard library. Refer the [documentation](https://plantuml.com/sprite) for further information.
-
-**Demo**
+* **PlantUML StdLib**: PlantUML includes a huge collection of sprites in its standard
+  library. Refer the [documentation](https://plantuml.com/sprite) for
+  further information.
 
 ```plantuml
 @startuml
@@ -917,7 +941,8 @@ BATMAN"
 
 > :bookmark_tabs: **DETAILED EXPLANATION**
 >
-> Find more detailed explanation in the main article: [Fun and learning with the PlantUML preprocessor](src/preprocessor/README.rst#fun-and-learning-with-the-plantuml-preprocessor)
+> Find more detailed explanation in the main article:
+> [Fun and learning with the PlantUML preprocessor](src/preprocessor/README.rst#fun-and-learning-with-the-plantuml-preprocessor)
 
 PlantUML includes a preprocessor. It provides variables, conditional expressions,
 looping constructs, and functions, along with some builtin utility functions.
@@ -931,45 +956,41 @@ and created more preprocessor code examples mainly for enjoyment :satisfied:. My
 examples are available in [src/preprocessor](src/preprocessor), some of which are
 described below:
 
-* **Factorial computation**: [source code](src/preprocessor/factorial_demo.puml)
-
+* **Factorial computation** [[source code](src/preprocessor/factorial_demo.puml)]:
   Generates a state diagram showing the recursive calls and computed factorial value.
 
-  * **Unit tests for factorial function**: [source code](src/preprocessor/factorial_demo_test.puml)
-
+  * **Unit tests for factorial function** [[source code](src/preprocessor/factorial_demo_test.puml)]:
     Uses the preprocessor directive `!assert` to define "unit tests" for the factorial
     function. :sunglasses:
-* **Factorials of a range of numbers as a Q&A sequence**: [source code](src/preprocessor/factorial_question_answer_sequence.puml)
 
+* **Factorials of a range of numbers as a Q&A sequence** [[source code](src/preprocessor/factorial_question_answer_sequence.puml)]:
   Generates a question-answer series as a sequence diagram. The questions ask for the
   factorial of a range of number, while the answer provides the factorial value.
 
-* **Fibonacci recursion tree customized with user-defined function and lambda function**: [source code](src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml)
-
+* **Fibonacci recursion tree customized with user-defined function and lambda function**
+  [[source code](src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml)]:
   Generates the fibonacci recursion tree as a state diagram. Also shows simple
   conditional customization in two ways: using a user-defined function and using a
   lambda function.
 
-* **Test cricket matches hosting data in a hierarchical structure**: [source code](src/preprocessor/test_match_host_wbs_demo.puml)
-
+* **Test cricket matches hosting data in a hierarchical structure** [[source code](src/preprocessor/test_match_host_wbs_demo.puml)]:
   Reads a JSON file containing data about Test cricket grounds, their hierarchical
   location (city, country), and number of matches hosted. Generates a Work Breakdown
   Structure (WBS) diagram showing this data hierarchically, while adding up the counts
   of every lower level.
 
-* **Collatz sequence for a range of numbers**: [source code](src/preprocessor/collatz_sequence.puml)
-
+* **Collatz sequence for a range of numbers** [[source code](src/preprocessor/collatz_sequence.puml)]:
   Generates the [collatz sequence](https://en.wikipedia.org/wiki/Collatz_conjecture) for
   a series of numbers, with a separate diagram file for each number.
 
-* **Multiple customized diagrams from diagram template**: [source code](src/preprocessor/multiple_diagrams_generation_demo.puml)
-
+* **Multiple customized diagrams from diagram template** [[source code](src/preprocessor/multiple_diagrams_generation_demo.puml)]:
   Generates multiple customized diagrams by customizing a diagram template based on
   data provided in a JSON file.
 
 ## Non-UML Diagrams
 
-PlantUML can also draw several types of non-UML diagrams from simple textual descriptions. This document gives a demo of the following types of non-UML diagrams:
+PlantUML can also draw several types of non-UML diagrams from simple textual
+descriptions. This document gives a demo of the following types of non-UML diagrams:
 
 * Gantt Chart
 * Mindmap
@@ -977,7 +998,8 @@ PlantUML can also draw several types of non-UML diagrams from simple textual des
 
 ### Gantt Chart
 
-The below gantt chart illustrates the schedule of a fictional project. This demo illustrates a few features:
+The below gantt chart illustrates the schedule of a fictional project. This demo
+illustrates a few features:
 
 * Declaring tasks on the chart
 * Specifying start date for task
@@ -987,7 +1009,8 @@ The below gantt chart illustrates the schedule of a fictional project. This demo
 * Assigning workers to tasks
 * Indicating constraints between tasks or milestones
 
-Refer the [documentation](https://plantuml.com/gantt-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/gantt-diagram) for the full set of
+features and configuration options.
 
 ```plantuml
 @startgantt
@@ -1034,13 +1057,15 @@ project starts on 2022-01-01
 
 ### Mindmap
 
-The below mindmap illustrates some investment options available in India. This demo illustrates a few features:
+The below mindmap illustrates some investment options available in India. This demo
+illustrates a few features:
 
 * Adding items to the mindmap heirarchically
 * Splitting the mindmap into left side and right side
 * Applying styles to various parts of the diagram
 
-Refer the [documentation](https://plantuml.com/mindmap-diagram) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/mindmap-diagram) for the full set of
+features and configuration options.
 
 ```plantuml
 @startmindmap
@@ -1097,13 +1122,15 @@ left side
 
 ### Wireframe
 
-The below wireframe illustrates the user interface of a social media site. This demo illustrates a few features:
+The below wireframe illustrates the user interface of a social media site. This demo
+illustrates a few features:
 
 * Use of a few standard UI elements, such as buttons, dropdown
 * Organizing the UI elements using table
 * Formatting the text elements using Creole markup
 
-Refer the [documentation](https://plantuml.com/salt) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/salt) for the full set of features and
+configuration options.
 
 ```plantuml
 @startsalt
@@ -1160,65 +1187,95 @@ skinparam padding 10
 
 As a text-based drawing tool, PlantUML offers the following benefits over a GUI-based tool:
 
-* **Convenience**: Writing the diagram description is often more convenient than dragging items on a canvas from a GUI toolbox.
-* **Revision control**: Diagram descriptions are saved in text files which are well suited for use with revision control systems as compared to images.
-* **Easier reviews**: diff tools make it easy to identify changes to the diagram, which make reviews easier. Any deviations between the source code and the diagrams describing them are more likely to be identified and fixed during the code reviews, making the documentation more reliable.
-* **Continuous integration for documentation**: Diagrams are frequently an indespensible component of good documentations. Continuous integration systems can be configured to automatically generate and update the diagrams.
-* **Uniform and standardized diagrams**: Generated diagrams are more uniform and standardized which reduces hurdles in understanding and discussing them.
+* **Convenience**: Writing the diagram description is often more convenient than
+  dragging items on a canvas from a GUI toolbox.
+* **Revision control**: Diagram descriptions are saved in text files which are
+  well suited for use with revision control systems as compared to images.
+* **Easier reviews**: diff tools make it easy to identify changes to the diagram,
+  which make reviews easier. Any deviations between the source code and the diagrams
+  describing them are more likely to be identified and fixed during the code reviews,
+  making the documentation more reliable.
+* **Continuous integration for documentation**: Diagrams are frequently an
+  indespensible component of good documentations. Continuous integration systems can be
+  configured to automatically generate and update the diagrams.
+* **Uniform and standardized diagrams**: Generated diagrams are more uniform and
+  standardized which reduces hurdles in understanding and discussing them.
 
-Text-based drawing tools, such as PlantUML, are an important enabler for the [docs-as-code](https://www.writethedocs.org/guide/docs-as-code/) approach.
+Text-based drawing tools, such as PlantUML, are an important enabler for the
+[docs-as-code](https://www.writethedocs.org/guide/docs-as-code/) approach.
 
-**What PlantUML cannot do**: PlantUML is not a [golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument) for all documentation needs. It serves reasonably well for lightweight architectures and for diagrams of simple to moderate complexity.
+**What PlantUML cannot do**: PlantUML is not a
+[golden hammer](https://en.wikipedia.org/wiki/Law_of_the_instrument) for all
+documentation needs. It serves reasonably well for lightweight architectures and for
+diagrams of simple to moderate complexity.
 
-For more complex modelling requirements of bigger software systems, PlantUML alone is not sufficient. This especially holds when we need to reuse the models to provide different views of the system. PlantUML is an important tool in the developer's documentation toolbox but it is often best used in symphony with other tools.
+For more complex modelling requirements of bigger software systems, PlantUML alone is
+not sufficient. This especially holds when we need to reuse the models to provide
+different views of the system. PlantUML is an important tool in the developer's
+documentation toolbox but it is often best used in symphony with other tools.
 
 ### How to run PlantUML
 
 There are several ways to run PlantUML. The most commonly used ways are:
 
-* **From the command line**: Download the latest precompiled binary `plantuml.jar` from the [download page](https://plantuml.com/download). Execute it from the command line. Provide the text files or directory containing the diagram descriptions as arguments. (requires [Java](https://www.java.com/en/download/) and [Graphviz](https://graphviz.org/download/))
+* **From the command line**: Download the latest precompiled binary `plantuml.jar`
+  from the [download page](https://plantuml.com/download). Execute it from the
+  command line. Provide the text files or directory containing the diagram descriptions
+  as arguments. (requires [Java](https://www.java.com/en/download/)
+  and [Graphviz](https://graphviz.org/download/))
 
-    ```console
-    java -jar plantuml.jar file1 file2 file3
-    ```
+  ```console
+  java -jar plantuml.jar file1 file2 file3
+  ```
 
-    Refer the [documentation](https://plantuml.com/command-line) for the full set of features and configuration options.
+  Refer the [documentation](https://plantuml.com/command-line) for the full set of
+  features and configuration options.
 
-* **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either by double clicking the `plantuml.jar` or using the following command:
+* **As a standalone GUI**: PlantUML can be run as a standalone GUI application, either
+  by double clicking the `plantuml.jar` or using the following command:
 
     ```console
     java -jar plantuml.jar -gui
     ```
 
-    Then the file or directory containing the diagram descriptions can be selected from the GUI to generate the diagrams.
+    Then the file or directory containing the diagram descriptions can be selected from
+    the GUI to generate the diagrams.
 
-* **As a web service**: PlantUML can be hosted as a web service, which is then used to generate the diagrams. There are three approaches available to use the web service:
+* **As a web service**: PlantUML can be hosted as a web service, which is then used to
+  generate the diagrams. There are three approaches available to use the web service:
     1. Enter the diagram description into the text box on the web page.
-    2. Encode the diagram description into a string, using the command line option `-encodeurl`. Use it with the web service corresponding to the image type to obtain the diagram.
+    2. Encode the diagram description into a string, using the
+       command line option `-encodeurl`. Use it with the web service corresponding to
+       the image type to obtain the diagram.
     3. Enter the encoded URL into the web browser which displays the diagram.
 
     The web service can be used in the following ways:
   * **On the PlantUML server**: PlantUML hosts the web service at <http://www.plantuml.com/plantuml/>
-  * **Locally as a docker container**: PlantUML web service can be hosted locally using the official docker image, with the following commands:
+  * **Locally as a docker container**: PlantUML web service can be hosted locally using
+    the official docker image, with the following commands:
 
-      ```console
-      docker pull plantuml/plantuml-server
-      docker run -d -p 8080:8080 plantuml/plantuml-server
-      ```
+    ```console
+    docker pull plantuml/plantuml-server
+    docker run -d -p 8080:8080 plantuml/plantuml-server
+    ```
 
-      It hosts the plantuml server locally on `http://localhost:8080`.
+    It hosts the plantuml server locally on `http://localhost:8080`.
 
-    Refer the [documentation](https://plantuml.com/server) for the full set of features and configuration options.
+    Refer the [documentation](https://plantuml.com/server) for the full set of features
+    and configuration options.
 
-    **Demo**
-
-    [My video on YouTube](https://www.youtube.com/watch?v=hSDdGrJ1cx4) shows a demo of generating a PlantUML diagram using the docker container approach. The python module `plantuml` is a remote client interface that encodes the diagram description and communicates with the specified server.
+    [My video on YouTube](https://www.youtube.com/watch?v=hSDdGrJ1cx4) shows a demo of
+    generating a PlantUML diagram using the docker container approach. The python
+    module `plantuml` is a remote client interface that encodes the diagram description
+    and communicates with the specified server.
 
     [![Generate PlantUML diagram using Docker](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhSDdGrJ1cx4)](https://www.youtube.com/watch?v=hSDdGrJ1cx4)
 
 ### License Information
 
-PlantUML is licensed under the GPL license. It is also available under other licenses (LGPL, Apache, Eclipse Public, MIT) with some missing features. The generated images are owned by the author of the diagram description.
+PlantUML is licensed under the GPL license. It is also available under other licenses
+(LGPL, Apache, Eclipse Public, MIT) with some missing features. The generated images
+are owned by the author of the diagram description.
 
 The special command `license` prints the license text.
 
@@ -1232,31 +1289,42 @@ license
 
 ### Language Description
 
-The command line option `-language` prints to standard output a description of the PlantUML language.
+The command line option `-language` prints to standard output a description of the
+PlantUML language.
 
 ### Syntax Checker
 
-The command line option `-syntax` checks the syntax of the diagram description from the standard input, and reports any syntax errors without generating the diagram.
+The command line option `-syntax` checks the syntax of the diagram description from the
+standard input, and reports any syntax errors without generating the diagram.
 
 ### Metadata
 
-PlantUML stores the diagram description into the generated image as metadata, in the form of encoded text. The command line option `-metadata` recovers it from the generated image.
+PlantUML stores the diagram description into the generated image as metadata, in the
+form of encoded text. The command line option `-metadata` recovers it from the
+generated image.
 
 ### Cypher
 
-The command line option `-cypher` replaces all words, except PlantUML keywords, with random letters. This is useful while reporting issues when the diagram description contains confidential data.
+The command line option `-cypher` replaces all words, except PlantUML keywords, with
+random letters. This is useful while reporting issues when the diagram description
+contains confidential data.
 
 ### Generating Huge Diagrams
 
-PlantUML restricts image width and height to 4096 pixels by default. This can be overridden by setting the environment variable `PLANTUML_LIMIT_SIZE`.
+PlantUML restricts image width and height to 4096 pixels by default. This can be
+overridden by setting the environment variable `PLANTUML_LIMIT_SIZE`.
 
 ### Getting Help
 
-Questions not answered from the documentation can be asked either on the [PlantUML forum](https://forum.plantuml.net/) or on [PlantUML's github page](https://github.com/plantuml/plantuml/issues). PlantUML's source code is available on [github](https://github.com/plantuml).
+Questions not answered from the documentation can be asked either on the
+[PlantUML forum](https://forum.plantuml.net/) or on
+[PlantUML's github page](https://github.com/plantuml/plantuml/issues).
+PlantUML's source code is available on [github](https://github.com/plantuml).
 
 ## Using with other tools
 
-PlantUML can be used together with several tools. This document describes use of PlantUML with the following tools:
+PlantUML can be used together with several tools. This document describes use of
+PlantUML with the following tools:
 
 * Editors
   * VSCode
@@ -1276,30 +1344,39 @@ PlantUML can be used together with several tools. This document describes use of
 
 #### VSCode
 
-* **Preview PlantUML diagrams directly**: PlantUML plugins enable generating a preview of the plantuml diagram descriptions directly from VSCode.
-* **Preview PlantUML diagrams included in markdown**: PlantUML diagram descriptions can also be included inside markdown code. Markdown plugins enable generating the diagram preview inline within the markdown preview.
+* **Preview PlantUML diagrams directly**: PlantUML plugins enable generating a preview
+  of the plantuml diagram descriptions directly from VSCode.
+* **Preview PlantUML diagrams included in markdown**: PlantUML diagram descriptions can
+  also be included inside markdown code. Markdown plugins enable generating the diagram
+  preview inline within the markdown preview.
 
-[My video on YouTube](https://www.youtube.com/watch?v=md86dxdb3ow) shows a demo of both the options.
+[My video on YouTube](https://www.youtube.com/watch?v=md86dxdb3ow) shows a demo of both
+the options.
 
 [![PlantUML preview in VSCode](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dmd86dxdb3ow)](https://www.youtube.com/watch?v=md86dxdb3ow)
 
 #### Atom
 
-Atom editor has plugins to preview the PlantUML diagram descriptions, for both standalone files and when included in a markdown file.
+Atom editor has plugins to preview the PlantUML diagram descriptions, for both
+standalone files and when included in a markdown file.
 
-[My video on YouTube](https://www.youtube.com/watch?v=ifh7KRUutBY) shows a demo of both the options.
+[My video on YouTube](https://www.youtube.com/watch?v=ifh7KRUutBY) shows a demo of both
+the options.
 
 [![PlantUML preview in Atom editor](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Difh7KRUutBY)](https://www.youtube.com/watch?v=ifh7KRUutBY)
 
 #### Eclipse
 
-PlantUML plugins are also available for the Eclipse IDE which enable generating a preview of the diagrams.
+PlantUML plugins are also available for the Eclipse IDE which enable generating a
+preview of the diagrams.
 
 #### Word
 
-PlantUML addin for Microsoft Word generates the diagrams for the plantuml diagram description and includes them directly into the same document.
+PlantUML addin for Microsoft Word generates the diagrams for the plantuml diagram
+description and includes them directly into the same document.
 
-The [My video on YouTube](https://www.youtube.com/watch?v=nGNqLCgfQyg) shows a demo of using this addin.
+The [My video on YouTube](https://www.youtube.com/watch?v=nGNqLCgfQyg) shows a demo of
+using this addin.
 
 [![PlantUML preview in Microsoft Word](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DnGNqLCgfQyg)](https://www.youtube.com/watch?v=nGNqLCgfQyg)
 
@@ -1307,27 +1384,40 @@ The [My video on YouTube](https://www.youtube.com/watch?v=nGNqLCgfQyg) shows a d
 
 #### Integration with Doxygen
 
-PlantUML diagrams can be embedded directly into the doxygen documents. PlantUML diagram description enclosed within the doxygen commands `\startuml` and `\enduml` appears inline in the generated document.
+PlantUML diagrams can be embedded directly into the doxygen documents. PlantUML diagram
+description enclosed within the doxygen commands `\startuml` and `\enduml` appears
+inline in the generated document.
 
-The [My video on YouTube](https://www.youtube.com/watch?v=4a1sdOkSc2Q) shows a demo using my [conan_learning](https://github.com/dragondive/conan_learning) project.
+The [My video on YouTube](https://www.youtube.com/watch?v=4a1sdOkSc2Q) shows a demo
+using my [conan_learning](https://github.com/dragondive/conan_learning) project.
 
 [![PlantUML integration with doxygen document generator](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4a1sdOkSc2Q)](https://www.youtube.com/watch?v=4a1sdOkSc2Q)
 
 #### Java Doclet
 
-`uml-java-doclet` plugin can generate class diagrams from the Java code and embed them into the javadoc. The [documentation](https://plantuml.com/doclet) describes how to obtain this plugin. The [My video on YouTube](https://www.youtube.com/watch?v=yzo2mLTevIA) shows a demo of using this plugin to generate the class diagrams for PlantUML's own source code.
+`uml-java-doclet` plugin can generate class diagrams from the Java code and embed them
+into the javadoc. The [documentation](https://plantuml.com/doclet) describes how to
+obtain this plugin. The [My video on YouTube](https://www.youtube.com/watch?v=yzo2mLTevIA)
+shows a demo of using this plugin to generate the class diagrams for PlantUML's
+own source code.
 
 [![PlantUML Java class diagram generation using uml-java-doclet](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dyzo2mLTevIA)](https://www.youtube.com/watch?v=yzo2mLTevIA)
 
 #### hpp2plantuml
 
-Python module `hpp2plantuml` available [here](https://pypi.org/project/hpp2plantuml/) on PyPI can generate class diagrams from C++ code. The [My video on YouTube](https://www.youtube.com/watch?v=Da-q15EUQqc) shows a demo of using this module to generate class diagrams for VLC media player's source code.
+Python module `hpp2plantuml` available [here](https://pypi.org/project/hpp2plantuml/)
+on PyPI can generate class diagrams from C++ code. The [My video on YouTube](https://www.youtube.com/watch?v=Da-q15EUQqc)
+shows a demo of using this module to generate class diagrams for VLC media player's
+source code.
 
 [![PlantUML C++ class diagram generation using hpp2plantuml](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDa-q15EUQqc)](https://www.youtube.com/watch?v=Da-q15EUQqc)
 
 #### py2puml
 
-Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-tools) on github can generate class diagrams from Python code. The [My video on YouTube](https://www.youtube.com/watch?v=JHRy_C8dkaE) shows a demo of using this module to generate class diagrams for my ongoing hobby project [multibeggar](https://github.com/dragondive/hebi/tree/main/multibeggar).
+Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-tools) on
+github can generate class diagrams from Python code. The [My video on YouTube](https://www.youtube.com/watch?v=JHRy_C8dkaE)
+shows a demo of using this module to generate class diagrams for my ongoing hobby
+project [multibeggar](https://github.com/dragondive/hebi/tree/main/multibeggar).
 
 [![PlantUML Python class diagram generation using py2puml](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJHRy_C8dkaE)](https://www.youtube.com/watch?v=JHRy_C8dkaE)
 
@@ -1335,19 +1425,26 @@ Python utility `py2puml` available [here](https://github.com/deadbok/py-puml-too
 
 #### markdown
 
-Python module `plantuml-markdown` available [here](https://pypi.org/project/plantuml-markdown/) on PyPI can generate HTML page from a markdown file that has plantuml source code included. The [My video on YouTube](https://www.youtube.com/watch?v=dcGaxTEiztw) shows a demo of using this module to generate the HTML for this document itself, making it another example of self-reference. :grin:
+Python module `plantuml-markdown` available [here](https://pypi.org/project/plantuml-markdown/)
+on PyPI can generate HTML page from a markdown file that has plantuml source code
+included. The [My video on YouTube](https://www.youtube.com/watch?v=dcGaxTEiztw) shows
+a demo of using this module to generate the HTML for this document itself, making it
+another example of self-reference. :grin:
 
 [![PlantUML in Markdown - generate HTML using plantuml-markdown](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdcGaxTEiztw)](https://www.youtube.com/watch?v=dcGaxTEiztw)
 
 ### Web Browsers
 
-Browser extensions are available to render PlantUML in the Chrome and Firefox web browsers. The [My video on YouTube](https://www.youtube.com/watch?v=MhFjz8i8nBI) shows a demo of using these plugins.
+Browser extensions are available to render PlantUML in the Chrome and Firefox web
+browsers. The [My video on YouTube](https://www.youtube.com/watch?v=MhFjz8i8nBI) shows
+a demo of using these plugins.
 
 [![PlantUML web browser extensions demo](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMhFjz8i8nBI)](https://www.youtube.com/watch?v=MhFjz8i8nBI)
 
 ## Customization
 
-PlantUML provides a number of features for customizing the look and feel of the diagrams. This section provides a demo of the following customization features:
+PlantUML provides a number of features for customizing the look and feel of the
+diagrams. This section provides a demo of the following customization features:
 
 * Skinparams
 * Themes
@@ -1355,15 +1452,15 @@ PlantUML provides a number of features for customizing the look and feel of the 
 
 ### Skinparams
 
-The colors and fonts of the diagram can be changed by specifying one or more `skinparam` declarations in the diagram description, with the following syntax:
+The colors and fonts of the diagram can be changed by specifying one or more
+`skinparam` declarations in the diagram description, with the following syntax:
 
 ```console
 skinparam <parameter> <value>
 ```
 
-#### Demos
-
-* **black and white diagram**: The skinparam `monochrome` is used to make a black and white diagram.
+* **black and white diagram**: The skinparam `monochrome` is used to make a black and
+  white diagram.
 
 ```plantuml
 @startuml
@@ -1377,7 +1474,8 @@ note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bf
 
 ![output: readme diagram 22](src/diagrams/readme/readme_diagram_22.svg)
 
-* **handwritten diagram**: The skinparam `handwritten` is used to give a hand-drawn appearance to the diagram.
+* **handwritten diagram**: The skinparam `handwritten` is used to give a hand-drawn
+  appearance to the diagram.
 
 ```plantuml
 @startuml
@@ -1391,7 +1489,8 @@ note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bf
 
 ![output: readme diagram 23](src/diagrams/readme/readme_diagram_23.svg)
 
-* **dark mode diagram**: The skinparam `monochrome` set to `reverse` generates a dark mode diagram, suitable for placing the diagram on a black background.
+* **dark mode diagram**: The skinparam `monochrome` set to `reverse` generates a dark
+  mode diagram, suitable for placing the diagram on a black background.
 
 ```plantuml
 @startuml
@@ -1405,7 +1504,9 @@ note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bf
 
 ![output: readme diagram 24](src/diagrams/readme/readme_diagram_24.svg)
 
-* **customize individual entities**: Skinparam can be used not only to customize the overall look and feel of the diagram, but also of individual entities in the diagram. The below demo shows customization of the participants and the note.
+* **customize individual entities**: Skinparam can be used not only to customize the
+  overall look and feel of the diagram, but also of individual entities in the diagram.
+  The below demo shows customization of the participants and the note.
 
 ```plantuml
 @startuml
@@ -1435,7 +1536,9 @@ note right : [[https://ozanerhansha.medium.com/on-the-origin-of-hello-world-61bf
 
 #### List of all skinparams
 
-The command `skinparameters` can be used to generate a diagram with a list of all the available skinparams. This list can also be generated by executing PlantUML on the command line with the `-language` option.
+The command `skinparameters` can be used to generate a diagram with a list of all the
+available skinparams. This list can also be generated by executing PlantUML on the
+command line with the `-language` option.
 
 ```console
 skinparameters
@@ -1443,7 +1546,8 @@ skinparameters
 
 ### Themes
 
-Themes can be applied to the PlantUML diagrams. The command `help themes` lists the themes available in the core library. Some themes include procedures to colour messages.
+Themes can be applied to the PlantUML diagrams. The command `help themes` lists the
+themes available in the core library. Some themes include procedures to colour messages.
 
 ```plantuml
 @startuml
@@ -1452,8 +1556,6 @@ help themes
 ```
 
 ![output: readme diagram 26](src/diagrams/readme/readme_diagram_26.svg)
-
-**Demo**
 
 ```plantuml
 @startuml
@@ -1500,9 +1602,9 @@ end alt
 
 ### Styles
 
-CSS-like styles can be applied to the diagrams. The stylesheet can be either included inline in the diagram description between `<style>` and `</style>` tags, or included from a separate file.
-
-**Demo**
+CSS-like styles can be applied to the diagrams. The stylesheet can be either included
+inline in the diagram description between `<style>` and `</style>` tags, or included
+from a separate file.
 
 ```plantuml
 @startuml
@@ -1597,9 +1699,11 @@ There are a number of options available to support the PlantUML tool:
 
 #### Dedication
 
-Dedicate a picture or a photo with a message, which will be integrated into the PlantUML code. To support this service, a contribution of $5 per month is recommended.
+Dedicate a picture or a photo with a message, which will be integrated into the PlantUML
+code. To support this service, a contribution of $5 per month is recommended.
 
-The dedication can be public or private. It will be available in each and every deployed instance of PlantUML across the world!
+The dedication can be public or private. It will be available in each and every deployed
+instance of PlantUML across the world!
 
 ```plantuml
 @startuml
@@ -1613,7 +1717,9 @@ The currently added public dedications can be seen directly from the source code
 
 #### Donation
 
-To support PlantUML via crowdfunding, donate using [Paypal](http://plantuml.com/paypal), [Patreon](http://plantuml.com/patreon) or [Liberapay](http://plantuml.com/lp). The special `donors` command prints the list of donors and sponsors.
+To support PlantUML via crowdfunding, donate using [Paypal](http://plantuml.com/paypal),
+[Patreon](http://plantuml.com/patreon) or [Liberapay](http://plantuml.com/lp).
+The special `donors` command prints the list of donors and sponsors.
 
 ```plantuml
 @startuml
@@ -1625,11 +1731,14 @@ donors
 
 ### PlantUML Themes
 
-Some user-contributed PlantUML themes are available at [Puml Themes](https://bschwarz.github.io/puml-themes/) and [RedDress-PlantUML](https://github.com/Drakemor/RedDress-PlantUML)
+Some user-contributed PlantUML themes are available at [Puml Themes](https://bschwarz.github.io/puml-themes/)
+and [RedDress-PlantUML](https://github.com/Drakemor/RedDress-PlantUML)
 
 ### UML for Blind People
 
-[This web page](http://www.bfg-it.de/wiki/Blind_mit_UML_arbeiten) describes PlantUML as part of a solution to describe UML to blind people. (The page is written in German, and can be translated to English or other languages using a language translation engine.)
+[This web page](http://www.bfg-it.de/wiki/Blind_mit_UML_arbeiten) describes PlantUML as
+part of a solution to describe UML to blind people. (The page is written in German, and
+can be translated to English or other languages using a language translation engine.)
 
 ## Fun Stuff
 
@@ -1641,9 +1750,11 @@ PlantUML comes with some fun stuff. This document gives a demo of the following 
 
 ### xearth
 
-This demo shows the use of `xearth` command to draw a map of the Earth focussed on a specified coordinate.
+This demo shows the use of `xearth` command to draw a map of the Earth focussed on a
+specified coordinate.
 
-Refer the [documentation](https://plantuml.com/xearth) for the full set of features and configuration options.
+Refer the [documentation](https://plantuml.com/xearth) for the full set of features and
+configuration options.
 
 ```plantuml
 @startuml
@@ -1652,7 +1763,7 @@ viewPositionType = Fixed
 viewPosLat = 12.971563711294497    /' ಬ್ರಿಗೇಡ್ ರಸ್ತೆ, '/
 viewPosLong = 77.60679643358596    /' ಬೆಂಗಳೂರು, ಭಾರತ '/
 12.971563711294497 77.60679643358596   "Brigade Road, Bengaluru, India"
-shadeP = true  /' if true, the Earth's surface is shaded based on its current position relative to the Sun. '/
+shadeP = false  /' if true, the Earth's surface is shaded based on its current position relative to the Sun. '/
 gridP = true
 gridDivision = 30
 @enduml
@@ -1672,7 +1783,8 @@ sudoku
 
 ![output: readme diagram 32](src/diagrams/readme/readme_diagram_32.svg)
 
-The `sudoku` command can also be called with an argument, which is the seed to generate a specific sudoku puzzle.
+The `sudoku` command can also be called with an argument, which is the seed to generate
+a specific sudoku puzzle.
 
 ```plantuml
 @startuml
@@ -1698,6 +1810,10 @@ run oregon trail
 
 **Acknowledgements**
 
-* Many thanks to [Markdown-Videos](https://github.com/Snailedlt/Markdown-Videos/) for the convenient YouTube thumbnail and link embedding used in this document.
+* Many thanks to [Markdown-Videos](https://github.com/Snailedlt/Markdown-Videos/) for
+  the convenient YouTube thumbnail and link embedding used in this document.
 
-  Github in its infinite wisdom stubbornly refuses to support embedding YouTube videos, while videos uploaded to Github are conveniently embedded complete with a play button and progress bar! Apparently, the only thing Microsoft learned from all the anti-competitive lawsuits is figuring out what unethical behaviour they can likely get away with.
+  Github in its infinite wisdom refuses to support embedding YouTube videos, while
+  conveniently providing even video player controls for videos uploaded to Github.
+  Apparently, all that Microsoft has learned from the several anti-competitive lawsuits
+  is evaluating what unethical behaviour they can get away with. :facepalm:
