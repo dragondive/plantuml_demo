@@ -4,7 +4,8 @@ Fun and learning with the PlantUML preprocessor
 The PlantUML preprocessor provides a higher level abstraction to generate the diagram
 descriptions. It can also be used as a programming language to *compute* the diagrams!
 The preprocessor provides variables, conditional expressions, looping constructs, and
-functions, making it a full fledged Turing complete language.
+functions, among other facilities. The programs can also take external input through
+a file.
 
 This also enables having some fun while learning the preprocessor features. In this
 document, I describe some such examples. These example diagrams are *computed* by
@@ -39,7 +40,7 @@ https://github.com/dragondive/plantuml_demo/blob/bfd3b1c018fe5893a8f37a9a01a6d9e
 "Unit tests" for the factorial function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This *hacks* the preprocessor's JSON parsing utility and ``!assert`` macro to run
+This *hacks* the preprocessor's JSON parsing utility and ``!assert`` directive to run
 "unit tests" for the factorial function. For an invalid input, that is a negative
 number, the factorial function raises an assert. However, there is no facility to expect
 an assertion or exception (which is fair as the preprocessor is not a unit testing
@@ -154,7 +155,7 @@ following information:
 1. Number of matches played at various cricket grounds.
 2. Hierarchical structure of the location (city, country) the cricket ground belongs to.
 
-The WBS diagram represents the hierarchy as a tree to any depth, while also summing up
+The WBS diagram represents the hierarchy as a tree to any depth, while also adding up
 the count at every level beneath it. This naturally resembles the
 `Composite design pattern <https://refactoring.guru/design-patterns/composite>`__, and
 the computation follows such a recursive structure.

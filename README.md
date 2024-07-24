@@ -919,22 +919,53 @@ BATMAN"
 >
 > Find more detailed explanation in the main article: [Fun and learning with the PlantUML preprocessor](src/preprocessor/README.rst#fun-and-learning-with-the-plantuml-preprocessor)
 
-PlantUML includes a preprocessor. It can be used as a higher level abstraction to generate the diagram description. It also serves as a mini programming language to generate the diagrams programatically. The PlantUML preprocessor is similar to the C preprocessor, with one main difference being that it uses `!` character instead of `#` for preprocessor directives.
+PlantUML includes a preprocessor. It provides variables, conditional expressions,
+looping constructs, and functions, along with some builtin utility functions.
 
-The PlantUML preprocessor provides variables, conditional expressions (with `!if`, `!else`, `!elseif` and `!endif`), looping (with `!while` and `!endwhile`), procedures (with `!procedure` and `!endprocedure`) and functions (with `!function`, `!endfunction` and `!return`). It also provides some builtin functions for convenient use in the preprocessor code.
+Refer the [documentation](https://plantuml.com/preprocessor) for the syntax rules,
+full set of features and builtin functions.
 
-Refer the [documentation](https://plantuml.com/preprocessor) for the syntax rules, full set of features and builtin functions.
+The preprocessor serves as a mini programming language to generate the diagrams
+programatically. While self-learning the preprocessor, I ended up having too much fun
+and created more preprocessor code examples mainly for enjoyment :satisfied:. My code
+examples are available in [src/preprocessor](src/preprocessor), some of which are
+described below:
 
-Several preprocessor code examples are available in [src/preprocessor](src/preprocessor) and some of them are described briefly here. All these examples are my original work. I created some of them initially to self-learn the preprocessor, but ended up having too much fun and created more preprocessor codes mainly for enjoyment. :satisfied:
+* **Factorial computation**: [source code](src/preprocessor/factorial_demo.puml)
 
-* **[fibonacci_recursive_in_out_with_user_function_demo.puml](src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml)**: Generates the fibonacci recursion tree in the form of a state diagram. It also demonstrates simple customization based on conditional expressions in two ways: using a user-defined function, and using a lambda expression.
-* **[fibonacci_memoized_demo.puml](src/preprocessor/fibonacci_memoized_demo.puml)**: Generates the graph of the memoized approach for the computation of fibonacci number.
-* **[factorial_question_answer_sequence.puml](src/preprocessor/factorial_question_answer_sequence.puml)**: Generates a question and answer series as a sequence diagram. The questions in the series consist of asking the factorial of a sequence of numbers, while the answer provides the requested factorial.
-* **[full_binary_tree_demo.puml](src/preprocessor/full_binary_tree_demo.puml)**: Generates the full binary tree for the specified height in the form of an object diagram.
-* **[test_match_host_wbs_demo.puml](src/preprocessor/test_match_host_wbs_demo.puml)**: Reads a JSON file that contains data of Test cricket matches hosted in the form of a recursive data structure. Generates a Work Breakdown Structure (WBS) diagram, while summing up the counts at every level.
-* **[factorial_demo_test.puml](src/preprocessor/factorial_demo_test.puml)**: Uses the `!assert` directive to define "unit tests" for the factorial computation PlantUML code. :sunglasses:
-* **[collatz_sequence.puml](src/preprocessor/collatz_sequence.puml)**: Generates the [collatz sequence](https://en.wikipedia.org/wiki/Collatz_conjecture) for a series of numbers, with a separate image for the diagram of each number.
-* **[multiple_diagrams_generation_demo.puml](src/preprocessor/multiple_diagrams_generation_demo.puml)**: Demonstrates generation of multiple diagrams from a single diagram description. The preprocessor code provides the overall structure for the diagrams, while a JSON file can configure various portions of the diagrams generated.
+  Generates a state diagram showing the recursive calls and computed factorial value.
+
+  * **Unit tests for factorial function**: [source code](src/preprocessor/factorial_demo_test.puml)
+
+    Uses the preprocessor directive `!assert` to define "unit tests" for the factorial
+    function. :sunglasses:
+* **Factorials of a range of numbers as a Q&A sequence**: [source code](src/preprocessor/factorial_question_answer_sequence.puml)
+
+  Generates a question-answer series as a sequence diagram. The questions ask for the
+  factorial of a range of number, while the answer provides the factorial value.
+
+* **Fibonacci recursion tree customized with user-defined function and lambda function**: [source code](src/preprocessor/fibonacci_recursive_in_out_with_user_function_demo.puml)
+
+  Generates the fibonacci recursion tree as a state diagram. Also shows simple
+  conditional customization in two ways: using a user-defined function and using a
+  lambda function.
+
+* **Test cricket matches hosting data in a hierarchical structure**: [source code](src/preprocessor/test_match_host_wbs_demo.puml)
+
+  Reads a JSON file containing data about Test cricket grounds, their hierarchical
+  location (city, country), and number of matches hosted. Generates a Work Breakdown
+  Structure (WBS) diagram showing this data hierarchically, while adding up the counts
+  of every lower level.
+
+* **Collatz sequence for a range of numbers**: [source code](src/preprocessor/collatz_sequence.puml)
+
+  Generates the [collatz sequence](https://en.wikipedia.org/wiki/Collatz_conjecture) for
+  a series of numbers, with a separate diagram file for each number.
+
+* **Multiple customized diagrams from diagram template**: [source code](src/preprocessor/multiple_diagrams_generation_demo.puml)
+
+  Generates multiple customized diagrams by customizing a diagram template based on
+  data provided in a JSON file.
 
 ## Non-UML Diagrams
 
