@@ -915,6 +915,10 @@ BATMAN"
 
 ## Preprocessor
 
+> :bookmark_tabs: **DETAILED EXPLANATION**
+>
+> Find more detailed explanation in the main article: [Fun and learning with the PlantUML preprocessor](src/preprocessor/README.rst#fun-and-learning-with-the-plantuml-preprocessor)
+
 PlantUML includes a preprocessor. It can be used as a higher level abstraction to generate the diagram description. It also serves as a mini programming language to generate the diagrams programatically. The PlantUML preprocessor is similar to the C preprocessor, with one main difference being that it uses `!` character instead of `#` for preprocessor directives.
 
 The PlantUML preprocessor provides variables, conditional expressions (with `!if`, `!else`, `!elseif` and `!endif`), looping (with `!while` and `!endwhile`), procedures (with `!procedure` and `!endprocedure`) and functions (with `!function`, `!endfunction` and `!return`). It also provides some builtin functions for convenient use in the preprocessor code.
