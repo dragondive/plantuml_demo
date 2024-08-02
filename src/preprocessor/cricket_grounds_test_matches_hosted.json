@@ -1,4 +1,4 @@
-!$test_cricket_matches_data = {
+{
 "name": "All", "list": [
     {"name": "India", "list": [
         {"name": "Eden Gardens, Kolkata", "count": 42},

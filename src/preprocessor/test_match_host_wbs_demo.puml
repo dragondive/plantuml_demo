@@ -1,6 +1,7 @@
 @startwbs
 
-!include test_cricket_matches_data.puml
+!input_json_file ?= "src/preprocessor/cricket_grounds_test_matches_hosted.json"
+!$test_cricket_matches_data = %load_json(input_json_file)
 
 !function $repeat_string($input_string, $times)
     !$str = ""
@@ -85,7 +86,7 @@ wbsDiagram {
 
 title <size:40>**Test cricket matches hosted by cricket grounds**</size>
 legend top center
-<size:24>Last updated: 22 July 2024</size>
+<size:24>Last updated: %date()</size>
 
 |<#PaleGreen>    | Hosted 100 or more matches |
 end legend
