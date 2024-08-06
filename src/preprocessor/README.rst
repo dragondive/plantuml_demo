@@ -169,6 +169,26 @@ https://github.com/dragondive/plantuml_demo/blob/33e13848c91b5bc321864b16ec968fa
 .. image:: diagrams/test_match_host_wbs_demo.svg
    :alt: Hierarchical structure representing Test matches hosting data
 
+Semi-automatically scrape data and update the diagram
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As a further enhancement, this diagram can be updated semi-automatically using Python
+and Github Actions. Using Python, I scrape the howstat.com
+`data source <https://www.howstat.com/Cricket/Statistics/Grounds/GroundList.asp?Scope=T>`_ ,
+clean and transform the data into a JSON file, which is then used to
+generate the diagram. Github Actions workflow semi-automates this process and commits
+the updated diagram to the repository.
+
+My other repository `dragondive/masadora <https://github.com/dragondive/masadora/>`_
+contains the Python project `helicopter <https://github.com/dragondive/masadora/tree/main/python/helicopter>`_
+and the reusable workflow `fly-helicopter <https://github.com/dragondive/masadora/blob/main/.github/workflows/fly-helicopter.yml>`_,
+along with `more explanation <https://github.com/dragondive/masadora/blob/main/python/helicopter/README.rst>`_.
+The reusable workflow is used in this repository's Github Actions workflow
+`generate-test-cricket-matches-hosted-diagram <https://github.com/dragondive/plantuml_demo/blob/main/.github/workflows/generate-test-cricket-matches-hosted-diagram.yml>`_.
+
+.. image:: diagrams/test_match_host_wbs_demo_from_scraped_data.svg
+   :alt: Hierarchical structure representing Test matches hosting data, auto-generated from scraped data
+
 Compute and draw Collatz sequence for a range of numbers
 --------------------------------------------------------
 
@@ -189,8 +209,7 @@ complete set of chains is available in the directory
 
 https://github.com/dragondive/plantuml_demo/blob/63b36f833afd6c53edd86806516bd93fca0cb834/src/preprocessor/collatz_sequence.puml#L1-L127
 
-|Collatz sequence for 9| |Collatz sequence for 43| |Collatz sequence for
-97|
+|Collatz sequence for 9| |Collatz sequence for 43| |Collatz sequence for 97|
 
 Generate multiple customized diagrams from diagram template
 -----------------------------------------------------------
