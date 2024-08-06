@@ -1,0 +1,67 @@
+name: Generate diagram showing Test cricket matches hosted data
+
+on:
+  workflow_dispatch:
+    inputs:
+      plantuml-version:
+        description: 'PlantUML version to use'
+        required: true
+        default: latest
+        type: string
+
+jobs:
+  get-test-cricket-matches-hosted-data:
+    name: Get Test cricket matches hosted data using helicopter
+    uses: dragondive/masadora/.github/workflows/fly-helicopter.yml@helicopter/v1.0.0
+
+  generate-diagram:
+    name: Generate PlantUML diagram
+    runs-on: ubuntu-latest
+    needs: get-test-cricket-matches-hosted-data
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.7
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: fly-helicopter-artifacts
+
+      - name: Load cached PlantUML
+        id: cached-plantuml
+        if: ${{ inputs.plantuml-version != 'latest' }}
+        uses: actions/cache@v4.0.2
+        with:
+          path: ${{ runner.temp }}/plantuml.jar
+          key: plantuml-${{ inputs.plantuml-version }}
+
+      - name: Setup PlantUML
+        if: steps.cached-plantuml.outputs.cache-hit != 'true'
+        run: |
+          if [ "${{ inputs.plantuml-version }}" = "latest" ]; then
+            PLANTUML_DOWNLOAD_URL=https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar
+          else
+            PLANTUML_DOWNLOAD_URL=https://github.com/plantuml/plantuml/releases/download/v${{ inputs.plantuml-version }}/plantuml.jar
+          fi
+          curl -L -o ${{ runner.temp }}/plantuml.jar $PLANTUML_DOWNLOAD_URL
+
+      - name: Generate diagram
+        run: |
+          java -jar ${{ runner.temp}}/plantuml.jar \
+            -tsvg \
+            -Dinput_json_file=${{ github.workspace }}/cricket_grounds_test_matches_hosted.json \
+            -o ${{ github.workspace }} \
+            src/preprocessor/test_match_host_wbs_demo.puml
+          mv test_match_host_wbs_demo.svg src/preprocessor/diagrams/test_match_host_wbs_demo_from_scraped_data.svg
+
+      - name: Compute run timestamp
+        shell: bash
+        id: commit-timestamp
+        run: |
+          echo "timestamp=$(date +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+
+      - name: Commit generated diagram
+        uses: stefanzweifel/git-auto-commit-action@v5.0.1
+        with:
+          commit_message: updated test_match_host_wbs_demo_from_scraped_data diagram at ${{ steps.commit-timestamp.outputs.timestamp }}
+          file_pattern: src/preprocessor/diagrams/test_match_host_wbs_demo_from_scraped_data.svg
